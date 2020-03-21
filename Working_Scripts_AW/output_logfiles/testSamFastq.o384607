@@ -1,0 +1,24 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: 0_SRA_fastqDump.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/samples_Salmonella_muenster
+  The working directory is:  /scratch-local/aubcls71.testSamFastq.384607
+  The memory limit is: 2gb
+  The job will start running after: 2020-03-20T14:08:23
+  Job Name: testSamFastq
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc35
+  Node list:  dmc35
+  Nodes:  dmc35
+  Command typed:
+/apps/scripts/run_script 0_SRA_fastqDump.sh     
+  Queue submit command:
+sbatch --qos=class -J testSamFastq --begin=2020-03-20T14:08:23 --requeue --mail-user=asw0049@auburn.edu -o testSamFastq.o384607 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=2000mb --constraint=dmc 
+Read 1053590 spots for SRR10740748
+Written 1053590 spots for SRR10740748

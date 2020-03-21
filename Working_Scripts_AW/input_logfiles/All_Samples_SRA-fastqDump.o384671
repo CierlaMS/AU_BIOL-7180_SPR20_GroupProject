@@ -1,0 +1,42 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: 0_SRA_fastqDump.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/samples_Salmonella_muenster
+  The working directory is:  /scratch-local/aubcls71.All_Samples_SRA-fastqDump.384671
+  The memory limit is: 1gb
+  The job will start running after: 2020-03-20T18:03:30
+  Job Name: All_Samples_SRA-fastqDump
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc23
+  Node list:  dmc23
+  Nodes:  dmc23
+  Command typed:
+/apps/scripts/run_script 0_SRA_fastqDump.sh     
+  Queue submit command:
+sbatch --qos=class -J All_Samples_SRA-fastqDump --begin=2020-03-20T18:03:30 --requeue --mail-user=asw0049@auburn.edu -o All_Samples_SRA-fastqDump.o384671 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=1000mb --constraint=dmc 
+Read 1053590 spots for SRR10740748
+Written 1053590 spots for SRR10740748
+Read 1042044 spots for SRR10740747
+Written 1042044 spots for SRR10740747
+Read 999592 spots for SRR10740746
+Written 999592 spots for SRR10740746
+Read 1051202 spots for SRR10740745
+Written 1051202 spots for SRR10740745
+Read 1015015 spots for SRR10740744
+Written 1015015 spots for SRR10740744
+Read 955320 spots for SRR10740743
+Written 955320 spots for SRR10740743
+Read 962288 spots for SRR10740742
+Written 962288 spots for SRR10740742
+Read 876854 spots for SRR10740741
+Written 876854 spots for SRR10740741
+Read 1027813 spots for SRR10740740
+Written 1027813 spots for SRR10740740
+Read 1076023 spots for SRR10740739
+Written 1076023 spots for SRR10740739
