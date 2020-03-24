@@ -1,0 +1,32 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: 4_bwa_index.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls72/final_project/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls72.4bwaindexshSCRIPT.386845
+  The memory limit is: 1gb
+  The job will start running after: 2020-03-24T15:02:57
+  Job Name: 4bwaindexshSCRIPT
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc7
+  Node list:  dmc7
+  Nodes:  dmc7
+  Command typed:
+/apps/scripts/run_script 4_bwa_index.sh     
+  Queue submit command:
+sbatch --qos=class -J 4bwaindexshSCRIPT --begin=2020-03-24T15:02:57 --requeue --mail-user=sco0004@aubur.edu -o 4bwaindexshSCRIPT.o386845 -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=1000mb --constraint=dmc 
+[bwa_index] Pack FASTA... [bns_fasta2bntseq] fail to open file '/scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.fasta.pac' : Permission denied
+[bwa_index] Pack FASTA... 0.04 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 2.95 seconds elapse.
+[bwa_index] Update BWT... 0.04 sec
+[bwa_index] Pack forward-only FASTA... 0.02 sec
+[bwa_index] Construct SA from BWT and Occ... 1.20 sec
+[main] Version: 0.7.12-r1039
+[main] CMD: bwa index /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_assembly/WT_2012_ref_assembly.fasta
+[main] Real time: 4.493 sec; CPU: 4.269 sec
