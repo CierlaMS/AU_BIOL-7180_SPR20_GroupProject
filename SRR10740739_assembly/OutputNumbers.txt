@@ -1,0 +1,28 @@
+Contigs >= 100 nt
+ Number: 248
+ Total length: 4843184
+ Average: 19528
+ N50: 63281
+ Median: 3507
+ Largest: 168655
+Contigs >= 500 nt
+ Number: 155
+ Total length: 4824357
+ Average: 31124
+ N50: 63281
+ Median: 18687
+ Largest: 168655
+Scaffolds >= 100 nt
+ Number: 230
+ Total length: 4849472
+ Average: 21084
+ N50: 71950
+ Median: 2991
+ Largest: 168655
+Scaffolds >= 500 nt
+ Number: 137
+ Total length: 4830645
+ Average: 35260
+ N50: 71950
+ Median: 20004
+ Largest: 168655

@@ -1,0 +1,5 @@
+#Step	Date	Elapsed time	Since Beginning
+Network testing	2020-03-23T18:30:07	0 seconds	0 seconds
+Counting sequences to assemble	2020-03-23T18:30:07	0 seconds	0 seconds
+Sequence loading	2020-03-23T18:30:07	0 seconds	0 seconds
+K-mer counting	2020-03-23T18:30:07	0 seconds	0 seconds

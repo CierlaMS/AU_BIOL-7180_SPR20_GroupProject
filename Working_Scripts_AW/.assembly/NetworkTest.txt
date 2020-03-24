@@ -1,0 +1,8 @@
+# average and mode round trip latency in microseconds (10^-6 seconds) when requesting a reply for a message of 4000 bytes
+# MessagePassingInterfaceRank	Name	ModeLatencyInMicroseconds	AverageLatencyInMicroseconds	NumberOfExchanges
+# AverageForAllRanks: 24.75
+# StandardDeviation: 2.69258
+0	dmc7.asc.edu	4	27	1000
+1	dmc7.asc.edu	4	28	1000
+2	dmc7.asc.edu	4	24	1000
+3	dmc7.asc.edu	3	20	1000

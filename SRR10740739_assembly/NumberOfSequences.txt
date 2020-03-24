@@ -1,0 +1,19 @@
+Files: 2
+
+FileNumber: 0
+	FilePath: /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_1.fastq
+ 	NumberOfSequences: 1076023
+	FirstSequence: 0
+	LastSequence: 1076022
+
+FileNumber: 1
+	FilePath: /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_2.fastq
+ 	NumberOfSequences: 1076023
+	FirstSequence: 1076023
+	LastSequence: 2152045
+
+
+Summary
+	NumberOfSequences: 2152046
+	FirstSequence: 0
+	LastSequence: 2152045

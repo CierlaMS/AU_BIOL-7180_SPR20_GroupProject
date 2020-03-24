@@ -1,0 +1,31 @@
+# Most of the vertices should have an ingoing degree of 1 and an outgoing degree of 1.
+# These are the easy vertices.
+# Then, the most abundant are those with an ingoing degree of 1 and an outgoing degree of 2.
+# Note that vertices with a coverage of 1 are not considered.
+# The option -write-kmers will actually write all the graph to a file if you need more precise data.
+# IngoingDegree	OutgoingDegree	NumberOfVertices
+0	0	21476
+0	1	152699
+0	2	513
+0	3	8
+0	4	0
+1	0	152699
+1	1	12348888
+1	2	161628
+1	3	3972
+1	4	338
+2	0	513
+2	1	161628
+2	2	8390
+2	3	588
+2	4	149
+3	0	8
+3	1	3972
+3	2	588
+3	3	210
+3	4	109
+4	0	0
+4	1	338
+4	2	149
+4	3	109
+4	4	122

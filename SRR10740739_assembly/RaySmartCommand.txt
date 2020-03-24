@@ -1,0 +1,8 @@
+mpiexec -n 1 Ray \
+ -k \
+ 21 \
+ -p \
+ /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_1.fastq \
+ /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_2.fastq \
+ -o \
+ /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_assembly

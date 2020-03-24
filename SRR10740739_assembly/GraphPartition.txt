@@ -1,0 +1,5 @@
+#Rank	NumberOfKmers	IdealNumberOfKmers	Difference	RelativeDifference
+#TotalKmers: 13019094
+#Ranks: 1
+#IdealNumberOfKmers: 13019094
+0	13019094	13019094	0	0%
