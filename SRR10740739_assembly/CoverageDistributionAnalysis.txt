@@ -1,0 +1,9 @@
+k-mer length:	21
+Number of k-mers in the distributed de Bruijn graph: 13019094
+Lowest coverage observed:	2
+MinimumCoverage:	20
+PeakCoverage:	87
+RepeatCoverage:	154
+Number of k-mers with at least MinimumCoverage:	9402012 k-mers
+Percentage of vertices with coverage 2:	19.6177 %
+DistributionFile: /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_assembly/CoverageDistribution.txt

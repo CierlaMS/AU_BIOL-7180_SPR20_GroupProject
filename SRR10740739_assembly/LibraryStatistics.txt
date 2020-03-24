@@ -1,0 +1,14 @@
+NumberOfPairedLibraries: 1
+
+LibraryNumber: 0
+ InputFormat: TwoFiles,Paired
+ DetectionType: Automatic
+ File: /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_1.fastq
+  NumberOfSequences: 1076023
+ File: /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_2.fastq
+  NumberOfSequences: 1076023
+ Distribution: /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_assembly/LibraryData.xml
+ Peak 0
+  AverageOuterDistance: 386
+  StandardDeviation: 119
+

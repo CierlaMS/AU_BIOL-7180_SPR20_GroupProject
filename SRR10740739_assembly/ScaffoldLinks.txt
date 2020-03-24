@@ -1,0 +1,19 @@
+#Left contig name	Left contig strand	Right contig name	Right contig strand	Average gap length	Average gap count	Summary link iterator 1	Summary count 1	Summary average 1	Summary standard  deviation 1	Summary link iterator 2	Summary count 2	Summary average 2	Summary standard  deviation 2
+contig-0	R	contig-68000000	R	249	2	0	5	289	163	1	3	209	131
+contig-1000000	R	contig-12000000	R	433	2	0	6	424	99	1	7	443	103
+contig-8000000	F	contig-15000000	R	230	2	0	6	252	187	1	3	208	196
+contig-14000000	F	contig-198000000	R	463	2	0	15	464	152	1	19	463	136
+contig-14000000	R	contig-102000000	R	558	2	0	6	558	220	1	6	558	220
+contig-16000000	F	contig-68000000	F	327	2	0	6	327	121	1	6	327	121
+contig-18000000	F	contig-41000000	R	365	2	0	45	368	155	1	29	362	132
+contig-23000000	R	contig-35000000	R	554	2	0	4	554	111	1	4	554	111
+contig-24000000	F	contig-227000000	R	364	2	0	9	375	136	1	35	353	170
+contig-28000000	F	contig-241000000	F	290	2	0	3	284	105	1	7	297	96
+contig-28000000	R	contig-50000000	R	528	2	0	12	528	160	1	12	528	160
+contig-29000000	R	contig-228000000	R	282	2	0	8	228	104	1	5	336	106
+contig-32000000	F	contig-64000000	R	340	2	0	79	341	181	1	92	340	179
+contig-42000000	F	contig-58000000	F	325	2	0	25	282	120	1	11	368	70
+contig-51000000	F	contig-96000000	F	192	2	0	13	179	78	1	11	205	50
+contig-52000000	F	contig-229000000	R	340	2	0	40	343	166	1	56	337	179
+contig-63000000	R	contig-223000000	R	343	2	0	3	356	100	1	6	330	33
+contig-85000000	R	contig-244000000	F	105	2	0	27	104	56	1	32	107	56
