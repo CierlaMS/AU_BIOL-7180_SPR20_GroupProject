@@ -1,4 +1,3 @@
-
 #!/bin/sh
 #Reference genomes and Samples List
 path=/scratch/ashley_AU/pea_fastq/Step4_AW/Step4_multiline/paired_fastq

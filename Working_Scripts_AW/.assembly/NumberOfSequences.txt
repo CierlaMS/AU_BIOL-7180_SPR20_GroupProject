@@ -1,0 +1,15 @@
+Files: 2
+
+FileNumber: 0
+	FilePath: {}_1.fastq
+ 	NumberOfSequences: 0
+
+FileNumber: 1
+	FilePath: {}_2.fastq
+ 	NumberOfSequences: 0
+
+
+Summary
+	NumberOfSequences: 0
+	FirstSequence: 0
+	LastSequence: 18446744073709551615

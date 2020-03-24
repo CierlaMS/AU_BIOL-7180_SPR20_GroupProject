@@ -1,0 +1,8 @@
+mpiexec -n 4 Ray \
+ -k \
+ 21 \
+ -p \
+ {}_1.fastq \
+ {}_2.fastq \
+ -o \
+ .assembly
