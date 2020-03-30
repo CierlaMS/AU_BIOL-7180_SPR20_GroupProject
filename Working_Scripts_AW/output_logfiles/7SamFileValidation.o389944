@@ -1,0 +1,102 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: 7_SamFileValidation.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.7SamFileValidation.389944
+  The memory limit is: 2gb
+  The job will start running after: 2020-03-30T13:16:57
+  Job Name: 7SamFileValidation
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc5
+  Node list:  dmc5
+  Nodes:  dmc5
+  Command typed:
+/apps/scripts/run_script 7_SamFileValidation.sh     
+  Queue submit command:
+sbatch --qos=class -J 7SamFileValidation --begin=2020-03-30T13:16:57 --requeue --mail-user=asw0049@auburn.edu -o 7SamFileValidation.o389944 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=2000mb --constraint=dmc 
+[Mon Mar 30 13:18:09 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740748.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740748.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:18:09 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:18:21 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.20 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:18:21 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740747.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740747.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:18:21 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:18:34 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.21 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:18:34 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740746.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740746.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:18:34 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:18:47 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.21 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:18:48 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740745.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740745.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:18:48 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:19:00 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.21 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:19:01 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740744.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740744.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:19:01 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:19:12 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.19 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:19:13 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740743.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740743.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:19:13 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:19:23 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.18 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:19:24 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740742.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740742.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:19:24 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:19:35 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.18 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:19:35 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740741.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740741.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:19:35 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:19:46 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.17 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:19:46 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740740.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740740.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:19:46 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:19:57 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.19 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:19:58 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740739.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/Sal_Ref_genome.SRR10740739.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:19:58 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:20:10 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.20 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:20:11 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740748.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740748.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:20:11 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:20:23 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.20 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:20:23 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740747.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740747.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:20:23 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:20:34 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.18 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:20:35 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740746.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740746.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:20:35 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:20:47 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.21 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:20:48 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740745.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740745.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:20:48 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:21:00 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.21 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:21:01 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740744.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740744.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:21:01 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:21:13 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.20 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:21:14 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740743.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740743.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:21:14 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:21:26 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.20 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:21:27 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740742.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740742.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:21:27 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:21:37 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.18 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:21:38 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740741.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740741.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:21:38 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:21:48 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.16 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:21:48 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740740.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740740.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:21:48 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:21:59 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.18 minutes.
+Runtime.totalMemory()=2039414784
+[Mon Mar 30 13:22:00 CDT 2020] net.sf.picard.sam.ValidateSamFile INPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740739.sorted.bam OUTPUT=/scratch/AU_BIOL-7180_GrpProject/sorted_bam_files_AW/WT_2012_ref_assembly.SRR10740739.val.outputSummary MODE=SUMMARY    MAX_OUTPUT=100 IGNORE_WARNINGS=false VALIDATE_INDEX=true IS_BISULFITE_SEQUENCED=false MAX_OPEN_TEMP_FILES=8000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Mar 30 13:22:00 CDT 2020] Executing as aubcls71@dmc5.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Mon Mar 30 13:22:11 CDT 2020] net.sf.picard.sam.ValidateSamFile done. Elapsed time: 0.19 minutes.
+Runtime.totalMemory()=2039414784
