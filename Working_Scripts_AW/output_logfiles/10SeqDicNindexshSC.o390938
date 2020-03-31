@@ -1,0 +1,30 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: 10_SeqDicNindex.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.10SeqDicNindexshSC.390938
+  The memory limit is: 1gb
+  The job will start running after: 2020-03-31T13:52:36
+  Job Name: 10SeqDicNindexshSC
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc19
+  Node list:  dmc19
+  Nodes:  dmc19
+  Command typed:
+/apps/scripts/run_script 10_SeqDicNindex.sh     
+  Queue submit command:
+sbatch --qos=class -J 10SeqDicNindexshSC --begin=2020-03-31T13:52:36 --requeue --mail-user=asw0049@auburn.edu -o 10SeqDicNindexshSC.o390938 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=1000mb --constraint=dmc 
+[Tue Mar 31 13:53:16 CDT 2020] net.sf.picard.sam.CreateSequenceDictionary REFERENCE=/scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.fasta OUTPUT=/scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.dict    TRUNCATE_NAMES_AT_WHITESPACE=true NUM_SEQUENCES=2147483647 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Tue Mar 31 13:53:16 CDT 2020] Executing as aubcls71@dmc19.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Tue Mar 31 13:53:16 CDT 2020] net.sf.picard.sam.CreateSequenceDictionary done. Elapsed time: 0.01 minutes.
+Runtime.totalMemory()=2075918336
+[Tue Mar 31 13:53:17 CDT 2020] net.sf.picard.sam.CreateSequenceDictionary REFERENCE=/home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta OUTPUT=/home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.dict    TRUNCATE_NAMES_AT_WHITESPACE=true NUM_SEQUENCES=2147483647 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Tue Mar 31 13:53:17 CDT 2020] Executing as aubcls71@dmc19.asc.edu on Linux 3.10.0-1062.4.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 1.79(1282)
+[Tue Mar 31 13:53:18 CDT 2020] net.sf.picard.sam.CreateSequenceDictionary done. Elapsed time: 0.01 minutes.
+Runtime.totalMemory()=2075918336
