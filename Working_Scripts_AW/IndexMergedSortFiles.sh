@@ -4,7 +4,7 @@
 ##Index Sorted or Merged Bam Alignment Files
 #
 path=/scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW
-declare -a merged_bams=("Sal_Ref_genome.sorted.merged.bam.gz" "WT_Ref_genome.sorted.merged.bam.gz")
+declare -a merged_bams=("Sal_Ref_genome.sorted.merged.bam" "WT_Ref_genome.sorted.merged.bam")
 
 ###############Setup Enviroment################
 module load samtools
@@ -12,7 +12,9 @@ module load samtools
 gunzip $path/*.gz
 
 for merged in ${merged_bams[@]}; do
-    samtools index $merged
+    samtools index $path/$merged
 done
 
 gzip $path/*.bam
+
+exit
