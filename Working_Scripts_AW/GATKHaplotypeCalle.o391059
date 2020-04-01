@@ -1,0 +1,592 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: GATK_HaplotypeCaller.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.GATKHaplotypeCalle.391059
+  The memory limit is: 4gb
+  The job will start running after: 2020-03-31T18:05:09
+  Job Name: GATKHaplotypeCalle
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  2  cores on master node  dmc14
+  Node list:  dmc14
+  Nodes:  dmc14 dmc14
+  Command typed:
+/apps/scripts/run_script GATK_HaplotypeCaller.sh     
+  Queue submit command:
+sbatch --qos=class -J GATKHaplotypeCalle --begin=2020-03-31T18:05:09 --requeue --mail-user=asw0049@auburn.edu -o GATKHaplotypeCalle.o391059 --mail-type=ALL -t 24:00:00 -N 1-1 -n 2 --mem-per-cpu=2000mb --constraint=dmc 
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4g -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar HaplotypeCaller -R /scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.fasta -I /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.bam -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz -ERC GVCF
+18:06:11.377 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 31, 2020 6:06:16 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+18:06:16.905 INFO  HaplotypeCaller - ------------------------------------------------------------
+18:06:16.907 INFO  HaplotypeCaller - The Genome Analysis Toolkit (GATK) v4.1.4.0
+18:06:16.907 INFO  HaplotypeCaller - For support and documentation go to https://software.broadinstitute.org/gatk/
+18:06:16.908 INFO  HaplotypeCaller - Executing as aubcls71@dmc14.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+18:06:16.909 INFO  HaplotypeCaller - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+18:06:16.909 INFO  HaplotypeCaller - Start Date/Time: March 31, 2020 6:06:11 PM CDT
+18:06:16.910 INFO  HaplotypeCaller - ------------------------------------------------------------
+18:06:16.910 INFO  HaplotypeCaller - ------------------------------------------------------------
+18:06:16.912 INFO  HaplotypeCaller - HTSJDK Version: 2.20.3
+18:06:16.912 INFO  HaplotypeCaller - Picard Version: 2.21.1
+18:06:16.913 INFO  HaplotypeCaller - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+18:06:16.913 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+18:06:16.914 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+18:06:16.914 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+18:06:16.915 INFO  HaplotypeCaller - Deflater: IntelDeflater
+18:06:16.915 INFO  HaplotypeCaller - Inflater: IntelInflater
+18:06:16.915 INFO  HaplotypeCaller - GCS max retries/reopens: 20
+18:06:16.916 INFO  HaplotypeCaller - Requester pays: disabled
+18:06:16.916 INFO  HaplotypeCaller - Initializing engine
+18:06:18.114 INFO  HaplotypeCaller - Done initializing engine
+18:06:18.118 INFO  HaplotypeCallerEngine - Tool is in reference confidence mode and the annotation, the following changes will be made to any specified annotations: 'StrandBiasBySample' will be enabled. 'ChromosomeCounts', 'FisherStrand', 'StrandOddsRatio' and 'QualByDepth' annotations have been disabled
+18:06:18.131 INFO  HaplotypeCallerEngine - Standard Emitting and Calling confidence set to 0.0 for reference-model confidence output
+18:06:18.132 INFO  HaplotypeCallerEngine - All sites annotated with PLs forced to true for reference-model confidence output
+18:06:18.149 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+18:06:18.155 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+18:06:18.206 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+18:06:18.208 INFO  IntelPairHmm - Available threads: 2
+18:06:18.209 INFO  IntelPairHmm - Requested threads: 4
+18:06:18.209 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+18:06:18.210 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+18:06:18.268 INFO  ProgressMeter - Starting traversal
+18:06:18.275 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+18:06:21.115 WARN  InbreedingCoeff - InbreedingCoeff will not be calculated; at least 10 samples must have called genotypes
+18:06:29.945 INFO  ProgressMeter - NZ_LHMO01000001.1:4290              0.2                    20            102.8
+18:06:41.345 INFO  ProgressMeter - NZ_LHMO01000010.1:6426              0.4                    50            130.0
+18:06:52.318 INFO  ProgressMeter - NZ_LHMO01000010.1:13776              0.6                    80            141.0
+18:07:03.769 INFO  ProgressMeter - NZ_LHMO01000010.1:27199              0.8                   130            171.5
+18:07:14.687 INFO  ProgressMeter - NZ_LHMO01000011.1:2697              0.9                   170            180.8
+18:07:29.297 INFO  ProgressMeter - NZ_LHMO01000011.1:14046              1.2                   210            177.4
+18:07:40.588 INFO  ProgressMeter - NZ_LHMO01000011.1:19275              1.4                   230            167.7
+18:07:54.176 INFO  ProgressMeter - NZ_LHMO01000011.1:32836              1.6                   280            175.2
+18:08:05.428 INFO  ProgressMeter - NZ_LHMO01000011.1:41234              1.8                   310            173.6
+18:08:16.974 INFO  ProgressMeter - NZ_LHMO01000011.1:54790              2.0                   360            182.0
+18:08:32.177 INFO  ProgressMeter - NZ_LHMO01000011.1:62891              2.2                   390            174.8
+18:08:42.769 INFO  ProgressMeter - NZ_LHMO01000011.1:70875              2.4                   420            174.4
+18:08:57.469 INFO  ProgressMeter - NZ_LHMO01000011.1:87155              2.7                   480            180.9
+18:09:07.670 INFO  ProgressMeter - NZ_LHMO01000011.1:97728              2.8                   520            184.2
+18:09:19.077 INFO  ProgressMeter - NZ_LHMO01000011.1:105094              3.0                   550            182.5
+18:09:34.961 INFO  ProgressMeter - NZ_LHMO01000011.1:115409              3.3                   590            180.0
+18:09:47.152 INFO  ProgressMeter - NZ_LHMO01000011.1:126573              3.5                   630            181.0
+18:09:58.033 INFO  ProgressMeter - NZ_LHMO01000011.1:134562              3.7                   660            180.2
+18:10:08.233 INFO  ProgressMeter - NZ_LHMO01000011.1:151861              3.8                   720            187.9
+18:10:18.903 INFO  ProgressMeter - NZ_LHMO01000011.1:163236              4.0                   760            189.5
+18:10:32.297 INFO  ProgressMeter - NZ_LHMO01000012.1:3891              4.2                   780            184.2
+18:10:45.693 INFO  ProgressMeter - NZ_LHMO01000012.1:20031              4.5                   840            188.5
+18:10:57.039 INFO  ProgressMeter - NZ_LHMO01000012.1:39972              4.6                   910            195.9
+18:11:09.481 INFO  ProgressMeter - NZ_LHMO01000012.1:50537              4.9                   950            195.7
+18:11:20.449 INFO  ProgressMeter - NZ_LHMO01000012.1:55373              5.0                   970            192.6
+18:11:30.669 INFO  ProgressMeter - NZ_LHMO01000012.1:64501              5.2                  1010            194.0
+18:11:41.836 INFO  ProgressMeter - NZ_LHMO01000012.1:77794              5.4                  1060            196.6
+18:11:54.149 INFO  ProgressMeter - NZ_LHMO01000012.1:92217              5.6                  1110            198.3
+18:12:07.779 INFO  ProgressMeter - NZ_LHMO01000012.1:102521              5.8                  1150            197.4
+18:12:18.341 INFO  ProgressMeter - NZ_LHMO01000012.1:114274              6.0                  1200            200.0
+18:12:29.397 INFO  ProgressMeter - NZ_LHMO01000012.1:122193              6.2                  1230            198.9
+18:12:44.625 INFO  ProgressMeter - NZ_LHMO01000012.1:133514              6.4                  1270            197.2
+18:12:54.789 INFO  ProgressMeter - NZ_LHMO01000012.1:138446              6.6                  1290            195.2
+18:13:04.896 INFO  ProgressMeter - NZ_LHMO01000012.1:147590              6.8                  1330            196.3
+18:13:15.357 INFO  ProgressMeter - NZ_LHMO01000012.1:157360              7.0                  1370            197.1
+18:13:28.196 INFO  ProgressMeter - NZ_LHMO01000012.1:165475              7.2                  1400            195.4
+18:13:39.391 INFO  ProgressMeter - NZ_LHMO01000012.1:172460              7.4                  1430            194.5
+18:13:50.311 INFO  ProgressMeter - NZ_LHMO01000012.1:183059              7.5                  1470            195.1
+18:14:00.872 INFO  ProgressMeter - NZ_LHMO01000012.1:197274              7.7                  1520            197.1
+18:14:11.057 INFO  ProgressMeter - NZ_LHMO01000012.1:211096              7.9                  1570            199.2
+18:14:22.062 INFO  ProgressMeter - NZ_LHMO01000012.1:221789              8.1                  1610            199.7
+18:14:33.720 INFO  ProgressMeter - NZ_LHMO01000013.1:2335              8.3                  1640            198.6
+18:14:49.945 INFO  ProgressMeter - NZ_LHMO01000013.1:12487              8.5                  1680            197.0
+18:15:01.228 INFO  ProgressMeter - NZ_LHMO01000013.1:20425              8.7                  1710            196.2
+18:15:15.450 INFO  ProgressMeter - NZ_LHMO01000013.1:30935              9.0                  1750            195.5
+18:15:26.978 INFO  ProgressMeter - NZ_LHMO01000013.1:36446              9.1                  1770            193.5
+18:15:38.838 INFO  ProgressMeter - NZ_LHMO01000013.1:43866              9.3                  1800            192.7
+18:15:51.122 INFO  ProgressMeter - NZ_LHMO01000013.1:54366              9.5                  1840            192.7
+18:16:05.293 INFO  ProgressMeter - NZ_LHMO01000013.1:67965              9.8                  1890            193.2
+18:16:17.864 INFO  ProgressMeter - NZ_LHMO01000013.1:79190             10.0                  1930            193.1
+18:16:28.773 INFO  ProgressMeter - NZ_LHMO01000013.1:90265             10.2                  1970            193.6
+18:16:39.100 INFO  ProgressMeter - NZ_LHMO01000013.1:97619             10.3                  2000            193.3
+18:16:50.382 INFO  ProgressMeter - NZ_LHMO01000013.1:102654             10.5                  2020            191.7
+18:17:03.398 INFO  ProgressMeter - NZ_LHMO01000013.1:112821             10.8                  2060            191.6
+18:17:14.508 INFO  ProgressMeter - NZ_LHMO01000013.1:127065             10.9                  2110            192.9
+18:17:24.734 INFO  ProgressMeter - NZ_LHMO01000013.1:140435             11.1                  2160            194.5
+18:17:32.248 WARN  DepthPerSampleHC - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.249 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.250 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.251 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.254 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.255 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.256 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.257 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.259 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:32.440 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:17:37.941 INFO  ProgressMeter - NZ_LHMO01000013.1:181586             11.3                  2310            203.9
+18:17:50.632 INFO  ProgressMeter - NZ_LHMO01000013.1:197349             11.5                  2370            205.4
+18:18:00.639 INFO  ProgressMeter - NZ_LHMO01000013.1:205281             11.7                  2400            205.0
+18:18:15.154 INFO  ProgressMeter - NZ_LHMO01000013.1:221665             11.9                  2460            205.9
+18:18:25.824 INFO  ProgressMeter - NZ_LHMO01000013.1:229724             12.1                  2490            205.3
+18:18:37.803 INFO  ProgressMeter - NZ_LHMO01000013.1:237263             12.3                  2520            204.5
+18:18:49.860 INFO  ProgressMeter - NZ_LHMO01000013.1:247555             12.5                  2560            204.4
+18:19:01.619 INFO  ProgressMeter - NZ_LHMO01000013.1:252393             12.7                  2580            202.8
+18:19:14.592 INFO  ProgressMeter - NZ_LHMO01000013.1:257606             12.9                  2600            200.9
+18:19:26.485 INFO  ProgressMeter - NZ_LHMO01000013.1:262403             13.1                  2620            199.4
+18:19:37.371 INFO  ProgressMeter - NZ_LHMO01000013.1:276128             13.3                  2670            200.5
+18:19:52.287 INFO  ProgressMeter - NZ_LHMO01000013.1:289850             13.6                  2720            200.5
+18:20:04.007 INFO  ProgressMeter - NZ_LHMO01000013.1:303858             13.8                  2770            201.3
+18:20:16.085 INFO  ProgressMeter - NZ_LHMO01000013.1:317810             14.0                  2820            202.0
+18:20:27.381 INFO  ProgressMeter - NZ_LHMO01000013.1:331578             14.2                  2870            202.8
+18:20:40.378 INFO  ProgressMeter - NZ_LHMO01000013.1:348726             14.4                  2930            203.9
+18:20:50.805 INFO  ProgressMeter - NZ_LHMO01000013.1:359692             14.5                  2970            204.2
+18:20:56.427 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:21:02.255 INFO  ProgressMeter - NZ_LHMO01000014.1:13478             14.7                  3070            208.4
+18:21:12.694 INFO  ProgressMeter - NZ_LHMO01000014.1:18796             14.9                  3090            207.3
+18:21:22.794 INFO  ProgressMeter - NZ_LHMO01000014.1:32551             15.1                  3140            208.3
+18:21:34.154 INFO  ProgressMeter - NZ_LHMO01000014.1:37550             15.3                  3160            207.0
+18:21:44.935 INFO  ProgressMeter - NZ_LHMO01000014.1:48132             15.4                  3200            207.2
+18:22:00.742 INFO  ProgressMeter - NZ_LHMO01000014.1:57087             15.7                  3240            206.3
+18:22:10.889 INFO  ProgressMeter - NZ_LHMO01000014.1:64818             15.9                  3270            206.0
+18:22:25.483 INFO  ProgressMeter - NZ_LHMO01000014.1:69571             16.1                  3290            204.1
+18:22:38.248 INFO  ProgressMeter - NZ_LHMO01000014.1:80075             16.3                  3330            203.9
+18:22:48.566 INFO  ProgressMeter - NZ_LHMO01000014.1:90263             16.5                  3370            204.2
+18:22:59.235 INFO  ProgressMeter - NZ_LHMO01000014.1:112865             16.7                  3450            206.8
+18:23:10.400 INFO  ProgressMeter - NZ_LHMO01000014.1:126195             16.9                  3500            207.5
+18:23:23.702 INFO  ProgressMeter - NZ_LHMO01000014.1:141807             17.1                  3560            208.3
+18:23:37.649 INFO  ProgressMeter - NZ_LHMO01000014.1:160689             17.3                  3630            209.5
+18:23:49.863 INFO  ProgressMeter - NZ_LHMO01000014.1:179821             17.5                  3700            211.1
+18:24:02.398 INFO  ProgressMeter - NZ_LHMO01000014.1:193029             17.7                  3750            211.4
+18:24:13.850 INFO  ProgressMeter - NZ_LHMO01000014.1:208216             17.9                  3810            212.5
+18:24:29.803 INFO  ProgressMeter - NZ_LHMO01000014.1:218173             18.2                  3850            211.6
+18:24:39.875 INFO  ProgressMeter - NZ_LHMO01000014.1:228223             18.4                  3890            211.9
+18:24:50.744 INFO  ProgressMeter - NZ_LHMO01000014.1:238690             18.5                  3930            212.0
+18:25:03.776 INFO  ProgressMeter - NZ_LHMO01000014.1:261700             18.8                  4010            213.8
+18:25:13.885 INFO  ProgressMeter - NZ_LHMO01000014.1:272100             18.9                  4050            214.0
+18:25:25.723 INFO  ProgressMeter - NZ_LHMO01000014.1:284263             19.1                  4100            214.4
+18:25:36.189 INFO  ProgressMeter - NZ_LHMO01000014.1:298000             19.3                  4150            215.0
+18:25:47.956 INFO  ProgressMeter - NZ_LHMO01000014.1:309357             19.5                  4190            214.9
+18:25:58.559 INFO  ProgressMeter - NZ_LHMO01000014.1:332711             19.7                  4270            217.1
+18:26:10.779 INFO  ProgressMeter - NZ_LHMO01000014.1:352377             19.9                  4340            218.4
+18:26:27.820 INFO  ProgressMeter - NZ_LHMO01000014.1:371046             20.2                  4410            218.8
+18:26:40.925 INFO  ProgressMeter - NZ_LHMO01000014.1:375519             20.4                  4430            217.4
+18:26:51.559 INFO  ProgressMeter - NZ_LHMO01000014.1:389125             20.6                  4480            218.0
+18:27:02.281 INFO  ProgressMeter - NZ_LHMO01000014.1:401262             20.7                  4530            218.5
+18:27:17.806 INFO  ProgressMeter - NZ_LHMO01000014.1:414117             21.0                  4580            218.2
+18:27:30.296 INFO  ProgressMeter - NZ_LHMO01000015.1:4908             21.2                  4630            218.4
+18:27:40.415 INFO  ProgressMeter - NZ_LHMO01000015.1:12051             21.4                  4660            218.1
+18:27:53.235 INFO  ProgressMeter - NZ_LHMO01000015.1:23104             21.6                  4700            217.8
+18:28:04.419 INFO  ProgressMeter - NZ_LHMO01000015.1:28298             21.8                  4720            216.8
+18:28:14.755 INFO  ProgressMeter - NZ_LHMO01000015.1:39064             21.9                  4760            216.9
+18:28:27.310 INFO  ProgressMeter - NZ_LHMO01000015.1:56204             22.2                  4820            217.6
+18:28:37.729 INFO  ProgressMeter - NZ_LHMO01000015.1:63766             22.3                  4850            217.3
+18:28:50.581 INFO  ProgressMeter - NZ_LHMO01000015.1:74710             22.5                  4890            217.0
+18:29:01.925 INFO  ProgressMeter - NZ_LHMO01000015.1:85923             22.7                  4930            216.9
+18:29:32.538 INFO  ProgressMeter - NZ_LHMO01000016.1:686             23.2                  4970            213.9
+18:29:51.076 INFO  ProgressMeter - NZ_LHMO01000017.1:652             23.5                  4980            211.5
+18:30:02.875 INFO  ProgressMeter - NZ_LHMO01000017.1:8482             23.7                  5010            211.0
+18:30:16.687 INFO  ProgressMeter - NZ_LHMO01000017.1:21306             24.0                  5060            211.1
+18:30:27.675 INFO  ProgressMeter - NZ_LHMO01000017.1:31969             24.2                  5100            211.1
+18:30:40.241 INFO  ProgressMeter - NZ_LHMO01000017.1:46166             24.4                  5150            211.4
+18:30:54.100 INFO  ProgressMeter - NZ_LHMO01000017.1:54139             24.6                  5180            210.6
+18:31:04.824 INFO  ProgressMeter - NZ_LHMO01000017.1:64864             24.8                  5220            210.7
+18:31:15.804 INFO  ProgressMeter - NZ_LHMO01000018.1:7193             25.0                  5270            211.1
+18:31:30.833 INFO  ProgressMeter - NZ_LHMO01000018.1:10941             25.2                  5290            209.8
+18:31:43.799 INFO  ProgressMeter - NZ_LHMO01000018.1:22057             25.4                  5330            209.6
+18:31:56.953 INFO  ProgressMeter - NZ_LHMO01000018.1:28520             25.6                  5360            209.0
+18:32:07.678 INFO  ProgressMeter - NZ_LHMO01000018.1:36509             25.8                  5390            208.7
+18:32:19.154 INFO  ProgressMeter - NZ_LHMO01000018.1:57159             26.0                  5460            209.9
+18:32:30.017 INFO  ProgressMeter - NZ_LHMO01000018.1:73262             26.2                  5520            210.7
+18:32:40.294 INFO  ProgressMeter - NZ_LHMO01000018.1:80712             26.4                  5550            210.5
+18:32:51.815 INFO  ProgressMeter - NZ_LHMO01000018.1:94944             26.6                  5600            210.9
+18:33:05.271 INFO  ProgressMeter - NZ_LHMO01000018.1:99612             26.8                  5620            209.8
+18:33:16.089 INFO  ProgressMeter - NZ_LHMO01000018.1:110856             27.0                  5660            209.9
+18:33:35.005 INFO  ProgressMeter - NZ_LHMO01000018.1:121667             27.3                  5700            209.0
+18:33:47.804 INFO  ProgressMeter - NZ_LHMO01000018.1:135317             27.5                  5750            209.2
+18:33:58.134 INFO  ProgressMeter - NZ_LHMO01000019.1:4266             27.7                  5800            209.7
+18:34:10.855 INFO  ProgressMeter - NZ_LHMO01000019.1:17235             27.9                  5850            209.9
+18:34:22.143 INFO  ProgressMeter - NZ_LHMO01000019.1:30144             28.1                  5900            210.2
+18:34:33.039 INFO  ProgressMeter - NZ_LHMO01000019.1:43881             28.2                  5950            210.6
+18:34:43.191 INFO  ProgressMeter - NZ_LHMO01000019.1:51318             28.4                  5980            210.5
+18:34:53.227 INFO  ProgressMeter - NZ_LHMO01000019.1:54025             28.6                  5990            209.6
+18:35:04.783 INFO  ProgressMeter - NZ_LHMO01000019.1:56166             28.8                  6000            208.5
+18:35:15.045 INFO  ProgressMeter - NZ_LHMO01000019.1:67337             28.9                  6040            208.7
+18:35:25.636 INFO  ProgressMeter - NZ_LHMO01000019.1:81116             29.1                  6090            209.1
+18:35:38.129 INFO  ProgressMeter - NZ_LHMO01000019.1:91268             29.3                  6130            209.0
+18:35:51.034 INFO  ProgressMeter - NZ_LHMO01000002.1:4536             29.5                  6160            208.5
+18:36:03.598 INFO  ProgressMeter - NZ_LHMO01000002.1:15286             29.8                  6200            208.4
+18:36:15.463 INFO  ProgressMeter - NZ_LHMO01000002.1:25705             30.0                  6240            208.3
+18:36:26.108 INFO  ProgressMeter - NZ_LHMO01000002.1:37227             30.1                  6280            208.4
+18:36:37.753 INFO  ProgressMeter - NZ_LHMO01000020.1:652             30.3                  6320            208.4
+18:36:49.083 INFO  ProgressMeter - NZ_LHMO01000020.1:11719             30.5                  6360            208.4
+18:37:00.935 INFO  ProgressMeter - NZ_LHMO01000020.1:18657             30.7                  6390            208.1
+18:37:12.160 INFO  ProgressMeter - NZ_LHMO01000020.1:33080             30.9                  6440            208.4
+18:37:24.210 INFO  ProgressMeter - NZ_LHMO01000020.1:43825             31.1                  6480            208.4
+18:37:37.147 INFO  ProgressMeter - NZ_LHMO01000020.1:51896             31.3                  6510            207.9
+18:37:47.395 INFO  ProgressMeter - NZ_LHMO01000020.1:62850             31.5                  6550            208.0
+18:37:59.662 INFO  ProgressMeter - NZ_LHMO01000020.1:73993             31.7                  6590            208.0
+18:38:10.471 INFO  ProgressMeter - NZ_LHMO01000021.1:11953             31.9                  6640            208.3
+18:38:26.969 INFO  ProgressMeter - NZ_LHMO01000021.1:19616             32.1                  6670            207.5
+18:38:39.459 INFO  ProgressMeter - NZ_LHMO01000021.1:36577             32.4                  6730            208.0
+18:38:50.103 INFO  ProgressMeter - NZ_LHMO01000021.1:38181             32.5                  6740            207.2
+18:39:04.084 INFO  ProgressMeter - NZ_LHMO01000021.1:52675             32.8                  6790            207.2
+18:39:15.384 INFO  ProgressMeter - NZ_LHMO01000021.1:62707             33.0                  6830            207.3
+18:39:25.982 INFO  ProgressMeter - NZ_LHMO01000021.1:79239             33.1                  6890            208.0
+18:39:36.854 INFO  ProgressMeter - NZ_LHMO01000021.1:84184             33.3                  6910            207.4
+18:39:49.327 INFO  ProgressMeter - NZ_LHMO01000021.1:90971             33.5                  6940            207.1
+18:40:03.102 INFO  ProgressMeter - NZ_LHMO01000021.1:101170             33.7                  6980            206.8
+18:40:23.498 INFO  ProgressMeter - NZ_LHMO01000021.1:111317             34.1                  7020            205.9
+18:40:40.769 INFO  ProgressMeter - NZ_LHMO01000021.1:118994             34.4                  7050            205.1
+18:40:53.125 INFO  ProgressMeter - NZ_LHMO01000021.1:130096             34.6                  7090            205.0
+18:41:03.153 INFO  ProgressMeter - NZ_LHMO01000021.1:141414             34.7                  7130            205.2
+18:41:14.453 INFO  ProgressMeter - NZ_LHMO01000021.1:148901             34.9                  7160            204.9
+18:41:25.459 INFO  ProgressMeter - NZ_LHMO01000021.1:159722             35.1                  7200            205.0
+18:41:36.064 INFO  ProgressMeter - NZ_LHMO01000021.1:166947             35.3                  7230            204.8
+18:41:52.139 INFO  ProgressMeter - NZ_LHMO01000021.1:172055             35.6                  7250            203.9
+18:42:04.410 INFO  ProgressMeter - NZ_LHMO01000021.1:182411             35.8                  7290            203.8
+18:42:15.661 INFO  ProgressMeter - NZ_LHMO01000021.1:187002             36.0                  7310            203.3
+18:42:26.183 INFO  ProgressMeter - NZ_LHMO01000021.1:195031             36.1                  7340            203.1
+18:42:37.644 INFO  ProgressMeter - NZ_LHMO01000021.1:205377             36.3                  7380            203.2
+18:42:51.634 INFO  ProgressMeter - NZ_LHMO01000021.1:215651             36.6                  7420            203.0
+18:43:03.469 INFO  ProgressMeter - NZ_LHMO01000021.1:231743             36.8                  7480            203.5
+18:43:15.360 INFO  ProgressMeter - NZ_LHMO01000021.1:239132             37.0                  7510            203.2
+18:43:25.482 INFO  ProgressMeter - NZ_LHMO01000021.1:250185             37.1                  7550            203.4
+18:43:35.568 INFO  ProgressMeter - NZ_LHMO01000021.1:255283             37.3                  7570            203.0
+18:43:46.084 INFO  ProgressMeter - NZ_LHMO01000021.1:266082             37.5                  7610            203.1
+18:43:56.537 INFO  ProgressMeter - NZ_LHMO01000021.1:279571             37.6                  7660            203.5
+18:44:08.757 INFO  ProgressMeter - NZ_LHMO01000021.1:290311             37.8                  7700            203.5
+18:44:24.267 INFO  ProgressMeter - NZ_LHMO01000021.1:300943             38.1                  7740            203.2
+18:44:35.075 INFO  ProgressMeter - NZ_LHMO01000022.1:1252             38.3                  7790            203.5
+18:44:48.222 INFO  ProgressMeter - NZ_LHMO01000022.1:17320             38.5                  7850            203.9
+18:45:02.640 INFO  ProgressMeter - NZ_LHMO01000022.1:27132             38.7                  7890            203.7
+18:45:15.850 INFO  ProgressMeter - NZ_LHMO01000022.1:32196             39.0                  7910            203.0
+18:45:37.746 INFO  ProgressMeter - NZ_LHMO01000022.1:38520             39.3                  7940            201.9
+18:45:53.323 INFO  ProgressMeter - NZ_LHMO01000022.1:43502             39.6                  7960            201.1
+18:46:33.358 INFO  ProgressMeter - NZ_LHMO01000022.1:45518             40.3                  7970            198.0
+18:47:59.426 INFO  ProgressMeter - NZ_LHMO01000022.1:49820             41.7                  7990            191.7
+18:48:18.221 INFO  ProgressMeter - NZ_LHMO01000023.1:20657             42.0                  8070            192.1
+18:48:29.101 INFO  ProgressMeter - NZ_LHMO01000023.1:34232             42.2                  8120            192.5
+18:48:39.867 INFO  ProgressMeter - NZ_LHMO01000023.1:44654             42.4                  8160            192.6
+18:48:55.641 INFO  ProgressMeter - NZ_LHMO01000023.1:49595             42.6                  8180            191.9
+18:49:06.704 INFO  ProgressMeter - NZ_LHMO01000023.1:57218             42.8                  8210            191.8
+18:49:20.988 INFO  ProgressMeter - NZ_LHMO01000023.1:73316             43.0                  8270            192.1
+18:49:31.890 INFO  ProgressMeter - NZ_LHMO01000023.1:90312             43.2                  8330            192.7
+18:49:42.367 INFO  ProgressMeter - NZ_LHMO01000023.1:100829             43.4                  8370            192.9
+18:49:55.240 INFO  ProgressMeter - NZ_LHMO01000023.1:108469             43.6                  8400            192.6
+18:50:05.995 INFO  ProgressMeter - NZ_LHMO01000024.1:9652             43.8                  8470            193.4
+18:50:17.494 INFO  ProgressMeter - NZ_LHMO01000024.1:21286             44.0                  8510            193.5
+18:50:33.868 INFO  ProgressMeter - NZ_LHMO01000025.1:1249             44.3                  8540            193.0
+18:50:44.358 INFO  ProgressMeter - NZ_LHMO01000025.1:17944             44.4                  8600            193.5
+18:50:55.236 INFO  ProgressMeter - NZ_LHMO01000025.1:27929             44.6                  8640            193.7
+18:51:05.869 INFO  ProgressMeter - NZ_LHMO01000025.1:34886             44.8                  8670            193.6
+18:51:17.410 INFO  ProgressMeter - NZ_LHMO01000025.1:52012             45.0                  8730            194.1
+18:51:32.438 INFO  ProgressMeter - NZ_LHMO01000025.1:62789             45.2                  8770            193.9
+18:51:44.868 INFO  ProgressMeter - NZ_LHMO01000025.1:78345             45.4                  8830            194.3
+18:51:56.211 INFO  ProgressMeter - NZ_LHMO01000025.1:97861             45.6                  8900            195.0
+18:52:11.278 INFO  ProgressMeter - NZ_LHMO01000025.1:109889             45.9                  8950            195.1
+18:52:22.869 INFO  ProgressMeter - NZ_LHMO01000026.1:8922             46.1                  8990            195.1
+18:52:35.177 INFO  ProgressMeter - NZ_LHMO01000027.1:540             46.3                  9000            194.5
+18:53:06.484 INFO  ProgressMeter - NZ_LHMO01000028.1:47             46.8                  9010            192.5
+18:53:25.821 INFO  ProgressMeter - NZ_LHMO01000028.1:1800             47.1                  9020            191.4
+18:54:17.445 INFO  ProgressMeter - NZ_LHMO01000028.1:3780             48.0                  9030            188.2
+18:54:52.439 INFO  ProgressMeter - NZ_LHMO01000028.1:5067             48.6                  9040            186.1
+18:55:05.445 INFO  ProgressMeter - NZ_LHMO01000028.1:6432             48.8                  9050            185.5
+18:55:26.843 INFO  ProgressMeter - NZ_LHMO01000028.1:7657             49.1                  9060            184.4
+18:55:59.291 INFO  ProgressMeter - NZ_LHMO01000028.1:8992             49.7                  9070            182.6
+18:56:19.838 INFO  ProgressMeter - NZ_LHMO01000028.1:11035             50.0                  9080            181.5
+18:56:49.344 INFO  ProgressMeter - NZ_LHMO01000028.1:15082             50.5                  9100            180.1
+18:57:00.390 INFO  ProgressMeter - NZ_LHMO01000028.1:17711             50.7                  9110            179.7
+18:57:13.482 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:13.484 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:13.485 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:13.485 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:13.486 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:13.487 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:13.488 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:13.489 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+18:57:28.820 INFO  ProgressMeter - NZ_LHMO01000028.1:20988             51.2                  9130            178.4
+18:57:44.516 INFO  ProgressMeter - NZ_LHMO01000029.1:6849             51.4                  9170            178.3
+18:57:56.778 INFO  ProgressMeter - NZ_LHMO01000029.1:20048             51.6                  9220            178.5
+18:58:13.099 INFO  ProgressMeter - NZ_LHMO01000029.1:26878             51.9                  9250            178.2
+18:58:27.164 INFO  ProgressMeter - NZ_LHMO01000029.1:43152             52.1                  9310            178.5
+18:58:38.498 INFO  ProgressMeter - NZ_LHMO01000003.1:8399             52.3                  9380            179.2
+18:58:49.173 INFO  ProgressMeter - NZ_LHMO01000003.1:27918             52.5                  9450            179.9
+18:58:59.927 INFO  ProgressMeter - NZ_LHMO01000003.1:44628             52.7                  9510            180.5
+18:59:13.960 INFO  ProgressMeter - NZ_LHMO01000003.1:49638             52.9                  9530            180.1
+18:59:27.154 INFO  ProgressMeter - NZ_LHMO01000003.1:54360             53.1                  9550            179.7
+18:59:37.922 INFO  ProgressMeter - NZ_LHMO01000003.1:70792             53.3                  9610            180.2
+18:59:49.306 INFO  ProgressMeter - NZ_LHMO01000003.1:89924             53.5                  9680            180.9
+18:59:59.330 INFO  ProgressMeter - NZ_LHMO01000003.1:97789             53.7                  9710            180.9
+19:00:10.302 INFO  ProgressMeter - NZ_LHMO01000003.1:107445             53.9                  9750            181.0
+19:00:23.442 INFO  ProgressMeter - NZ_LHMO01000003.1:120573             54.1                  9800            181.2
+19:00:34.664 INFO  ProgressMeter - NZ_LHMO01000003.1:132846             54.3                  9850            181.5
+19:00:47.670 INFO  ProgressMeter - NZ_LHMO01000003.1:148544             54.5                  9910            181.9
+19:00:59.202 INFO  ProgressMeter - NZ_LHMO01000003.1:160844             54.7                  9960            182.1
+19:01:10.637 INFO  ProgressMeter - NZ_LHMO01000003.1:177548             54.9                 10020            182.6
+19:01:21.148 INFO  ProgressMeter - NZ_LHMO01000003.1:192638             55.0                 10080            183.1
+19:01:32.149 INFO  ProgressMeter - NZ_LHMO01000003.1:200278             55.2                 10110            183.0
+19:01:43.313 INFO  ProgressMeter - NZ_LHMO01000003.1:211237             55.4                 10150            183.2
+19:01:55.929 INFO  ProgressMeter - NZ_LHMO01000003.1:224117             55.6                 10200            183.4
+19:02:08.560 INFO  ProgressMeter - NZ_LHMO01000003.1:241016             55.8                 10260            183.7
+19:02:19.337 INFO  ProgressMeter - NZ_LHMO01000003.1:253934             56.0                 10310            184.0
+19:02:32.005 INFO  ProgressMeter - NZ_LHMO01000003.1:261394             56.2                 10340            183.9
+19:02:42.679 INFO  ProgressMeter - NZ_LHMO01000003.1:275100             56.4                 10390            184.2
+19:02:53.527 INFO  ProgressMeter - NZ_LHMO01000003.1:289033             56.6                 10440            184.5
+19:03:04.515 INFO  ProgressMeter - NZ_LHMO01000003.1:305218             56.8                 10500            185.0
+19:03:19.582 INFO  ProgressMeter - NZ_LHMO01000003.1:315364             57.0                 10540            184.8
+19:03:30.640 INFO  ProgressMeter - NZ_LHMO01000003.1:332272             57.2                 10600            185.3
+19:03:42.094 INFO  ProgressMeter - NZ_LHMO01000003.1:346048             57.4                 10650            185.5
+19:03:56.782 INFO  ProgressMeter - NZ_LHMO01000003.1:359188             57.6                 10700            185.6
+19:04:11.116 INFO  ProgressMeter - NZ_LHMO01000003.1:369342             57.9                 10740            185.6
+19:04:22.113 INFO  ProgressMeter - NZ_LHMO01000003.1:382905             58.1                 10790            185.8
+19:04:52.968 INFO  ProgressMeter - NZ_LHMO01000030.1:1073             58.6                 10820            184.7
+19:05:14.890 INFO  ProgressMeter - NZ_LHMO01000031.1:901             58.9                 10830            183.7
+19:05:28.319 INFO  ProgressMeter - NZ_LHMO01000032.1:12967             59.2                 10910            184.4
+19:05:40.552 INFO  ProgressMeter - NZ_LHMO01000032.1:24015             59.4                 10950            184.4
+19:05:52.453 INFO  ProgressMeter - NZ_LHMO01000032.1:34724             59.6                 10990            184.5
+19:06:07.946 INFO  ProgressMeter - NZ_LHMO01000032.1:42081             59.8                 11020            184.2
+19:06:23.467 INFO  ProgressMeter - NZ_LHMO01000032.1:61990             60.1                 11090            184.6
+19:06:37.551 INFO  ProgressMeter - NZ_LHMO01000034.1:7804             60.3                 11190            185.5
+19:06:49.046 INFO  ProgressMeter - NZ_LHMO01000034.1:17652             60.5                 11230            185.6
+19:07:02.737 INFO  ProgressMeter - NZ_LHMO01000036.1:2389             60.7                 11270            185.5
+19:07:23.397 INFO  ProgressMeter - NZ_LHMO01000036.1:4677             61.1                 11280            184.7
+19:07:36.882 INFO  ProgressMeter - NZ_LHMO01000036.1:5475             61.3                 11290            184.1
+19:07:48.933 INFO  ProgressMeter - NZ_LHMO01000037.1:2787             61.5                 11310            183.9
+19:08:00.093 INFO  ProgressMeter - NZ_LHMO01000037.1:19503             61.7                 11370            184.3
+19:08:10.158 INFO  ProgressMeter - NZ_LHMO01000004.1:5732             61.9                 11420            184.6
+19:08:24.379 INFO  ProgressMeter - NZ_LHMO01000004.1:16498             62.1                 11460            184.5
+19:08:35.525 INFO  ProgressMeter - NZ_LHMO01000004.1:27946             62.3                 11500            184.6
+19:08:45.747 INFO  ProgressMeter - NZ_LHMO01000004.1:35732             62.5                 11530            184.6
+19:08:55.971 INFO  ProgressMeter - NZ_LHMO01000004.1:49130             62.6                 11580            184.9
+19:09:10.285 INFO  ProgressMeter - NZ_LHMO01000004.1:62568             62.9                 11630            185.0
+19:09:23.374 INFO  ProgressMeter - NZ_LHMO01000004.1:75963             63.1                 11680            185.1
+19:09:42.537 INFO  ProgressMeter - NZ_LHMO01000004.1:88901             63.4                 11730            185.0
+19:10:58.062 INFO  ProgressMeter - NZ_LHMO01000041.1:162             64.7                 11750            181.7
+19:11:08.187 INFO  ProgressMeter - NZ_LHMO01000045.1:352             64.8                 11770            181.5
+19:11:20.891 INFO  ProgressMeter - NZ_LHMO01000005.1:5405             65.0                 11810            181.6
+19:11:32.532 INFO  ProgressMeter - NZ_LHMO01000005.1:13500             65.2                 11840            181.5
+19:11:44.503 INFO  ProgressMeter - NZ_LHMO01000005.1:27143             65.4                 11890            181.7
+19:11:57.644 INFO  ProgressMeter - NZ_LHMO01000005.1:38482             65.7                 11930            181.7
+19:12:15.213 INFO  ProgressMeter - NZ_LHMO01000005.1:42738             65.9                 11950            181.2
+19:12:26.418 INFO  ProgressMeter - NZ_LHMO01000005.1:49866             66.1                 11980            181.1
+19:12:36.691 INFO  ProgressMeter - NZ_LHMO01000005.1:60367             66.3                 12020            181.3
+19:12:48.867 INFO  ProgressMeter - NZ_LHMO01000005.1:67570             66.5                 12050            181.2
+19:13:03.205 INFO  ProgressMeter - NZ_LHMO01000005.1:77526             66.7                 12090            181.1
+19:13:16.202 INFO  ProgressMeter - NZ_LHMO01000005.1:87148             67.0                 12130            181.1
+19:13:26.793 INFO  ProgressMeter - NZ_LHMO01000005.1:100659             67.1                 12180            181.4
+19:13:38.563 INFO  ProgressMeter - NZ_LHMO01000005.1:110761             67.3                 12220            181.5
+19:13:51.275 INFO  ProgressMeter - NZ_LHMO01000005.1:115267             67.5                 12240            181.2
+19:14:03.067 INFO  ProgressMeter - NZ_LHMO01000005.1:129075             67.7                 12290            181.4
+19:14:13.125 INFO  ProgressMeter - NZ_LHMO01000005.1:139414             67.9                 12330            181.6
+19:14:25.166 INFO  ProgressMeter - NZ_LHMO01000005.1:152093             68.1                 12380            181.8
+19:14:37.707 INFO  ProgressMeter - NZ_LHMO01000005.1:160489             68.3                 12410            181.6
+19:14:52.816 INFO  ProgressMeter - NZ_LHMO01000005.1:167953             68.6                 12440            181.4
+19:15:03.981 INFO  ProgressMeter - NZ_LHMO01000005.1:173337             68.8                 12460            181.2
+19:15:14.484 INFO  ProgressMeter - NZ_LHMO01000005.1:183590             68.9                 12500            181.3
+19:15:25.727 INFO  ProgressMeter - NZ_LHMO01000005.1:194294             69.1                 12540            181.4
+19:15:37.048 INFO  ProgressMeter - NZ_LHMO01000005.1:200777             69.3                 12570            181.4
+19:15:47.489 INFO  ProgressMeter - NZ_LHMO01000005.1:205300             69.5                 12590            181.2
+19:15:57.798 INFO  ProgressMeter - NZ_LHMO01000005.1:224253             69.7                 12660            181.7
+19:16:09.668 INFO  ProgressMeter - NZ_LHMO01000005.1:237494             69.9                 12710            181.9
+19:16:20.336 INFO  ProgressMeter - NZ_LHMO01000005.1:245424             70.0                 12740            181.9
+19:16:32.040 INFO  ProgressMeter - NZ_LHMO01000005.1:261009             70.2                 12800            182.3
+19:16:45.372 INFO  ProgressMeter - NZ_LHMO01000005.1:274042             70.5                 12850            182.4
+19:17:00.048 INFO  ProgressMeter - NZ_LHMO01000005.1:289274             70.7                 12910            182.6
+19:17:10.652 INFO  ProgressMeter - NZ_LHMO01000005.1:294155             70.9                 12930            182.4
+19:17:22.691 INFO  ProgressMeter - NZ_LHMO01000005.1:298919             71.1                 12950            182.2
+19:17:29.255 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.257 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.259 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.260 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.261 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.261 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.262 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.263 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.264 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.265 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.265 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.266 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.267 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.268 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.269 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.269 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.270 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.271 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.272 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.273 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.274 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.274 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.275 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.276 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:29.277 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:17:47.836 INFO  ProgressMeter - NZ_LHMO01000006.1:1816             71.5                 13000            181.8
+19:18:00.878 INFO  ProgressMeter - NZ_LHMO01000006.1:16944             71.7                 13060            182.1
+19:18:11.341 INFO  ProgressMeter - NZ_LHMO01000006.1:27918             71.9                 13100            182.2
+19:18:20.147 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:18:20.148 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:18:20.149 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:18:20.150 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+19:18:27.980 INFO  ProgressMeter - NZ_LHMO01000007.1:986             72.2                 13260            183.8
+19:18:40.779 INFO  ProgressMeter - NZ_LHMO01000007.1:11690             72.4                 13300            183.8
+19:18:50.916 INFO  ProgressMeter - NZ_LHMO01000007.1:20127             72.5                 13330            183.8
+19:19:02.458 INFO  ProgressMeter - NZ_LHMO01000008.1:3660             72.7                 13390            184.1
+19:19:14.926 INFO  ProgressMeter - NZ_LHMO01000008.1:13291             72.9                 13430            184.1
+19:19:25.042 INFO  ProgressMeter - NZ_LHMO01000008.1:21018             73.1                 13460            184.1
+19:19:36.367 INFO  ProgressMeter - NZ_LHMO01000008.1:24420             73.3                 13480            183.9
+19:19:46.703 INFO  ProgressMeter - NZ_LHMO01000008.1:32805             73.5                 13510            183.9
+19:19:59.919 INFO  ProgressMeter - NZ_LHMO01000008.1:46313             73.7                 13560            184.0
+19:20:11.008 INFO  ProgressMeter - NZ_LHMO01000008.1:54377             73.9                 13590            183.9
+19:20:21.338 INFO  ProgressMeter - NZ_LHMO01000008.1:64887             74.1                 13630            184.1
+19:20:32.627 INFO  ProgressMeter - NZ_LHMO01000008.1:78889             74.2                 13680            184.3
+19:20:43.827 INFO  ProgressMeter - NZ_LHMO01000008.1:87244             74.4                 13710            184.2
+19:20:56.971 INFO  ProgressMeter - NZ_LHMO01000008.1:95098             74.6                 13740            184.1
+19:21:07.834 INFO  ProgressMeter - NZ_LHMO01000008.1:106522             74.8                 13780            184.2
+19:21:23.139 INFO  ProgressMeter - NZ_LHMO01000008.1:119811             75.1                 13830            184.2
+19:21:41.923 INFO  ProgressMeter - NZ_LHMO01000008.1:127001             75.4                 13860            183.8
+19:21:53.962 INFO  ProgressMeter - NZ_LHMO01000008.1:140481             75.6                 13910            184.0
+19:22:07.282 INFO  ProgressMeter - NZ_LHMO01000008.1:146921             75.8                 13940            183.9
+19:22:24.672 INFO  ProgressMeter - NZ_LHMO01000008.1:160307             76.1                 13990            183.8
+19:22:34.763 INFO  ProgressMeter - NZ_LHMO01000008.1:170978             76.3                 14030            183.9
+19:22:44.987 INFO  ProgressMeter - NZ_LHMO01000008.1:181851             76.4                 14070            184.1
+19:22:55.206 INFO  ProgressMeter - NZ_LHMO01000008.1:195993             76.6                 14120            184.3
+19:23:09.331 INFO  ProgressMeter - NZ_LHMO01000008.1:203594             76.9                 14150            184.1
+19:23:20.143 INFO  ProgressMeter - NZ_LHMO01000008.1:213617             77.0                 14190            184.2
+19:23:31.078 INFO  ProgressMeter - NZ_LHMO01000008.1:227516             77.2                 14240            184.4
+19:23:42.083 INFO  ProgressMeter - NZ_LHMO01000008.1:234455             77.4                 14270            184.4
+19:23:54.226 INFO  ProgressMeter - NZ_LHMO01000008.1:245186             77.6                 14310            184.4
+19:24:04.654 INFO  ProgressMeter - NZ_LHMO01000008.1:252726             77.8                 14340            184.4
+19:24:16.576 INFO  ProgressMeter - NZ_LHMO01000008.1:263829             78.0                 14380            184.4
+19:24:26.856 INFO  ProgressMeter - NZ_LHMO01000008.1:270889             78.1                 14410            184.4
+19:24:38.861 INFO  ProgressMeter - NZ_LHMO01000008.1:281919             78.3                 14450            184.4
+19:24:49.053 INFO  ProgressMeter - NZ_LHMO01000008.1:290437             78.5                 14480            184.4
+19:25:03.797 INFO  ProgressMeter - NZ_LHMO01000008.1:331111             78.8                 14620            185.6
+19:25:14.710 INFO  ProgressMeter - NZ_LHMO01000008.1:339007             78.9                 14650            185.6
+19:25:24.990 INFO  ProgressMeter - NZ_LHMO01000008.1:341436             79.1                 14660            185.3
+19:25:35.691 INFO  ProgressMeter - NZ_LHMO01000008.1:349303             79.3                 14690            185.3
+19:25:47.358 INFO  ProgressMeter - NZ_LHMO01000008.1:363209             79.5                 14740            185.4
+19:26:01.768 INFO  ProgressMeter - NZ_LHMO01000008.1:367149             79.7                 14760            185.1
+19:26:13.504 INFO  ProgressMeter - NZ_LHMO01000008.1:372564             79.9                 14780            184.9
+19:26:26.690 INFO  ProgressMeter - NZ_LHMO01000008.1:379874             80.1                 14810            184.8
+19:26:37.296 INFO  ProgressMeter - NZ_LHMO01000008.1:388541             80.3                 14840            184.8
+19:26:47.817 INFO  ProgressMeter - NZ_LHMO01000008.1:399644             80.5                 14880            184.9
+19:27:00.849 INFO  ProgressMeter - NZ_LHMO01000008.1:408332             80.7                 14910            184.7
+19:27:22.293 INFO  ProgressMeter - NZ_LHMO01000009.1:2908             81.1                 14950            184.4
+19:27:36.680 INFO  ProgressMeter - NZ_LHMO01000009.1:16023             81.3                 15000            184.5
+19:27:51.404 INFO  ProgressMeter - NZ_LHMO01000009.1:28896             81.6                 15050            184.5
+19:28:04.737 INFO  ProgressMeter - NZ_LHMO01000009.1:36100             81.8                 15080            184.4
+19:28:15.324 INFO  ProgressMeter - NZ_LHMO01000009.1:43338             82.0                 15110            184.4
+19:28:26.278 INFO  ProgressMeter - NZ_LHMO01000009.1:54423             82.1                 15150            184.5
+19:28:39.718 INFO  ProgressMeter - NZ_LHMO01000009.1:59600             82.4                 15170            184.2
+19:28:51.439 INFO  ProgressMeter - NZ_LHMO01000009.1:67062             82.6                 15200            184.1
+19:29:01.956 INFO  ProgressMeter - NZ_LHMO01000009.1:74282             82.7                 15230            184.1
+19:29:20.037 INFO  ProgressMeter - NZ_LHMO01000009.1:84840             83.0                 15270            183.9
+19:29:33.677 INFO  ProgressMeter - NZ_LHMO01000009.1:97380             83.3                 15320            184.0
+19:29:47.334 INFO  ProgressMeter - NZ_LHMO01000009.1:111094             83.5                 15370            184.1
+19:29:58.962 INFO  ProgressMeter - NZ_LHMO01000009.1:120270             83.7                 15410            184.2
+19:30:10.654 INFO  ProgressMeter - NZ_LHMO01000009.1:131420             83.9                 15450            184.2
+19:30:23.704 INFO  ProgressMeter - NZ_LHMO01000009.1:153809             84.1                 15530            184.7
+19:30:35.761 INFO  ProgressMeter - NZ_LHMO01000009.1:172978             84.3                 15600            185.1
+19:30:46.833 INFO  ProgressMeter - NZ_LHMO01000009.1:182864             84.5                 15640            185.1
+19:30:56.956 INFO  ProgressMeter - NZ_LHMO01000009.1:192957             84.6                 15680            185.2
+19:31:07.999 INFO  ProgressMeter - NZ_LHMO01000009.1:200134             84.8                 15710            185.2
+19:31:18.238 INFO  ProgressMeter - NZ_LHMO01000009.1:213878             85.0                 15760            185.4
+19:31:29.013 INFO  ProgressMeter - NZ_LHMO01000009.1:219356             85.2                 15780            185.3
+19:31:41.586 INFO  ProgressMeter - NZ_LHMO01000009.1:229134             85.4                 15820            185.3
+19:31:52.902 INFO  ProgressMeter - NZ_LHMO01000009.1:236074             85.6                 15850            185.2
+19:32:03.034 INFO  ProgressMeter - NZ_LHMO01000009.1:247066             85.7                 15890            185.3
+19:32:16.737 INFO  ProgressMeter - NZ_LHMO01000009.1:268789             86.0                 15970            185.8
+19:32:30.270 INFO  ProgressMeter - NZ_LHMO01000009.1:275465             86.2                 16000            185.6
+19:32:48.397 INFO  ProgressMeter - NZ_LHMO01000009.1:293575             86.5                 16070            185.8
+19:32:59.923 INFO  ProgressMeter - NZ_LHMO01000009.1:301158             86.7                 16100            185.7
+19:33:12.446 INFO  ProgressMeter - NZ_LHMO01000009.1:315536             86.9                 16150            185.8
+19:33:25.281 INFO  ProgressMeter - NZ_LHMO01000009.1:329076             87.1                 16200            186.0
+19:33:36.657 INFO  ProgressMeter - NZ_LHMO01000009.1:339100             87.3                 16240            186.0
+19:33:48.241 INFO  ProgressMeter - NZ_LHMO01000009.1:351538             87.5                 16290            186.2
+19:33:59.592 INFO  ProgressMeter - NZ_LHMO01000009.1:370232             87.7                 16360            186.6
+19:34:30.756 INFO  ProgressMeter - NZ_LHMO01000009.1:380472             88.2                 16400            185.9
+19:34:52.418 INFO  ProgressMeter - NZ_LHMO01000009.1:382624             88.6                 16410            185.3
+19:35:05.457 INFO  ProgressMeter - NZ_LHMO01000009.1:396291             88.8                 16460            185.4
+19:35:19.528 INFO  ProgressMeter - NZ_LHMO01000009.1:418282             89.0                 16540            185.8
+19:35:30.615 INFO  ProgressMeter - NZ_LHMO01000009.1:428705             89.2                 16580            185.9
+19:35:40.819 INFO  ProgressMeter - NZ_LHMO01000009.1:438092             89.4                 16620            186.0
+19:35:53.791 INFO  ProgressMeter - NZ_LHMO01000009.1:454043             89.6                 16680            186.2
+19:36:04.315 INFO  ProgressMeter - NZ_LHMO01000009.1:466744             89.8                 16730            186.4
+19:36:15.269 INFO  ProgressMeter - NZ_LHMO01000009.1:479704             89.9                 16780            186.5
+19:36:34.096 INFO  ProgressMeter - NZ_LHMO01000009.1:492368             90.3                 16830            186.5
+19:36:44.694 INFO  ProgressMeter - NZ_LHMO01000009.1:504967             90.4                 16880            186.6
+19:36:55.202 INFO  ProgressMeter - NZ_LHMO01000009.1:512868             90.6                 16910            186.6
+19:37:05.755 INFO  ProgressMeter - NZ_LHMO01000009.1:521245             90.8                 16940            186.6
+19:37:15.819 INFO  ProgressMeter - NZ_LHMO01000009.1:531376             91.0                 16980            186.7
+19:37:26.668 INFO  ProgressMeter - NZ_LHMO01000009.1:541948             91.1                 17020            186.7
+19:37:38.121 INFO  ProgressMeter - NZ_LHMO01000009.1:549222             91.3                 17050            186.7
+19:37:50.409 INFO  ProgressMeter - NZ_LHMO01000009.1:559218             91.5                 17090            186.7
+19:38:02.962 INFO  ProgressMeter - NZ_LHMO01000009.1:578034             91.7                 17160            187.0
+19:38:15.174 INFO  ProgressMeter - NZ_LHMO01000009.1:597954             91.9                 17230            187.4
+19:38:25.427 INFO  ProgressMeter - NZ_LHMO01000009.1:617400             92.1                 17300            187.8
+19:38:37.813 INFO  ProgressMeter - NZ_LHMO01000009.1:631500             92.3                 17350            187.9
+19:38:49.314 INFO  ProgressMeter - NZ_LHMO01000009.1:649542             92.5                 17420            188.3
+19:38:59.549 INFO  ProgressMeter - NZ_LHMO01000009.1:667737             92.7                 17490            188.7
+19:39:11.013 INFO  ProgressMeter - NZ_LHMO01000009.1:678221             92.9                 17530            188.7
+19:39:22.057 INFO  ProgressMeter - NZ_LHMO01000009.1:688821             93.1                 17570            188.8
+19:39:32.979 INFO  ProgressMeter - NZ_LHMO01000009.1:704988             93.2                 17630            189.1
+19:39:45.391 INFO  ProgressMeter - NZ_LHMO01000009.1:712662             93.5                 17660            189.0
+19:39:57.319 INFO  ProgressMeter - NZ_LHMO01000009.1:734698             93.7                 17740            189.4
+19:40:08.102 INFO  ProgressMeter - NZ_LHMO01000009.1:747720             93.8                 17790            189.6
+19:40:20.055 INFO  ProgressMeter - NZ_LHMO01000009.1:755410             94.0                 17820            189.5
+19:40:31.372 INFO  ProgressMeter - NZ_LHMO01000009.1:766176             94.2                 17860            189.6
+19:40:42.124 INFO  ProgressMeter - NZ_LHMO01000009.1:776910             94.4                 17900            189.6
+19:40:50.163 INFO  HaplotypeCaller - 128142 read(s) filtered by: ((((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter) AND WellformedReadFilter)
+  128142 read(s) filtered by: (((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter)
+      128142 read(s) filtered by: ((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter)
+          128142 read(s) filtered by: (((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter)
+              128142 read(s) filtered by: ((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter)
+                  128142 read(s) filtered by: (((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter)
+                      53162 read(s) filtered by: ((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter)
+                          53162 read(s) filtered by: (MappingQualityReadFilter AND MappingQualityAvailableReadFilter)
+                              53162 read(s) filtered by: MappingQualityReadFilter 
+                      74980 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+
+19:40:50.164 INFO  ProgressMeter - NZ_LHMO01000009.1:784846             94.5                 17935            189.7
+19:40:50.164 INFO  ProgressMeter - Traversal complete. Processed 17935 total regions in 94.5 minutes.
+19:40:50.190 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 3.157686414
+19:40:50.192 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 2883.0058836870003
+19:40:50.193 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 254.97 sec
+19:40:50.194 INFO  HaplotypeCaller - Shutting down engine
+[March 31, 2020 7:40:50 PM CDT] org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller done. Elapsed time: 94.65 minutes.
+Runtime.totalMemory()=2682781696
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4g -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar HaplotypeCaller -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta -I /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.g.vcf.gz -ERC GVCF
+19:40:56.712 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 31, 2020 7:41:02 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+19:41:02.114 INFO  HaplotypeCaller - ------------------------------------------------------------
+19:41:02.116 INFO  HaplotypeCaller - The Genome Analysis Toolkit (GATK) v4.1.4.0
+19:41:02.116 INFO  HaplotypeCaller - For support and documentation go to https://software.broadinstitute.org/gatk/
+19:41:02.117 INFO  HaplotypeCaller - Executing as aubcls71@dmc14.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+19:41:02.118 INFO  HaplotypeCaller - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+19:41:02.119 INFO  HaplotypeCaller - Start Date/Time: March 31, 2020 7:40:56 PM CDT
+19:41:02.119 INFO  HaplotypeCaller - ------------------------------------------------------------
+19:41:02.119 INFO  HaplotypeCaller - ------------------------------------------------------------
+19:41:02.121 INFO  HaplotypeCaller - HTSJDK Version: 2.20.3
+19:41:02.122 INFO  HaplotypeCaller - Picard Version: 2.21.1
+19:41:02.122 INFO  HaplotypeCaller - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+19:41:02.123 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+19:41:02.123 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+19:41:02.123 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+19:41:02.124 INFO  HaplotypeCaller - Deflater: IntelDeflater
+19:41:02.124 INFO  HaplotypeCaller - Inflater: IntelInflater
+19:41:02.124 INFO  HaplotypeCaller - GCS max retries/reopens: 20
+19:41:02.125 INFO  HaplotypeCaller - Requester pays: disabled
+19:41:02.125 INFO  HaplotypeCaller - Initializing engine
+19:41:02.255 INFO  HaplotypeCaller - Shutting down engine
+[March 31, 2020 7:41:02 PM CDT] org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller done. Elapsed time: 0.09 minutes.
+Runtime.totalMemory()=2125463552
+***********************************************************************
+
+A USER ERROR has occurred: Couldn't read file. Error was: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged with exception: Cannot read non-existent file: file:///scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged
+
+***********************************************************************
+Set the system property GATK_STACKTRACE_ON_USER_EXCEPTION (--java-options '-DGATK_STACKTRACE_ON_USER_EXCEPTION=true') to print the stack trace.

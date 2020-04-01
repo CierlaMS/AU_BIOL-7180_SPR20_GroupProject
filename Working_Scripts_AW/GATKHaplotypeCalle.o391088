@@ -1,0 +1,82 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: GATK_HaplotypeCaller.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.GATKHaplotypeCalle.391088
+  The memory limit is: 4gb
+  The job will start running after: 2020-03-31T20:21:10
+  Job Name: GATKHaplotypeCalle
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  2  cores on master node  dmc9
+  Node list:  dmc9
+  Nodes:  dmc9 dmc9
+  Command typed:
+/apps/scripts/run_script GATK_HaplotypeCaller.sh     
+  Queue submit command:
+sbatch --qos=class -J GATKHaplotypeCalle --begin=2020-03-31T20:21:10 --requeue --mail-user=asw0049@auburn.edu -o GATKHaplotypeCalle.o391088 --mail-type=ALL -t 24:00:00 -N 1-1 -n 2 --mem-per-cpu=2000mb --constraint=dmc 
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4g -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar HaplotypeCaller -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta -I /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.bam -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.g.vcf.gz -ERC GVCF
+20:22:55.217 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 31, 2020 8:23:00 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+20:23:00.961 INFO  HaplotypeCaller - ------------------------------------------------------------
+20:23:00.962 INFO  HaplotypeCaller - The Genome Analysis Toolkit (GATK) v4.1.4.0
+20:23:00.963 INFO  HaplotypeCaller - For support and documentation go to https://software.broadinstitute.org/gatk/
+20:23:00.964 INFO  HaplotypeCaller - Executing as aubcls71@dmc9.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+20:23:00.964 INFO  HaplotypeCaller - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+20:23:00.965 INFO  HaplotypeCaller - Start Date/Time: March 31, 2020 8:22:55 PM CDT
+20:23:00.965 INFO  HaplotypeCaller - ------------------------------------------------------------
+20:23:00.965 INFO  HaplotypeCaller - ------------------------------------------------------------
+20:23:00.967 INFO  HaplotypeCaller - HTSJDK Version: 2.20.3
+20:23:00.968 INFO  HaplotypeCaller - Picard Version: 2.21.1
+20:23:00.968 INFO  HaplotypeCaller - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+20:23:00.969 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+20:23:00.969 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+20:23:00.969 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+20:23:00.970 INFO  HaplotypeCaller - Deflater: IntelDeflater
+20:23:00.970 INFO  HaplotypeCaller - Inflater: IntelInflater
+20:23:00.971 INFO  HaplotypeCaller - GCS max retries/reopens: 20
+20:23:00.971 INFO  HaplotypeCaller - Requester pays: disabled
+20:23:00.971 INFO  HaplotypeCaller - Initializing engine
+20:23:02.367 INFO  HaplotypeCaller - Done initializing engine
+20:23:02.371 INFO  HaplotypeCallerEngine - Tool is in reference confidence mode and the annotation, the following changes will be made to any specified annotations: 'StrandBiasBySample' will be enabled. 'ChromosomeCounts', 'FisherStrand', 'StrandOddsRatio' and 'QualByDepth' annotations have been disabled
+20:23:02.400 INFO  HaplotypeCallerEngine - Standard Emitting and Calling confidence set to 0.0 for reference-model confidence output
+20:23:02.401 INFO  HaplotypeCallerEngine - All sites annotated with PLs forced to true for reference-model confidence output
+20:23:02.423 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+20:23:02.435 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+20:23:02.490 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+20:23:02.493 INFO  IntelPairHmm - Available threads: 2
+20:23:02.494 INFO  IntelPairHmm - Requested threads: 4
+20:23:02.495 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+20:23:02.495 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+20:23:02.612 INFO  ProgressMeter - Starting traversal
+20:23:02.628 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+20:23:13.489 INFO  ProgressMeter -      scaffold-0:4993              0.2                    20            110.6
+20:23:25.735 INFO  ProgressMeter -     scaffold-0:13259              0.4                    50            129.8
+20:23:37.441 WARN  InbreedingCoeff - InbreedingCoeff will not be calculated; at least 10 samples must have called genotypes
+20:23:41.046 INFO  ProgressMeter -     scaffold-0:18370              0.6                    70            109.3
+20:23:52.444 INFO  ProgressMeter -     scaffold-0:25589              0.8                   100            120.4
+20:24:02.837 INFO  ProgressMeter -     scaffold-0:40060              1.0                   150            149.5
+20:24:13.334 INFO  ProgressMeter -     scaffold-0:51270              1.2                   190            161.2
+20:24:26.428 INFO  ProgressMeter -     scaffold-0:68754              1.4                   250            179.0
+20:24:37.419 INFO  ProgressMeter -     scaffold-0:82508              1.6                   300            189.9
+20:24:52.545 INFO  ProgressMeter -     scaffold-0:90699              1.8                   330            180.1
+20:25:04.512 INFO  ProgressMeter -      scaffold-1:1801              2.0                   390            192.0
+20:25:14.782 INFO  ProgressMeter -     scaffold-1:21744              2.2                   460            208.8
+20:25:27.340 INFO  ProgressMeter -     scaffold-1:29962              2.4                   490            203.2
+20:25:38.513 INFO  ProgressMeter -     scaffold-1:40476              2.6                   530            204.0
+20:25:48.563 INFO  ProgressMeter -     scaffold-1:51698              2.8                   570            206.1
+20:26:01.574 INFO  ProgressMeter -     scaffold-1:62799              3.0                   610            204.5
+20:26:15.416 INFO  ProgressMeter -     scaffold-1:76718              3.2                   660            205.4
+20:26:32.747 INFO  ProgressMeter -     scaffold-1:86483              3.5                   700            199.9
+20:26:43.549 INFO  ProgressMeter -    scaffold-1:103169              3.7                   760            206.4
+20:26:58.506 INFO  ProgressMeter -    scaffold-1:107798              3.9                   780            198.4
+20:27:11.846 INFO  ProgressMeter -      scaffold-2:1332              4.2                   800            192.6
+20:27:30.397 INFO  ProgressMeter -      scaffold-2:8390              4.5                   830            186.0
