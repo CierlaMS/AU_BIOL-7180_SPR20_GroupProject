@@ -16,3 +16,5 @@ module load gatk/4.1.4.0
 # place gatk commands after this line
 #gatk --java-options "-Xmx4g" HaplotypeCaller -R $path_ref/$ref_NCBI.fasta -I $path/$merge_NCBI.bam -O $path/$merge_NCBI.g.vcf.gz -ERC GVCF
 gatk --java-options "-Xmx4g" HaplotypeCaller -R $path_asmRay/$ref_WT.fasta -I $path/$merge_WT.bam -O $path/$merge_WT.g.vcf.gz -ERC GVCF
+
+exit

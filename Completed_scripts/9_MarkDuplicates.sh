@@ -1,5 +1,5 @@
 #!/bin/bash
-#The pupose of this script is to mark duplicates and to generate updated flagstats on merged bam files.
+#The purpose of this script is to mark duplicates and to generate updated flagstats on merged bam files.
 #######
 ##Index Sorted or Merged Bam Alignment Files
 #

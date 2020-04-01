@@ -1,5 +1,5 @@
 #!/bin/bash
-#The pupose of this script is to create indexes and dictionatries of rederence genomes for GATK.
+#The purpose of this script is to create indexes and dictionaries of reference genomes for GATK.
 #######
 ##Index Sorted or Merged Bam Alignment Files
 #

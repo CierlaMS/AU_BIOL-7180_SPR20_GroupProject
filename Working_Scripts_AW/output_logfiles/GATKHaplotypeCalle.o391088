@@ -1,0 +1,571 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: GATK_HaplotypeCaller.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.GATKHaplotypeCalle.391088
+  The memory limit is: 4gb
+  The job will start running after: 2020-03-31T20:21:10
+  Job Name: GATKHaplotypeCalle
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  2  cores on master node  dmc9
+  Node list:  dmc9
+  Nodes:  dmc9 dmc9
+  Command typed:
+/apps/scripts/run_script GATK_HaplotypeCaller.sh     
+  Queue submit command:
+sbatch --qos=class -J GATKHaplotypeCalle --begin=2020-03-31T20:21:10 --requeue --mail-user=asw0049@auburn.edu -o GATKHaplotypeCalle.o391088 --mail-type=ALL -t 24:00:00 -N 1-1 -n 2 --mem-per-cpu=2000mb --constraint=dmc 
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4g -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar HaplotypeCaller -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta -I /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.bam -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.g.vcf.gz -ERC GVCF
+20:22:55.217 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 31, 2020 8:23:00 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+20:23:00.961 INFO  HaplotypeCaller - ------------------------------------------------------------
+20:23:00.962 INFO  HaplotypeCaller - The Genome Analysis Toolkit (GATK) v4.1.4.0
+20:23:00.963 INFO  HaplotypeCaller - For support and documentation go to https://software.broadinstitute.org/gatk/
+20:23:00.964 INFO  HaplotypeCaller - Executing as aubcls71@dmc9.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+20:23:00.964 INFO  HaplotypeCaller - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+20:23:00.965 INFO  HaplotypeCaller - Start Date/Time: March 31, 2020 8:22:55 PM CDT
+20:23:00.965 INFO  HaplotypeCaller - ------------------------------------------------------------
+20:23:00.965 INFO  HaplotypeCaller - ------------------------------------------------------------
+20:23:00.967 INFO  HaplotypeCaller - HTSJDK Version: 2.20.3
+20:23:00.968 INFO  HaplotypeCaller - Picard Version: 2.21.1
+20:23:00.968 INFO  HaplotypeCaller - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+20:23:00.969 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+20:23:00.969 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+20:23:00.969 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+20:23:00.970 INFO  HaplotypeCaller - Deflater: IntelDeflater
+20:23:00.970 INFO  HaplotypeCaller - Inflater: IntelInflater
+20:23:00.971 INFO  HaplotypeCaller - GCS max retries/reopens: 20
+20:23:00.971 INFO  HaplotypeCaller - Requester pays: disabled
+20:23:00.971 INFO  HaplotypeCaller - Initializing engine
+20:23:02.367 INFO  HaplotypeCaller - Done initializing engine
+20:23:02.371 INFO  HaplotypeCallerEngine - Tool is in reference confidence mode and the annotation, the following changes will be made to any specified annotations: 'StrandBiasBySample' will be enabled. 'ChromosomeCounts', 'FisherStrand', 'StrandOddsRatio' and 'QualByDepth' annotations have been disabled
+20:23:02.400 INFO  HaplotypeCallerEngine - Standard Emitting and Calling confidence set to 0.0 for reference-model confidence output
+20:23:02.401 INFO  HaplotypeCallerEngine - All sites annotated with PLs forced to true for reference-model confidence output
+20:23:02.423 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+20:23:02.435 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+20:23:02.490 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+20:23:02.493 INFO  IntelPairHmm - Available threads: 2
+20:23:02.494 INFO  IntelPairHmm - Requested threads: 4
+20:23:02.495 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+20:23:02.495 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+20:23:02.612 INFO  ProgressMeter - Starting traversal
+20:23:02.628 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+20:23:13.489 INFO  ProgressMeter -      scaffold-0:4993              0.2                    20            110.6
+20:23:25.735 INFO  ProgressMeter -     scaffold-0:13259              0.4                    50            129.8
+20:23:37.441 WARN  InbreedingCoeff - InbreedingCoeff will not be calculated; at least 10 samples must have called genotypes
+20:23:41.046 INFO  ProgressMeter -     scaffold-0:18370              0.6                    70            109.3
+20:23:52.444 INFO  ProgressMeter -     scaffold-0:25589              0.8                   100            120.4
+20:24:02.837 INFO  ProgressMeter -     scaffold-0:40060              1.0                   150            149.5
+20:24:13.334 INFO  ProgressMeter -     scaffold-0:51270              1.2                   190            161.2
+20:24:26.428 INFO  ProgressMeter -     scaffold-0:68754              1.4                   250            179.0
+20:24:37.419 INFO  ProgressMeter -     scaffold-0:82508              1.6                   300            189.9
+20:24:52.545 INFO  ProgressMeter -     scaffold-0:90699              1.8                   330            180.1
+20:25:04.512 INFO  ProgressMeter -      scaffold-1:1801              2.0                   390            192.0
+20:25:14.782 INFO  ProgressMeter -     scaffold-1:21744              2.2                   460            208.8
+20:25:27.340 INFO  ProgressMeter -     scaffold-1:29962              2.4                   490            203.2
+20:25:38.513 INFO  ProgressMeter -     scaffold-1:40476              2.6                   530            204.0
+20:25:48.563 INFO  ProgressMeter -     scaffold-1:51698              2.8                   570            206.1
+20:26:01.574 INFO  ProgressMeter -     scaffold-1:62799              3.0                   610            204.5
+20:26:15.416 INFO  ProgressMeter -     scaffold-1:76718              3.2                   660            205.4
+20:26:32.747 INFO  ProgressMeter -     scaffold-1:86483              3.5                   700            199.9
+20:26:43.549 INFO  ProgressMeter -    scaffold-1:103169              3.7                   760            206.4
+20:26:58.506 INFO  ProgressMeter -    scaffold-1:107798              3.9                   780            198.4
+20:27:11.846 INFO  ProgressMeter -      scaffold-2:1332              4.2                   800            192.6
+20:27:30.397 INFO  ProgressMeter -      scaffold-2:8390              4.5                   830            186.0
+20:27:40.676 INFO  ProgressMeter -     scaffold-2:16504              4.6                   860            185.6
+20:27:50.757 INFO  ProgressMeter -     scaffold-2:27905              4.8                   900            187.4
+20:28:04.880 INFO  ProgressMeter -     scaffold-2:38016              5.0                   940            186.6
+20:28:15.050 INFO  ProgressMeter -     scaffold-2:48014              5.2                   980            188.2
+20:28:26.950 INFO  ProgressMeter -     scaffold-2:58239              5.4                  1020            188.7
+20:28:40.942 INFO  ProgressMeter -       scaffold-3:652              5.6                  1040            184.4
+20:28:51.955 INFO  ProgressMeter -      scaffold-3:8275              5.8                  1070            183.8
+20:29:04.274 INFO  ProgressMeter -     scaffold-3:12492              6.0                  1090            180.8
+20:29:17.635 INFO  ProgressMeter -     scaffold-3:20015              6.3                  1120            179.2
+20:29:36.589 INFO  ProgressMeter -     scaffold-3:27337              6.6                  1150            175.1
+20:29:47.610 INFO  ProgressMeter -     scaffold-3:43037              6.7                  1210            179.3
+20:29:57.999 INFO  ProgressMeter -     scaffold-3:53089              6.9                  1250            180.6
+20:30:09.049 INFO  ProgressMeter -     scaffold-3:63606              7.1                  1290            181.5
+20:30:23.208 INFO  ProgressMeter -     scaffold-3:68649              7.3                  1310            178.4
+20:30:33.338 INFO  ProgressMeter -     scaffold-3:83003              7.5                  1360            181.0
+20:30:49.061 INFO  ProgressMeter -     scaffold-4:10380              7.8                  1410            181.4
+20:30:59.643 INFO  ProgressMeter -     scaffold-4:15950              8.0                  1430            179.9
+20:31:13.089 INFO  ProgressMeter -     scaffold-4:29408              8.2                  1480            181.1
+20:31:24.631 INFO  ProgressMeter -     scaffold-4:36263              8.4                  1510            180.5
+20:31:34.919 INFO  ProgressMeter -     scaffold-4:52967              8.5                  1570            183.9
+20:31:48.333 INFO  ProgressMeter -     scaffold-4:59913              8.8                  1600            182.6
+20:32:02.313 INFO  ProgressMeter -     scaffold-4:62486              9.0                  1610            179.0
+20:32:12.890 INFO  ProgressMeter -     scaffold-4:70565              9.2                  1640            178.8
+20:32:23.886 INFO  ProgressMeter -     scaffold-4:80330              9.4                  1680            179.6
+20:32:39.752 INFO  ProgressMeter -     scaffold-4:99887              9.6                  1750            181.9
+20:32:51.593 INFO  ProgressMeter -    scaffold-4:104667              9.8                  1770            180.3
+20:33:13.688 INFO  ProgressMeter -    scaffold-4:109607             10.2                  1790            175.8
+20:33:24.885 INFO  ProgressMeter -    scaffold-4:122291             10.4                  1840            177.4
+20:33:36.766 INFO  ProgressMeter -    scaffold-4:142503             10.6                  1910            180.7
+20:33:48.275 INFO  ProgressMeter -      scaffold-5:4667             10.8                  1960            182.1
+20:33:59.075 INFO  ProgressMeter -     scaffold-5:16061             10.9                  2000            182.8
+20:34:13.146 INFO  ProgressMeter -     scaffold-5:24049             11.2                  2030            181.7
+20:34:28.920 INFO  ProgressMeter -     scaffold-5:33660             11.4                  2070            181.0
+20:34:51.154 INFO  ProgressMeter -     scaffold-5:49385             11.8                  2130            180.4
+20:35:01.854 INFO  ProgressMeter -     scaffold-5:54999             12.0                  2150            179.4
+20:35:22.781 INFO  ProgressMeter -     scaffold-5:57905             12.3                  2160            175.1
+20:35:37.038 INFO  ProgressMeter -     scaffold-5:67720             12.6                  2200            175.0
+20:35:47.401 INFO  ProgressMeter -     scaffold-6:20452             12.7                  2290            179.7
+20:35:57.518 INFO  ProgressMeter -     scaffold-6:26194             12.9                  2310            178.9
+20:36:08.049 INFO  ProgressMeter -     scaffold-6:34839             13.1                  2340            178.8
+20:36:19.662 INFO  ProgressMeter -     scaffold-6:39827             13.3                  2360            177.7
+20:36:34.406 INFO  ProgressMeter -     scaffold-6:46825             13.5                  2390            176.6
+20:36:48.863 INFO  ProgressMeter -     scaffold-6:57641             13.8                  2430            176.5
+20:37:05.723 INFO  ProgressMeter -     scaffold-6:61968             14.1                  2450            174.4
+20:37:21.146 INFO  ProgressMeter -     scaffold-6:68723             14.3                  2480            173.3
+20:37:35.087 INFO  ProgressMeter -     scaffold-6:79129             14.5                  2520            173.3
+20:37:46.905 INFO  ProgressMeter -       scaffold-7:301             14.7                  2570            174.4
+20:37:57.173 INFO  ProgressMeter -     scaffold-7:14822             14.9                  2620            175.7
+20:38:11.574 INFO  ProgressMeter -     scaffold-7:27716             15.1                  2670            176.2
+20:38:22.203 INFO  ProgressMeter -     scaffold-7:32890             15.3                  2690            175.5
+20:38:33.190 INFO  ProgressMeter -     scaffold-7:41234             15.5                  2720            175.4
+20:38:45.969 INFO  ProgressMeter -       scaffold-8:352             15.7                  2740            174.3
+20:39:09.664 INFO  ProgressMeter -     scaffold-8:13704             16.1                  2790            173.1
+20:39:20.646 INFO  ProgressMeter -     scaffold-8:18322             16.3                  2810            172.4
+20:39:34.394 INFO  ProgressMeter -     scaffold-8:29391             16.5                  2850            172.4
+20:39:49.583 INFO  ProgressMeter -     scaffold-8:40153             16.8                  2890            172.2
+20:39:59.830 INFO  ProgressMeter -      scaffold-9:3739             17.0                  2940            173.4
+20:40:11.423 INFO  ProgressMeter -     scaffold-9:11911             17.1                  2970            173.2
+20:40:27.646 INFO  ProgressMeter -     scaffold-9:14610             17.4                  2980            171.1
+20:40:41.495 INFO  ProgressMeter -     scaffold-9:25189             17.6                  3020            171.1
+20:40:54.307 INFO  ProgressMeter -     scaffold-9:27376             17.9                  3030            169.6
+20:41:06.873 INFO  ProgressMeter -     scaffold-9:38111             18.1                  3070            169.9
+20:41:17.466 INFO  ProgressMeter -     scaffold-9:52158             18.2                  3120            171.0
+20:41:28.416 INFO  ProgressMeter -     scaffold-9:62855             18.4                  3160            171.5
+20:41:40.593 INFO  ProgressMeter -     scaffold-9:73473             18.6                  3200            171.7
+20:41:51.015 INFO  ProgressMeter -     scaffold-9:78855             18.8                  3220            171.2
+20:42:06.069 INFO  ProgressMeter -     scaffold-9:89644             19.1                  3260            171.1
+20:42:19.884 INFO  ProgressMeter -    scaffold-9:106441             19.3                  3320            172.1
+20:42:30.223 INFO  ProgressMeter -    scaffold-9:120701             19.5                  3370            173.2
+20:42:42.269 INFO  ProgressMeter -    scaffold-9:126057             19.7                  3390            172.4
+20:42:53.989 INFO  ProgressMeter -    scaffold-9:134447             19.9                  3420            172.2
+20:43:04.863 INFO  ProgressMeter -     scaffold-10:6620             20.0                  3470            173.2
+20:43:15.477 WARN  DepthPerSampleHC - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.485 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.488 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.490 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.492 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.494 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.496 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.498 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.500 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.502 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.504 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.506 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.509 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.514 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.517 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.519 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.520 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.522 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:15.523 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+20:43:17.378 INFO  ProgressMeter -    scaffold-10:16768             20.2                  3510            173.4
+20:43:28.698 INFO  ProgressMeter -     scaffold-11:7361             20.4                  3610            176.7
+20:43:39.760 INFO  ProgressMeter -    scaffold-11:15596             20.6                  3640            176.5
+20:43:50.256 INFO  ProgressMeter -    scaffold-11:25427             20.8                  3680            177.0
+20:44:00.730 INFO  ProgressMeter -    scaffold-11:39125             21.0                  3730            177.9
+20:44:12.397 INFO  ProgressMeter -    scaffold-11:48145             21.2                  3770            178.1
+20:44:26.022 INFO  ProgressMeter -    scaffold-11:54415             21.4                  3800            177.7
+20:44:42.806 INFO  ProgressMeter -    scaffold-11:73423             21.7                  3870            178.6
+20:44:53.300 INFO  ProgressMeter -     scaffold-12:3044             21.8                  3900            178.5
+20:45:04.279 INFO  ProgressMeter -    scaffold-12:18664             22.0                  3960            179.8
+20:45:16.244 INFO  ProgressMeter -     scaffold-13:8431             22.2                  4030            181.3
+20:45:32.209 INFO  ProgressMeter -    scaffold-13:21924             22.5                  4080            181.4
+20:45:44.029 INFO  ProgressMeter -    scaffold-13:37652             22.7                  4140            182.5
+20:45:56.736 INFO  ProgressMeter -    scaffold-13:48733             22.9                  4180            182.5
+20:46:08.573 INFO  ProgressMeter -     scaffold-14:7062             23.1                  4210            182.3
+20:46:19.713 INFO  ProgressMeter -    scaffold-14:16785             23.3                  4250            182.5
+20:46:31.053 INFO  ProgressMeter -    scaffold-14:21800             23.5                  4270            181.9
+20:46:41.715 INFO  ProgressMeter -    scaffold-14:29470             23.7                  4300            181.8
+20:46:52.098 INFO  ProgressMeter -    scaffold-14:43404             23.8                  4350            182.6
+20:47:03.903 INFO  ProgressMeter -      scaffold-15:601             24.0                  4380            182.3
+20:47:15.655 INFO  ProgressMeter -    scaffold-15:16487             24.2                  4440            183.3
+20:47:27.638 INFO  ProgressMeter -    scaffold-15:18789             24.4                  4450            182.3
+20:47:39.694 INFO  ProgressMeter -    scaffold-15:29016             24.6                  4490            182.4
+20:47:51.533 INFO  ProgressMeter -    scaffold-15:39656             24.8                  4530            182.6
+20:48:02.881 INFO  ProgressMeter -    scaffold-15:50320             25.0                  4570            182.8
+20:48:12.911 INFO  ProgressMeter -    scaffold-15:70980             25.2                  4640            184.3
+20:48:26.253 INFO  ProgressMeter -     scaffold-16:6172             25.4                  4670            183.9
+20:48:37.162 INFO  ProgressMeter -    scaffold-16:16251             25.6                  4710            184.2
+20:48:52.114 INFO  ProgressMeter -    scaffold-16:33595             25.8                  4770            184.7
+20:49:04.366 INFO  ProgressMeter -    scaffold-16:41359             26.0                  4800            184.4
+20:49:14.550 INFO  ProgressMeter -    scaffold-16:45590             26.2                  4820            184.0
+20:49:25.502 INFO  ProgressMeter -    scaffold-16:59693             26.4                  4870            184.6
+20:49:36.276 INFO  ProgressMeter -     scaffold-17:8533             26.6                  4910            184.9
+20:49:48.213 INFO  ProgressMeter -    scaffold-17:18716             26.8                  4950            185.0
+20:50:02.220 INFO  ProgressMeter -    scaffold-17:29920             27.0                  4990            184.9
+20:50:13.339 INFO  ProgressMeter -    scaffold-17:38181             27.2                  5020            184.7
+20:50:25.040 INFO  ProgressMeter -    scaffold-17:49471             27.4                  5060            184.9
+20:50:36.061 INFO  ProgressMeter -    scaffold-17:59911             27.6                  5100            185.1
+20:50:49.851 INFO  ProgressMeter -    scaffold-17:66967             27.8                  5130            184.6
+20:51:12.378 INFO  ProgressMeter -    scaffold-17:80610             28.2                  5180            183.9
+20:51:24.239 INFO  ProgressMeter -    scaffold-17:88190             28.4                  5210            183.7
+20:51:36.706 INFO  ProgressMeter -    scaffold-17:92535             28.6                  5230            183.1
+20:51:49.319 INFO  ProgressMeter -   scaffold-17:100978             28.8                  5260            182.8
+20:52:02.099 INFO  ProgressMeter -   scaffold-17:105915             29.0                  5280            182.1
+20:52:13.749 INFO  ProgressMeter -   scaffold-17:117452             29.2                  5320            182.3
+20:52:27.900 INFO  ProgressMeter -   scaffold-17:125331             29.4                  5350            181.8
+20:52:38.179 INFO  ProgressMeter -   scaffold-17:127882             29.6                  5360            181.1
+20:52:49.773 INFO  ProgressMeter -    scaffold-18:10444             29.8                  5420            182.0
+20:53:06.945 INFO  ProgressMeter -    scaffold-18:17274             30.1                  5450            181.2
+20:53:21.233 INFO  ProgressMeter -        scaffold-19:1             30.3                  5510            181.8
+20:53:33.604 INFO  ProgressMeter -     scaffold-19:5104             30.5                  5530            181.2
+20:53:44.938 INFO  ProgressMeter -    scaffold-19:18912             30.7                  5580            181.7
+20:53:55.785 INFO  ProgressMeter -    scaffold-19:30377             30.9                  5620            182.0
+20:54:06.422 INFO  ProgressMeter -    scaffold-19:38150             31.1                  5650            181.9
+20:54:19.583 INFO  ProgressMeter -     scaffold-20:7312             31.3                  5710            182.5
+20:54:37.744 INFO  ProgressMeter -    scaffold-20:14791             31.6                  5740            181.7
+20:54:49.550 INFO  ProgressMeter -    scaffold-20:22839             31.8                  5770            181.5
+20:55:05.803 INFO  ProgressMeter -    scaffold-20:33979             32.1                  5810            181.3
+20:55:16.986 INFO  ProgressMeter -    scaffold-20:41656             32.2                  5840            181.1
+20:55:30.475 INFO  ProgressMeter -    scaffold-20:55165             32.5                  5890            181.4
+20:55:46.424 INFO  ProgressMeter -    scaffold-20:68334             32.7                  5940            181.5
+20:55:58.897 INFO  ProgressMeter -    scaffold-20:81917             32.9                  5990            181.9
+20:56:09.198 INFO  ProgressMeter -    scaffold-20:89837             33.1                  6020            181.8
+20:56:19.529 INFO  ProgressMeter -    scaffold-21:10482             33.3                  6060            182.1
+20:56:33.719 INFO  ProgressMeter -    scaffold-21:18942             33.5                  6090            181.7
+20:56:49.749 INFO  ProgressMeter -     scaffold-22:6796             33.8                  6130            181.4
+20:57:03.324 INFO  ProgressMeter -    scaffold-22:17405             34.0                  6170            181.4
+20:57:13.590 INFO  ProgressMeter -    scaffold-22:28384             34.2                  6210            181.7
+20:57:24.352 INFO  ProgressMeter -    scaffold-22:35720             34.4                  6240            181.6
+20:57:35.666 INFO  ProgressMeter -    scaffold-23:17476             34.6                  6310            182.6
+20:57:46.548 INFO  ProgressMeter -     scaffold-24:5194             34.7                  6380            183.7
+20:57:57.920 INFO  ProgressMeter -    scaffold-24:16502             34.9                  6420            183.8
+20:58:08.216 INFO  ProgressMeter -    scaffold-24:21883             35.1                  6440            183.5
+20:58:21.085 INFO  ProgressMeter -    scaffold-24:35406             35.3                  6490            183.8
+20:58:33.664 INFO  ProgressMeter -     scaffold-25:6174             35.5                  6530            183.9
+20:58:44.086 INFO  ProgressMeter -    scaffold-25:10510             35.7                  6550            183.5
+20:58:54.166 INFO  ProgressMeter -    scaffold-25:13238             35.9                  6560            182.9
+20:59:04.777 INFO  ProgressMeter -    scaffold-25:18321             36.0                  6580            182.6
+20:59:15.170 INFO  ProgressMeter -    scaffold-25:29416             36.2                  6620            182.8
+20:59:30.040 INFO  ProgressMeter -    scaffold-25:39978             36.5                  6660            182.7
+20:59:42.059 INFO  ProgressMeter -    scaffold-25:51036             36.7                  6700            182.8
+21:00:00.702 INFO  ProgressMeter -    scaffold-25:68124             37.0                  6760            182.9
+21:00:11.580 INFO  ProgressMeter -    scaffold-26:16137             37.1                  6820            183.6
+21:00:21.704 INFO  ProgressMeter -     scaffold-27:4580             37.3                  6880            184.4
+21:00:32.829 INFO  ProgressMeter -    scaffold-27:12022             37.5                  6910            184.3
+21:00:43.397 INFO  ProgressMeter -     scaffold-28:8752             37.7                  6970            185.0
+21:00:53.436 INFO  ProgressMeter -    scaffold-28:11339             37.8                  6980            184.4
+21:01:04.484 INFO  ProgressMeter -    scaffold-29:16379             38.0                  7040            185.1
+21:01:16.335 INFO  ProgressMeter -    scaffold-29:36071             38.2                  7110            186.0
+21:01:35.743 INFO  ProgressMeter -    scaffold-29:44083             38.6                  7140            185.2
+21:01:46.420 INFO  ProgressMeter -    scaffold-29:51206             38.7                  7170            185.1
+21:01:57.534 INFO  ProgressMeter -    scaffold-29:61866             38.9                  7210            185.3
+21:02:09.237 INFO  ProgressMeter -    scaffold-30:14669             39.1                  7270            185.9
+21:02:21.477 INFO  ProgressMeter -    scaffold-30:19668             39.3                  7290            185.4
+21:02:35.637 INFO  ProgressMeter -    scaffold-30:30607             39.6                  7330            185.3
+21:02:47.761 INFO  ProgressMeter -     scaffold-31:8642             39.8                  7370            185.4
+21:02:58.174 INFO  ProgressMeter -    scaffold-31:16677             39.9                  7400            185.3
+21:03:09.090 INFO  ProgressMeter -    scaffold-31:27095             40.1                  7440            185.5
+21:03:22.481 INFO  ProgressMeter -    scaffold-31:34851             40.3                  7470            185.2
+21:03:33.018 INFO  ProgressMeter -       scaffold-32:39             40.5                  7510            185.4
+21:03:44.570 INFO  ProgressMeter -    scaffold-32:13948             40.7                  7560            185.8
+21:03:56.058 INFO  ProgressMeter -    scaffold-32:24071             40.9                  7600            185.9
+21:04:08.734 INFO  ProgressMeter -    scaffold-32:30696             41.1                  7630            185.6
+21:04:20.555 INFO  ProgressMeter -     scaffold-34:4505             41.3                  7710            186.7
+21:04:37.480 INFO  ProgressMeter -    scaffold-34:18424             41.6                  7760            186.6
+21:04:48.107 INFO  ProgressMeter -    scaffold-34:26012             41.8                  7790            186.6
+21:05:03.148 INFO  ProgressMeter -    scaffold-34:34214             42.0                  7820            186.2
+21:05:13.947 INFO  ProgressMeter -    scaffold-35:12225             42.2                  7880            186.8
+21:05:27.260 INFO  ProgressMeter -     scaffold-36:4627             42.4                  7920            186.7
+21:05:37.980 INFO  ProgressMeter -    scaffold-36:11029             42.6                  7950            186.7
+21:05:52.578 INFO  ProgressMeter -    scaffold-36:19690             42.8                  7980            186.3
+21:06:03.449 INFO  ProgressMeter -    scaffold-36:27425             43.0                  8010            186.2
+21:06:14.303 INFO  ProgressMeter -    scaffold-36:35160             43.2                  8040            186.1
+21:06:31.803 INFO  ProgressMeter -    scaffold-36:45616             43.5                  8080            185.8
+21:06:43.042 INFO  ProgressMeter -    scaffold-36:58677             43.7                  8130            186.2
+21:06:53.367 INFO  ProgressMeter -    scaffold-36:61119             43.8                  8140            185.7
+21:07:03.523 INFO  ProgressMeter -     scaffold-38:2802             44.0                  8200            186.3
+21:07:14.498 INFO  ProgressMeter -     scaffold-39:3052             44.2                  8270            187.1
+21:07:25.771 INFO  ProgressMeter -    scaffold-39:13799             44.4                  8310            187.2
+21:07:36.931 INFO  ProgressMeter -    scaffold-39:27075             44.6                  8360            187.6
+21:07:54.911 INFO  ProgressMeter -     scaffold-40:8272             44.9                  8400            187.2
+21:08:05.093 INFO  ProgressMeter -     scaffold-41:4904             45.0                  8450            187.6
+21:08:17.275 INFO  ProgressMeter -     scaffold-42:7491             45.2                  8490            187.6
+21:08:28.491 INFO  ProgressMeter -    scaffold-42:17768             45.4                  8530            187.8
+21:08:42.678 INFO  ProgressMeter -    scaffold-42:29022             45.7                  8570            187.7
+21:08:54.310 INFO  ProgressMeter -    scaffold-42:36020             45.9                  8600            187.5
+21:09:04.581 INFO  ProgressMeter -    scaffold-42:46288             46.0                  8640            187.7
+21:09:19.646 INFO  ProgressMeter -    scaffold-42:66182             46.3                  8710            188.2
+21:09:30.258 INFO  ProgressMeter -    scaffold-42:80113             46.5                  8760            188.5
+21:09:41.065 INFO  ProgressMeter -    scaffold-43:10248             46.6                  8800            188.7
+21:09:51.903 INFO  ProgressMeter -        scaffold-44:1             46.8                  8860            189.2
+21:10:02.316 INFO  ProgressMeter -      scaffold-46:601             47.0                  8930            190.0
+21:10:12.854 INFO  ProgressMeter -     scaffold-47:2439             47.2                  8980            190.4
+21:10:22.877 INFO  ProgressMeter -     scaffold-47:9967             47.3                  9010            190.3
+21:10:35.663 INFO  ProgressMeter -    scaffold-47:20780             47.6                  9050            190.3
+21:10:46.186 INFO  ProgressMeter -     scaffold-48:2920             47.7                  9080            190.3
+21:10:57.988 INFO  ProgressMeter -     scaffold-49:1873             47.9                  9100            189.9
+21:11:14.674 INFO  ProgressMeter -    scaffold-49:12521             48.2                  9140            189.6
+21:11:25.986 INFO  ProgressMeter -    scaffold-49:14620             48.4                  9150            189.1
+21:11:37.124 INFO  ProgressMeter -    scaffold-49:23532             48.6                  9190            189.2
+21:11:51.062 INFO  ProgressMeter -    scaffold-49:37599             48.8                  9240            189.3
+21:12:14.658 INFO  ProgressMeter -    scaffold-49:44206             49.2                  9270            188.4
+21:12:26.456 INFO  ProgressMeter -     scaffold-50:9669             49.4                  9310            188.5
+21:12:41.053 INFO  ProgressMeter -    scaffold-50:18054             49.6                  9340            188.2
+21:12:55.426 INFO  ProgressMeter -    scaffold-50:28713             49.9                  9380            188.1
+21:13:05.830 INFO  ProgressMeter -    scaffold-50:39998             50.1                  9420            188.2
+21:13:17.161 INFO  ProgressMeter -    scaffold-50:53783             50.2                  9470            188.5
+21:13:30.488 INFO  ProgressMeter -    scaffold-50:62070             50.5                  9500            188.3
+21:13:43.445 INFO  ProgressMeter -    scaffold-50:69844             50.7                  9530            188.0
+21:13:55.552 INFO  ProgressMeter -    scaffold-50:82639             50.9                  9580            188.3
+21:14:06.688 INFO  ProgressMeter -     scaffold-51:7714             51.1                  9610            188.2
+21:14:18.448 INFO  ProgressMeter -    scaffold-51:12426             51.3                  9630            187.9
+21:14:31.417 INFO  ProgressMeter -    scaffold-51:20270             51.5                  9660            187.6
+21:14:49.005 INFO  ProgressMeter -     scaffold-52:2867             51.8                  9700            187.4
+21:15:03.796 INFO  ProgressMeter -     scaffold-53:5869             52.0                  9750            187.4
+21:15:14.922 INFO  ProgressMeter -     scaffold-54:2752             52.2                  9810            187.9
+21:15:25.469 INFO  ProgressMeter -     scaffold-55:4415             52.4                  9840            187.9
+21:15:36.068 INFO  ProgressMeter -     scaffold-56:8015             52.6                  9880            188.0
+21:15:47.834 INFO  ProgressMeter -    scaffold-59:16577             52.8                  9970            189.0
+21:16:00.741 INFO  ProgressMeter -    scaffold-60:11810             53.0                 10020            189.2
+21:16:12.916 INFO  ProgressMeter -     scaffold-63:2333             53.2                 10090            189.8
+21:16:24.286 INFO  ProgressMeter -    scaffold-63:15516             53.4                 10140            190.0
+21:16:35.483 INFO  ProgressMeter -      scaffold-64:738             53.5                 10180            190.1
+21:16:46.100 INFO  ProgressMeter -     scaffold-66:4779             53.7                 10240            190.6
+21:16:56.765 INFO  ProgressMeter -      scaffold-68:562             53.9                 10280            190.7
+21:17:08.113 INFO  ProgressMeter -     scaffold-72:4814             54.1                 10380            191.9
+21:17:22.216 INFO  ProgressMeter -    scaffold-72:15376             54.3                 10420            191.8
+21:17:32.534 INFO  ProgressMeter -    scaffold-72:23193             54.5                 10450            191.7
+21:17:44.359 INFO  ProgressMeter -     scaffold-74:3398             54.7                 10490            191.8
+21:17:55.335 INFO  ProgressMeter -    scaffold-74:11296             54.9                 10520            191.7
+21:18:06.068 INFO  ProgressMeter -    scaffold-74:25203             55.1                 10570            192.0
+21:18:32.248 INFO  ProgressMeter -    scaffold-74:36146             55.5                 10610            191.2
+21:18:45.186 INFO  ProgressMeter -     scaffold-77:4822             55.7                 10660            191.4
+21:18:55.315 INFO  ProgressMeter -    scaffold-77:15788             55.9                 10700            191.5
+21:19:06.215 INFO  ProgressMeter -    scaffold-77:23881             56.1                 10730            191.4
+21:19:20.504 INFO  ProgressMeter -    scaffold-77:33826             56.3                 10770            191.3
+21:19:32.651 INFO  ProgressMeter -    scaffold-77:50321             56.5                 10830            191.7
+21:19:44.300 INFO  ProgressMeter -    scaffold-77:57793             56.7                 10860            191.6
+21:19:57.365 INFO  ProgressMeter -    scaffold-77:69017             56.9                 10900            191.5
+21:20:09.180 INFO  ProgressMeter -    scaffold-77:79414             57.1                 10940            191.6
+21:20:22.239 INFO  ProgressMeter -    scaffold-77:86839             57.3                 10970            191.4
+21:20:35.419 INFO  ProgressMeter -    scaffold-77:91345             57.5                 10990            191.0
+21:20:49.477 INFO  ProgressMeter -     scaffold-79:7728             57.8                 11050            191.2
+21:21:00.597 INFO  ProgressMeter -    scaffold-79:12901             58.0                 11070            191.0
+21:21:11.473 INFO  ProgressMeter -      scaffold-81:352             58.1                 11120            191.2
+21:21:28.635 INFO  ProgressMeter -    scaffold-81:13593             58.4                 11170            191.2
+21:21:40.672 INFO  ProgressMeter -    scaffold-81:19705             58.6                 11200            191.0
+21:21:50.952 INFO  ProgressMeter -    scaffold-81:27831             58.8                 11230            191.0
+21:22:04.135 INFO  ProgressMeter -    scaffold-81:44989             59.0                 11290            191.3
+21:22:15.486 INFO  ProgressMeter -    scaffold-81:58625             59.2                 11340            191.5
+21:22:26.052 INFO  ProgressMeter -     scaffold-84:1010             59.4                 11380            191.6
+21:22:38.016 INFO  ProgressMeter -     scaffold-87:6372             59.6                 11440            192.0
+21:22:49.792 INFO  ProgressMeter -    scaffold-87:16020             59.8                 11480            192.0
+21:23:01.257 INFO  ProgressMeter -    scaffold-87:23815             60.0                 11510            191.9
+21:23:18.411 INFO  ProgressMeter -    scaffold-87:35429             60.3                 11550            191.7
+21:23:29.352 INFO  ProgressMeter -    scaffold-87:49498             60.4                 11600            191.9
+21:23:41.701 INFO  ProgressMeter -    scaffold-87:56830             60.7                 11630            191.8
+21:23:53.291 INFO  ProgressMeter -    scaffold-87:62199             60.8                 11650            191.5
+21:24:02.916 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.919 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.920 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.922 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.924 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.926 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.928 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.930 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.932 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.934 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.937 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.939 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:02.941 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:24:03.558 INFO  ProgressMeter -    scaffold-87:87390             61.0                 11740            192.4
+21:24:14.863 INFO  ProgressMeter -     scaffold-91:3503             61.2                 11840            193.5
+21:24:27.804 INFO  ProgressMeter -    scaffold-91:13652             61.4                 11880            193.4
+21:24:39.961 INFO  ProgressMeter -    scaffold-91:40318             61.6                 11970            194.2
+21:24:50.674 INFO  ProgressMeter -    scaffold-91:54311             61.8                 12020            194.5
+21:25:01.374 INFO  ProgressMeter -     scaffold-92:1694             62.0                 12070            194.7
+21:25:12.574 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:25:12.576 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:25:12.577 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+21:25:12.597 INFO  ProgressMeter -     scaffold-95:2267             62.2                 12130            195.1
+21:25:25.617 INFO  ProgressMeter -     scaffold-96:1004             62.4                 12170            195.1
+21:25:44.195 INFO  ProgressMeter -     scaffold-96:2742             62.7                 12180            194.3
+21:26:04.118 INFO  ProgressMeter -      scaffold-98:790             63.0                 12210            193.7
+21:26:15.046 INFO  ProgressMeter -        scaffold-99:1             63.2                 12230            193.5
+21:26:26.337 INFO  ProgressMeter -    scaffold-103:7188             63.4                 12310            194.2
+21:26:39.285 INFO  ProgressMeter -     scaffold-109:388             63.6                 12370            194.5
+21:27:31.748 INFO  ProgressMeter -    scaffold-109:1572             64.5                 12380            192.0
+21:28:11.041 INFO  ProgressMeter -    scaffold-112:1493             65.1                 12510            192.0
+21:29:25.920 INFO  ProgressMeter -       scaffold-113:1             66.4                 12520            188.6
+21:29:39.112 INFO  ProgressMeter -    scaffold-121:2668             66.6                 12570            188.7
+21:29:52.233 INFO  ProgressMeter -   scaffold-121:18550             66.8                 12630            189.0
+21:30:06.892 INFO  ProgressMeter -   scaffold-121:28883             67.1                 12670            188.9
+21:30:18.881 INFO  ProgressMeter -   scaffold-121:41811             67.3                 12720            189.1
+21:30:33.194 INFO  ProgressMeter -   scaffold-121:47051             67.5                 12740            188.7
+21:30:44.383 INFO  ProgressMeter -   scaffold-121:51399             67.7                 12760            188.5
+21:30:54.673 INFO  ProgressMeter -   scaffold-121:59557             67.9                 12790            188.5
+21:31:22.048 INFO  ProgressMeter -      scaffold-122:52             68.3                 12810            187.5
+21:31:33.075 INFO  ProgressMeter -    scaffold-211:2874             68.5                 13090            191.1
+21:31:44.319 INFO  ProgressMeter -      scaffold-212:52             68.7                 13120            191.0
+21:31:58.964 INFO  ProgressMeter -   scaffold-212:10894             68.9                 13160            190.9
+21:32:10.036 INFO  ProgressMeter -   scaffold-212:21457             69.1                 13200            191.0
+21:32:20.901 INFO  ProgressMeter -   scaffold-213:15647             69.3                 13270            191.5
+21:32:32.143 INFO  ProgressMeter -   scaffold-213:18198             69.5                 13280            191.1
+21:32:42.996 INFO  ProgressMeter -   scaffold-213:28794             69.7                 13320            191.2
+21:32:54.004 INFO  ProgressMeter -    scaffold-214:6515             69.9                 13370            191.4
+21:33:04.610 INFO  ProgressMeter -    scaffold-215:3052             70.0                 13440            191.9
+21:33:17.369 INFO  ProgressMeter -   scaffold-215:17031             70.2                 13490            192.0
+21:33:27.374 INFO  ProgressMeter -   scaffold-215:19544             70.4                 13500            191.7
+21:33:38.393 INFO  ProgressMeter -   scaffold-215:33280             70.6                 13550            191.9
+21:33:49.876 INFO  ProgressMeter -   scaffold-215:38006             70.8                 13570            191.7
+21:34:00.607 INFO  ProgressMeter -   scaffold-215:46696             71.0                 13600            191.6
+21:34:14.893 INFO  ProgressMeter -    scaffold-216:7908             71.2                 13640            191.6
+21:34:28.966 INFO  ProgressMeter -   scaffold-216:18313             71.4                 13680            191.5
+21:34:42.054 INFO  ProgressMeter -   scaffold-216:29113             71.7                 13720            191.5
+21:34:54.768 INFO  ProgressMeter -   scaffold-216:33942             71.9                 13740            191.2
+21:35:05.077 INFO  ProgressMeter -   scaffold-216:51942             72.0                 13800            191.6
+21:35:17.295 INFO  ProgressMeter -    scaffold-217:1252             72.2                 13820            191.3
+21:35:34.359 INFO  ProgressMeter -    scaffold-217:5675             72.5                 13840            190.8
+21:35:48.219 INFO  ProgressMeter -   scaffold-217:14084             72.8                 13870            190.6
+21:36:00.510 INFO  ProgressMeter -   scaffold-217:24168             73.0                 13910            190.6
+21:36:10.640 INFO  ProgressMeter -   scaffold-217:38400             73.1                 13960            190.9
+21:36:22.774 INFO  ProgressMeter -   scaffold-217:54524             73.3                 14020            191.2
+21:36:33.353 INFO  ProgressMeter -   scaffold-218:11929             73.5                 14070            191.4
+21:36:43.503 INFO  ProgressMeter -   scaffold-218:22255             73.7                 14110            191.5
+21:36:54.215 INFO  ProgressMeter -   scaffold-218:33509             73.9                 14150            191.6
+21:37:05.116 INFO  ProgressMeter -   scaffold-218:47700             74.0                 14200            191.8
+21:37:18.909 INFO  ProgressMeter -   scaffold-218:52587             74.3                 14220            191.5
+21:37:30.823 INFO  ProgressMeter -   scaffold-218:62712             74.5                 14260            191.5
+21:37:41.238 INFO  ProgressMeter -    scaffold-219:3052             74.6                 14320            191.8
+21:37:53.713 INFO  ProgressMeter -   scaffold-219:19443             74.9                 14380            192.1
+21:38:05.243 INFO  ProgressMeter -   scaffold-219:33633             75.0                 14430            192.3
+21:38:17.069 INFO  ProgressMeter -   scaffold-219:47322             75.2                 14480            192.4
+21:38:32.197 INFO  ProgressMeter -   scaffold-219:58289             75.5                 14520            192.3
+21:38:44.772 INFO  ProgressMeter -   scaffold-219:75520             75.7                 14580            192.6
+21:38:55.533 INFO  ProgressMeter -   scaffold-220:10523             75.9                 14630            192.8
+21:39:06.528 INFO  ProgressMeter -   scaffold-220:18544             76.1                 14660            192.7
+21:39:17.561 INFO  ProgressMeter -   scaffold-220:23125             76.2                 14680            192.5
+21:39:27.603 INFO  ProgressMeter -   scaffold-220:31193             76.4                 14710            192.5
+21:39:37.725 INFO  ProgressMeter -   scaffold-221:10942             76.6                 14840            193.8
+21:39:51.065 INFO  ProgressMeter -   scaffold-221:21736             76.8                 14880            193.7
+21:40:01.355 INFO  ProgressMeter -   scaffold-221:29607             77.0                 14910            193.7
+21:40:12.990 INFO  ProgressMeter -   scaffold-221:39692             77.2                 14950            193.7
+21:40:29.376 INFO  ProgressMeter -   scaffold-221:53258             77.4                 15000            193.7
+21:40:40.435 INFO  ProgressMeter -   scaffold-221:60405             77.6                 15030            193.6
+21:40:51.760 INFO  ProgressMeter -    scaffold-222:7760             77.8                 15070            193.7
+21:41:03.686 INFO  ProgressMeter -   scaffold-222:12931             78.0                 15090            193.4
+21:41:17.453 INFO  ProgressMeter -   scaffold-222:17896             78.2                 15110            193.1
+21:41:31.811 INFO  ProgressMeter -   scaffold-222:28925             78.5                 15150            193.0
+21:41:43.863 INFO  ProgressMeter -   scaffold-222:39648             78.7                 15190            193.0
+21:41:54.467 INFO  ProgressMeter -   scaffold-222:49962             78.9                 15230            193.1
+21:42:05.221 INFO  ProgressMeter -   scaffold-222:63565             79.0                 15280            193.3
+21:42:15.940 INFO  ProgressMeter -    scaffold-223:9464             79.2                 15320            193.4
+21:42:27.155 INFO  ProgressMeter -   scaffold-223:17706             79.4                 15350            193.3
+21:42:39.534 INFO  ProgressMeter -   scaffold-223:29493             79.6                 15390            193.3
+21:42:50.044 INFO  ProgressMeter -   scaffold-223:43268             79.8                 15440            193.5
+21:43:00.732 INFO  ProgressMeter -   scaffold-223:57244             80.0                 15490            193.7
+21:43:11.274 INFO  ProgressMeter -   scaffold-223:67417             80.1                 15530            193.8
+21:43:27.387 INFO  ProgressMeter -    scaffold-224:3063             80.4                 15570            193.6
+21:43:39.141 INFO  ProgressMeter -   scaffold-224:16460             80.6                 15620            193.8
+21:44:03.397 INFO  ProgressMeter -   scaffold-224:24088             81.0                 15650            193.2
+21:44:15.218 INFO  ProgressMeter -   scaffold-224:31513             81.2                 15680            193.1
+21:44:27.326 INFO  ProgressMeter -   scaffold-224:39641             81.4                 15710            193.0
+21:44:37.894 INFO  ProgressMeter -   scaffold-224:50058             81.6                 15750            193.0
+21:44:48.600 INFO  ProgressMeter -   scaffold-224:58507             81.8                 15780            193.0
+21:44:58.685 INFO  ProgressMeter -   scaffold-224:69496             81.9                 15820            193.1
+21:45:09.082 INFO  ProgressMeter -   scaffold-224:83449             82.1                 15870            193.3
+21:45:21.431 INFO  ProgressMeter -   scaffold-224:93240             82.3                 15910            193.3
+21:45:32.787 INFO  ProgressMeter -    scaffold-225:4327             82.5                 15970            193.6
+21:45:43.513 INFO  ProgressMeter -   scaffold-225:24324             82.7                 16040            194.0
+21:45:54.208 INFO  ProgressMeter -   scaffold-225:35450             82.9                 16080            194.1
+21:46:04.889 INFO  ProgressMeter -   scaffold-225:44437             83.0                 16120            194.1
+21:46:20.391 INFO  ProgressMeter -   scaffold-225:58501             83.3                 16170            194.1
+21:46:32.754 INFO  ProgressMeter -   scaffold-225:66014             83.5                 16200            194.0
+21:46:50.814 INFO  ProgressMeter -   scaffold-225:73911             83.8                 16230            193.7
+21:47:03.359 INFO  ProgressMeter -   scaffold-225:86515             84.0                 16280            193.8
+21:47:13.720 INFO  ProgressMeter -   scaffold-225:88435             84.2                 16290            193.5
+21:47:25.801 INFO  ProgressMeter -   scaffold-225:95945             84.4                 16320            193.4
+21:47:36.015 INFO  ProgressMeter -  scaffold-225:101044             84.6                 16340            193.2
+21:47:47.372 INFO  ProgressMeter -  scaffold-225:115067             84.7                 16390            193.4
+21:48:01.874 INFO  ProgressMeter -  scaffold-225:122093             85.0                 16420            193.2
+21:48:16.051 INFO  ProgressMeter -  scaffold-225:127130             85.2                 16440            192.9
+21:48:26.997 INFO  ProgressMeter -  scaffold-225:131835             85.4                 16460            192.7
+21:48:42.689 INFO  ProgressMeter -  scaffold-225:143519             85.7                 16500            192.6
+21:48:57.745 INFO  ProgressMeter -  scaffold-225:156465             85.9                 16550            192.6
+21:49:09.911 INFO  ProgressMeter -    scaffold-226:8519             86.1                 16590            192.6
+21:49:22.094 INFO  ProgressMeter -   scaffold-226:24622             86.3                 16650            192.9
+21:49:32.579 INFO  ProgressMeter -   scaffold-226:38543             86.5                 16700            193.1
+21:49:42.919 INFO  ProgressMeter -   scaffold-226:52283             86.7                 16750            193.3
+21:49:56.068 INFO  ProgressMeter -   scaffold-226:63603             86.9                 16790            193.2
+21:50:14.362 INFO  ProgressMeter -   scaffold-226:71845             87.2                 16820            192.9
+21:50:26.257 INFO  ProgressMeter -   scaffold-226:82273             87.4                 16860            192.9
+21:50:37.576 INFO  ProgressMeter -   scaffold-226:95325             87.6                 16910            193.1
+21:50:53.415 INFO  ProgressMeter -  scaffold-226:102854             87.8                 16940            192.8
+21:51:04.022 INFO  ProgressMeter -  scaffold-226:112904             88.0                 16980            192.9
+21:51:17.636 INFO  ProgressMeter -  scaffold-226:123147             88.3                 17020            192.9
+21:51:28.718 INFO  ProgressMeter -  scaffold-226:146649             88.4                 17100            193.4
+21:51:40.159 INFO  ProgressMeter -  scaffold-226:160244             88.6                 17150            193.5
+21:52:06.989 INFO  ProgressMeter -  scaffold-226:166167             89.1                 17180            192.9
+21:52:27.683 INFO  ProgressMeter -  scaffold-226:167805             89.4                 17190            192.2
+21:52:38.603 INFO  ProgressMeter -    scaffold-227:8146             89.6                 17230            192.3
+21:52:51.162 INFO  ProgressMeter -   scaffold-227:21540             89.8                 17280            192.4
+21:53:01.404 INFO  ProgressMeter -   scaffold-227:29690             90.0                 17310            192.4
+21:53:12.209 INFO  ProgressMeter -   scaffold-227:37497             90.2                 17340            192.3
+21:53:24.839 INFO  ProgressMeter -   scaffold-227:42345             90.4                 17360            192.1
+21:53:36.021 INFO  ProgressMeter -   scaffold-227:50203             90.6                 17390            192.0
+21:53:46.740 INFO  ProgressMeter -    scaffold-228:1252             90.7                 17430            192.1
+21:53:58.921 INFO  ProgressMeter -   scaffold-228:11564             90.9                 17470            192.1
+21:54:11.198 INFO  ProgressMeter -   scaffold-228:25750             91.1                 17520            192.2
+21:54:24.706 INFO  ProgressMeter -   scaffold-228:30985             91.4                 17540            192.0
+21:54:35.507 INFO  ProgressMeter -   scaffold-228:45590             91.5                 17590            192.1
+21:54:45.525 INFO  ProgressMeter -   scaffold-228:59697             91.7                 17640            192.3
+21:54:56.340 INFO  ProgressMeter -   scaffold-228:72999             91.9                 17690            192.5
+21:55:06.700 INFO  ProgressMeter -   scaffold-228:84415             92.1                 17730            192.6
+21:55:18.596 INFO  ProgressMeter -   scaffold-228:91864             92.3                 17760            192.5
+21:55:30.015 INFO  ProgressMeter -  scaffold-228:109222             92.5                 17820            192.7
+21:55:41.016 INFO  ProgressMeter -  scaffold-228:122488             92.6                 17870            192.9
+21:55:51.047 INFO  ProgressMeter -  scaffold-228:132891             92.8                 17910            193.0
+21:56:02.511 INFO  ProgressMeter -  scaffold-228:147038             93.0                 17960            193.1
+21:56:15.359 INFO  ProgressMeter -  scaffold-228:155377             93.2                 17990            193.0
+21:56:34.592 INFO  ProgressMeter -  scaffold-228:159633             93.5                 18010            192.6
+21:56:50.197 INFO  ProgressMeter -    scaffold-229:8819             93.8                 18050            192.4
+21:57:01.780 INFO  ProgressMeter -   scaffold-229:23016             94.0                 18100            192.6
+21:57:12.293 INFO  ProgressMeter -   scaffold-229:28125             94.2                 18120            192.4
+21:57:24.055 INFO  ProgressMeter -   scaffold-229:39145             94.4                 18160            192.5
+21:57:34.498 INFO  ProgressMeter -   scaffold-229:46950             94.5                 18190            192.4
+21:57:47.532 INFO  ProgressMeter -   scaffold-229:58086             94.7                 18230            192.4
+21:57:59.387 INFO  ProgressMeter -   scaffold-229:62834             94.9                 18250            192.2
+21:58:18.031 INFO  ProgressMeter -   scaffold-229:70820             95.3                 18280            191.9
+21:58:28.732 INFO  ProgressMeter -   scaffold-229:81717             95.4                 18320            192.0
+21:58:39.645 INFO  ProgressMeter -   scaffold-229:89220             95.6                 18350            191.9
+21:58:50.633 INFO  ProgressMeter -   scaffold-229:96517             95.8                 18380            191.9
+21:59:06.019 INFO  ProgressMeter -  scaffold-229:101415             96.1                 18400            191.6
+21:59:47.309 INFO  ProgressMeter -  scaffold-229:102621             96.7                 18410            190.3
+22:00:20.243 INFO  ProgressMeter -  scaffold-229:104242             97.3                 18420            189.3
+22:00:31.883 INFO  ProgressMeter -  scaffold-229:115463             97.5                 18460            189.4
+22:00:43.715 INFO  ProgressMeter -  scaffold-229:126234             97.7                 18500            189.4
+22:00:54.255 INFO  ProgressMeter -  scaffold-229:134339             97.9                 18530            189.4
+22:01:04.976 INFO  ProgressMeter -  scaffold-229:142349             98.0                 18560            189.3
+22:01:12.882 INFO  HaplotypeCaller - 600754 read(s) filtered by: ((((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter) AND WellformedReadFilter)
+  600754 read(s) filtered by: (((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter)
+      600754 read(s) filtered by: ((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter)
+          600754 read(s) filtered by: (((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter)
+              600754 read(s) filtered by: ((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter)
+                  600754 read(s) filtered by: (((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter)
+                      526637 read(s) filtered by: ((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter)
+                          526637 read(s) filtered by: (MappingQualityReadFilter AND MappingQualityAvailableReadFilter)
+                              526637 read(s) filtered by: MappingQualityReadFilter 
+                      74117 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+
+22:01:12.883 INFO  ProgressMeter -  scaffold-229:148069             98.2                 18581            189.3
+22:01:12.884 INFO  ProgressMeter - Traversal complete. Processed 18581 total regions in 98.2 minutes.
+22:01:12.915 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 4.241739267000001
+22:01:12.920 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 2955.880295594
+22:01:12.921 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 199.35 sec
+22:01:12.922 INFO  HaplotypeCaller - Shutting down engine
+[March 31, 2020 10:01:12 PM CDT] org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller done. Elapsed time: 98.30 minutes.
+Runtime.totalMemory()=2612527104
