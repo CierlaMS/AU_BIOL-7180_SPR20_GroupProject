@@ -1,0 +1,22 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: IndexMergedSortFiles.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.IndexMergedSortFil.390837
+  The memory limit is: 1gb
+  The job will start running after: 2020-03-31T10:14:16
+  Job Name: IndexMergedSortFil
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc8
+  Node list:  dmc8
+  Nodes:  dmc8
+  Command typed:
+/apps/scripts/run_script IndexMergedSortFiles.sh     
+  Queue submit command:
+sbatch --qos=class -J IndexMergedSortFil --begin=2020-03-31T10:14:16 --requeue --mail-user=asw0049@auburn.edu -o IndexMergedSortFil.o390837 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=1000mb --constraint=dmc 

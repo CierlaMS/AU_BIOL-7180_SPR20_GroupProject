@@ -1,0 +1,24 @@
+#Commands ran in terminal
+#cat *.outputSummary> Overal_samValidate.OutputSummary
+#grep No Overall_samValidate.OutputSummary | wc -l >> Overall_samValidate.OutputSummary
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+No errors found
+20

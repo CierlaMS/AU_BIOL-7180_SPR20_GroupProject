@@ -1,0 +1,19 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: 8_SamtoolFlagstat.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The memory limit is: 1gb
+  The job will start running after: 2020-03-31T10:29:03
+  Job Name: 8SamtoolFlagstatsh
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Command typed:
+/apps/scripts/run_script 8_SamtoolFlagstat.sh     
+  Queue submit command:
+sbatch --qos=class -J 8SamtoolFlagstatsh --begin=2020-03-31T10:29:03 --requeue --mail-user=asw0049@auburn.edu -o 8SamtoolFlagstatsh.o$SLURM_JOB_ID --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=1000mb --constraint=dmc 
+  Job number: 390840
+ 
