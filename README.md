@@ -6,3 +6,10 @@ Raw read data can be found in the following directory in scratch and in the shar
 
 
 FastQC was utilized for basic quality control metrics of raw MiSeq sequencing data.
+
+BWA was used to do the following:
+    Create an index for the reference genomes (script 4)
+    Align the samples we have to both reference genomes (script 5)                      
+        INPUT FILE: .fastq.gz    OUTPUT FILE: .aln.sam
+    Convert the aligned files to an extension the BWA could use to sort and merge files based on reference genome aligned to (script 6)
+        INPUT FILE: .aln.sam     OUTPUT FILE: .sorted.merged.bam
