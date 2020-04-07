@@ -14,6 +14,7 @@ ref1="Sal_Ref_genome"
 ref2="WT_2012_ref_assembly"
 # This reference is the WT 2012 sample genome
 
+# Set up the environment to run the script
 module load bwa
 
 bwa index $path1/${ref1}.fasta

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Creating sample lists
+# This script is used to convert the files to an extension BWA can use to then sort the samples and merge them into one file based on the reference genome
+
+# Creating sample lists for each of the reference genomes
 declare -a Sal_list=("Sal_Ref_genome.SRR10740748")
                      "Sal_Ref_genome.SRR10740740"
                      "Sal_Ref_genome.SRR10740741"
@@ -47,6 +49,8 @@ do
 done
 
 # Merge the sorted traditional reference samples into one file
+# Tried a for do done loop to merge files, but it kept overwriting the file.
+# Opted for a hard code to get the job done.
 samtools merge -f -@ 4 Sal_Ref_genome.sorted.merged.bam Sal_Ref_genome.SRR10740739.sorted.bam Sal_Ref_genome.SRR10740740.sorted.bam Sal_Ref_genome.SRR10740741.sorted.bam Sal_Ref_genome.SRR10740742.sorted.bam Sal_Ref_genome.SRR10740743.sorted.bam Sal_Ref_genome.SRR10740744.sorted.bam Sal_Ref_genome.SRR10740745.sorted.bam Sal_Ref_genome.SRR10740746.sorted.bam Sal_Ref_genome.SRR10740747.sorted.bam Sal_Ref_genome.SRR10740748.sorted.bam
 
 #####
@@ -68,7 +72,7 @@ samtools merge -f -@ 4 WT_Ref_genome.sorted.merged.bam WT_2012_ref_assembly.SRR1
 
 
 
-# Testing commands in the command line
+# Testing commands in the command line to ensure proper function
 #samtools view -bS /scratch/AU_BIOL-7180_GrpProject/sam_files_before_merging/Sal_Ref_genome.SRR10740739.aln.sam > Sal_Ref_genome.SRR10740739.aln.bam
 #samtools sort -@ 4 -o Sal_Ref_genome.SRR10740740.sorted.bam Sal_Ref_genome.SRR10740740.aln.bam
 #samtools merge -f -@ 4 Sal_Ref_genome.sorted.merged.bam Sal_Ref_genome.SRR10740739.sorted.bam Sal_Ref_genome.SRR10740740.sorted.bam Sal_Ref_genome.SRR10740741.sorted.bam

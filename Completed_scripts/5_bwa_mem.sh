@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# This will be used to align the samples we have to both of our reference genomes
+
 # Creating sample list
 declare -a sample_list=("SRR10740748" "SRR10740747" "SRR10740746" "SRR10740745" "SRR10740744" "SRR10740743" "SRR10740742" "SRR10740741" "SRR10740740" "SRR10740739")
 
-# Defining the reference genomes
+# Defining the reference genomes and the paths to them
 path1=/scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23
 ref1="Sal_Ref_genome"
 path2=/scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_assembly
