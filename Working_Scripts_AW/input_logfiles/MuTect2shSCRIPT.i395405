@@ -1,0 +1,19 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: MuTect2.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The memory limit is: 2gb
+  The job will start running after: 2020-04-09T12:05:20
+  Job Name: MuTect2shSCRIPT
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Command typed:
+/apps/scripts/run_script MuTect2.sh     
+  Queue submit command:
+sbatch --qos=class -J MuTect2shSCRIPT --begin=2020-04-09T12:05:20 --requeue --mail-user=asw0049@auburn.edu -o MuTect2shSCRIPT.o$SLURM_JOB_ID --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=2000mb --constraint=dmc 
+  Job number: 395405
+ 

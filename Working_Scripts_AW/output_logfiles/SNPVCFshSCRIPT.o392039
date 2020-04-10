@@ -1,0 +1,202 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: SNP_VCF.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.SNPVCFshSCRIPT.392039
+  The memory limit is: 4gb
+  The job will start running after: 2020-04-01T18:40:01
+  Job Name: SNPVCFshSCRIPT
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  2  cores on master node  dmc6
+  Node list:  dmc6
+  Nodes:  dmc6 dmc6
+  Command typed:
+/apps/scripts/run_script SNP_VCF.sh     
+  Queue submit command:
+sbatch --qos=class -J SNPVCFshSCRIPT --begin=2020-04-01T18:40:01 --requeue --mail-user=asw0049@auburn.edu -o SNPVCFshSCRIPT.o392039 --mail-type=ALL -t 24:00:00 -N 1-1 -n 2 --mem-per-cpu=2000mb --constraint=dmc 
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4G -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar GenotypeGVCFs -R /scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.fasta -V /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.vcf.gz
+18:41:32.234 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 01, 2020 6:41:37 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+18:41:37.827 INFO  GenotypeGVCFs - ------------------------------------------------------------
+18:41:37.828 INFO  GenotypeGVCFs - The Genome Analysis Toolkit (GATK) v4.1.4.0
+18:41:37.829 INFO  GenotypeGVCFs - For support and documentation go to https://software.broadinstitute.org/gatk/
+18:41:37.830 INFO  GenotypeGVCFs - Executing as aubcls71@dmc6.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+18:41:37.830 INFO  GenotypeGVCFs - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+18:41:37.831 INFO  GenotypeGVCFs - Start Date/Time: April 1, 2020 6:41:32 PM CDT
+18:41:37.831 INFO  GenotypeGVCFs - ------------------------------------------------------------
+18:41:37.832 INFO  GenotypeGVCFs - ------------------------------------------------------------
+18:41:37.834 INFO  GenotypeGVCFs - HTSJDK Version: 2.20.3
+18:41:37.834 INFO  GenotypeGVCFs - Picard Version: 2.21.1
+18:41:37.835 INFO  GenotypeGVCFs - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+18:41:37.835 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+18:41:37.835 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+18:41:37.836 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+18:41:37.836 INFO  GenotypeGVCFs - Deflater: IntelDeflater
+18:41:37.837 INFO  GenotypeGVCFs - Inflater: IntelInflater
+18:41:37.837 INFO  GenotypeGVCFs - GCS max retries/reopens: 20
+18:41:37.837 INFO  GenotypeGVCFs - Requester pays: disabled
+18:41:37.838 INFO  GenotypeGVCFs - Initializing engine
+18:41:39.085 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz
+18:41:39.108 INFO  GenotypeGVCFs - Shutting down engine
+[April 1, 2020 6:41:39 PM CDT] org.broadinstitute.hellbender.tools.walkers.GenotypeGVCFs done. Elapsed time: 0.12 minutes.
+Runtime.totalMemory()=2163736576
+org.broadinstitute.hellbender.exceptions.GATKException: Error initializing feature reader for path /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.getTribbleFeatureReader(FeatureDataSource.java:377)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.getFeatureReader(FeatureDataSource.java:329)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.<init>(FeatureDataSource.java:279)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.<init>(FeatureDataSource.java:250)
+	at org.broadinstitute.hellbender.engine.VariantLocusWalker.initializeDrivingVariants(VariantLocusWalker.java:78)
+	at org.broadinstitute.hellbender.engine.VariantWalkerBase.initializeFeatures(VariantWalkerBase.java:67)
+	at org.broadinstitute.hellbender.engine.GATKTool.onStartup(GATKTool.java:706)
+	at org.broadinstitute.hellbender.engine.VariantLocusWalker.onStartup(VariantLocusWalker.java:65)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.runTool(CommandLineProgram.java:137)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMainPostParseArgs(CommandLineProgram.java:191)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:210)
+	at org.broadinstitute.hellbender.Main.runCommandLineProgram(Main.java:163)
+	at org.broadinstitute.hellbender.Main.mainEntry(Main.java:206)
+	at org.broadinstitute.hellbender.Main.main(Main.java:292)
+Caused by: htsjdk.tribble.TribbleException$MalformedFeatureFile: Unable to parse header with error: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz has invalid uncompressedLength: -910943640, for input source: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz
+	at htsjdk.tribble.TabixFeatureReader.readHeader(TabixFeatureReader.java:97)
+	at htsjdk.tribble.TabixFeatureReader.<init>(TabixFeatureReader.java:82)
+	at htsjdk.tribble.AbstractFeatureReader.getFeatureReader(AbstractFeatureReader.java:117)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.getTribbleFeatureReader(FeatureDataSource.java:374)
+	... 13 more
+Caused by: htsjdk.samtools.util.RuntimeIOException: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz has invalid uncompressedLength: -910943640
+	at htsjdk.samtools.util.BlockCompressedInputStream.inflateBlock(BlockCompressedInputStream.java:543)
+	at htsjdk.samtools.util.BlockCompressedInputStream.processNextBlock(BlockCompressedInputStream.java:532)
+	at htsjdk.samtools.util.BlockCompressedInputStream.nextBlock(BlockCompressedInputStream.java:468)
+	at htsjdk.samtools.util.BlockCompressedInputStream.readBlock(BlockCompressedInputStream.java:458)
+	at htsjdk.samtools.util.BlockCompressedInputStream.available(BlockCompressedInputStream.java:196)
+	at htsjdk.samtools.util.BlockCompressedInputStream.read(BlockCompressedInputStream.java:331)
+	at htsjdk.samtools.util.BlockCompressedInputStream.read(BlockCompressedInputStream.java:257)
+	at htsjdk.tribble.readers.PositionalBufferedStream.fill(PositionalBufferedStream.java:132)
+	at htsjdk.tribble.readers.PositionalBufferedStream.read(PositionalBufferedStream.java:84)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at htsjdk.tribble.readers.LongLineBufferedReader.fill(LongLineBufferedReader.java:140)
+	at htsjdk.tribble.readers.LongLineBufferedReader.readLine(LongLineBufferedReader.java:300)
+	at htsjdk.tribble.readers.LongLineBufferedReader.readLine(LongLineBufferedReader.java:356)
+	at htsjdk.tribble.readers.SynchronousLineReader.readLine(SynchronousLineReader.java:51)
+	at htsjdk.tribble.readers.LineIteratorImpl.advance(LineIteratorImpl.java:24)
+	at htsjdk.tribble.readers.LineIteratorImpl.advance(LineIteratorImpl.java:11)
+	at htsjdk.samtools.util.AbstractIterator.hasNext(AbstractIterator.java:44)
+	at htsjdk.variant.vcf.VCFCodec.readActualHeader(VCFCodec.java:89)
+	at htsjdk.tribble.AsciiFeatureCodec.readHeader(AsciiFeatureCodec.java:79)
+	at htsjdk.tribble.AsciiFeatureCodec.readHeader(AsciiFeatureCodec.java:37)
+	at htsjdk.tribble.TabixFeatureReader.readHeader(TabixFeatureReader.java:95)
+	... 16 more
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4G -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar GenotypeGVCFs -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta -V /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.g.vcf.gz -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.vcf.gz
+18:41:46.381 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 01, 2020 6:41:51 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+18:41:51.925 INFO  GenotypeGVCFs - ------------------------------------------------------------
+18:41:51.927 INFO  GenotypeGVCFs - The Genome Analysis Toolkit (GATK) v4.1.4.0
+18:41:51.927 INFO  GenotypeGVCFs - For support and documentation go to https://software.broadinstitute.org/gatk/
+18:41:51.929 INFO  GenotypeGVCFs - Executing as aubcls71@dmc6.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+18:41:51.929 INFO  GenotypeGVCFs - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+18:41:51.930 INFO  GenotypeGVCFs - Start Date/Time: April 1, 2020 6:41:46 PM CDT
+18:41:51.930 INFO  GenotypeGVCFs - ------------------------------------------------------------
+18:41:51.931 INFO  GenotypeGVCFs - ------------------------------------------------------------
+18:41:51.933 INFO  GenotypeGVCFs - HTSJDK Version: 2.20.3
+18:41:51.933 INFO  GenotypeGVCFs - Picard Version: 2.21.1
+18:41:51.934 INFO  GenotypeGVCFs - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+18:41:51.934 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+18:41:51.934 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+18:41:51.935 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+18:41:51.935 INFO  GenotypeGVCFs - Deflater: IntelDeflater
+18:41:51.936 INFO  GenotypeGVCFs - Inflater: IntelInflater
+18:41:51.936 INFO  GenotypeGVCFs - GCS max retries/reopens: 20
+18:41:51.936 INFO  GenotypeGVCFs - Requester pays: disabled
+18:41:51.937 INFO  GenotypeGVCFs - Initializing engine
+18:41:53.156 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.g.vcf.gz
+18:41:53.288 INFO  GenotypeGVCFs - Done initializing engine
+18:41:53.389 INFO  ProgressMeter - Starting traversal
+18:41:53.390 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+18:41:53.464 WARN  ReferenceConfidenceVariantContextMerger - Detected invalid annotations: When trying to merge variant contexts at location scaffold-0:17663 the annotation MLEAC=[2, 0] was not a numerical value and was ignored
+18:41:54.011 WARN  InbreedingCoeff - InbreedingCoeff will not be calculated; at least 10 samples must have called genotypes
+18:41:57.051 INFO  ProgressMeter -   scaffold-229:56273              0.1                 15454         253344.3
+18:41:57.051 INFO  ProgressMeter - Traversal complete. Processed 15454 total variants in 0.1 minutes.
+18:41:57.069 INFO  GenotypeGVCFs - Shutting down engine
+[April 1, 2020 6:41:57 PM CDT] org.broadinstitute.hellbender.tools.walkers.GenotypeGVCFs done. Elapsed time: 0.18 minutes.
+Runtime.totalMemory()=2120744960
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar SelectVariants -R /scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.fasta --variant /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.vcf.gz --select-type-to-include SNP --output /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.SNPs.vcf
+18:42:03.931 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 01, 2020 6:42:09 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+18:42:09.500 INFO  SelectVariants - ------------------------------------------------------------
+18:42:09.502 INFO  SelectVariants - The Genome Analysis Toolkit (GATK) v4.1.4.0
+18:42:09.503 INFO  SelectVariants - For support and documentation go to https://software.broadinstitute.org/gatk/
+18:42:09.504 INFO  SelectVariants - Executing as aubcls71@dmc6.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+18:42:09.505 INFO  SelectVariants - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+18:42:09.506 INFO  SelectVariants - Start Date/Time: April 1, 2020 6:42:03 PM CDT
+18:42:09.506 INFO  SelectVariants - ------------------------------------------------------------
+18:42:09.506 INFO  SelectVariants - ------------------------------------------------------------
+18:42:09.508 INFO  SelectVariants - HTSJDK Version: 2.20.3
+18:42:09.509 INFO  SelectVariants - Picard Version: 2.21.1
+18:42:09.509 INFO  SelectVariants - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+18:42:09.510 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+18:42:09.510 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+18:42:09.511 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+18:42:09.511 INFO  SelectVariants - Deflater: IntelDeflater
+18:42:09.511 INFO  SelectVariants - Inflater: IntelInflater
+18:42:09.512 INFO  SelectVariants - GCS max retries/reopens: 20
+18:42:09.512 INFO  SelectVariants - Requester pays: disabled
+18:42:09.513 INFO  SelectVariants - Initializing engine
+18:42:10.611 INFO  SelectVariants - Shutting down engine
+[April 1, 2020 6:42:10 PM CDT] org.broadinstitute.hellbender.tools.walkers.variantutils.SelectVariants done. Elapsed time: 0.11 minutes.
+Runtime.totalMemory()=2047344640
+***********************************************************************
+
+A USER ERROR has occurred: Couldn't read file file:///scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.vcf.gz. Error was: It doesn't exist.
+
+***********************************************************************
+Set the system property GATK_STACKTRACE_ON_USER_EXCEPTION (--java-options '-DGATK_STACKTRACE_ON_USER_EXCEPTION=true') to print the stack trace.
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar SelectVariants -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta --variant /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.vcf.gz --select-type-to-include SNP --output /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.SNPs.vcf
+18:42:17.452 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 01, 2020 6:42:22 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+18:42:23.000 INFO  SelectVariants - ------------------------------------------------------------
+18:42:23.001 INFO  SelectVariants - The Genome Analysis Toolkit (GATK) v4.1.4.0
+18:42:23.002 INFO  SelectVariants - For support and documentation go to https://software.broadinstitute.org/gatk/
+18:42:23.003 INFO  SelectVariants - Executing as aubcls71@dmc6.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+18:42:23.004 INFO  SelectVariants - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+18:42:23.005 INFO  SelectVariants - Start Date/Time: April 1, 2020 6:42:17 PM CDT
+18:42:23.005 INFO  SelectVariants - ------------------------------------------------------------
+18:42:23.005 INFO  SelectVariants - ------------------------------------------------------------
+18:42:23.007 INFO  SelectVariants - HTSJDK Version: 2.20.3
+18:42:23.008 INFO  SelectVariants - Picard Version: 2.21.1
+18:42:23.008 INFO  SelectVariants - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+18:42:23.009 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+18:42:23.009 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+18:42:23.009 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+18:42:23.010 INFO  SelectVariants - Deflater: IntelDeflater
+18:42:23.010 INFO  SelectVariants - Inflater: IntelInflater
+18:42:23.011 INFO  SelectVariants - GCS max retries/reopens: 20
+18:42:23.011 INFO  SelectVariants - Requester pays: disabled
+18:42:23.011 INFO  SelectVariants - Initializing engine
+18:42:24.148 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.vcf.gz
+18:42:24.268 INFO  SelectVariants - Done initializing engine
+18:42:24.362 INFO  ProgressMeter - Starting traversal
+18:42:24.363 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+18:42:24.739 INFO  ProgressMeter -             unmapped              0.0                   746         119360.0
+18:42:24.740 INFO  ProgressMeter - Traversal complete. Processed 746 total variants in 0.0 minutes.
+18:42:24.752 INFO  SelectVariants - Shutting down engine
+[April 1, 2020 6:42:24 PM CDT] org.broadinstitute.hellbender.tools.walkers.variantutils.SelectVariants done. Elapsed time: 0.12 minutes.
+Runtime.totalMemory()=1989148672

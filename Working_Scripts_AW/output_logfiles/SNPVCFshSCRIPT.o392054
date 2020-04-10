@@ -1,0 +1,126 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: SNP_VCF.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.SNPVCFshSCRIPT.392054
+  The memory limit is: 4gb
+  The job will start running after: 2020-04-01T20:07:08
+  Job Name: SNPVCFshSCRIPT
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc6
+  Node list:  dmc6
+  Nodes:  dmc6
+  Command typed:
+/apps/scripts/run_script SNP_VCF.sh     
+  Queue submit command:
+sbatch --qos=class -J SNPVCFshSCRIPT --begin=2020-04-01T20:07:08 --requeue --mail-user=asw0049@auburn.edu -o SNPVCFshSCRIPT.o392054 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=4000mb --constraint=dmc 
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar VariantFiltration -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta --variant /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.SNPs.vcf -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.SNPs.filtered.initial.vcf --filter-expression QD < 2.0 --filter-name QD2 --filter-expression QUAL < 30.0 --filter-name QUAL30 --filter-expression SOR > 3.0 --filter-name SOR3 --filter-expression FS > 60.0 --filter-name FS60 --filter-expression MQ < 40.0 --filter-name MQ40 --filter-expression MQRankSum < -12.5 --filter-name MQRankSum-12.5 --filter-expression ReadPosRankSum < -8.0 --filter-name ReadPosRankSum-8
+20:08:43.808 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 01, 2020 8:08:49 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+20:08:49.512 INFO  VariantFiltration - ------------------------------------------------------------
+20:08:49.513 INFO  VariantFiltration - The Genome Analysis Toolkit (GATK) v4.1.4.0
+20:08:49.515 INFO  VariantFiltration - For support and documentation go to https://software.broadinstitute.org/gatk/
+20:08:49.516 INFO  VariantFiltration - Executing as aubcls71@dmc6.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+20:08:49.516 INFO  VariantFiltration - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+20:08:49.517 INFO  VariantFiltration - Start Date/Time: April 1, 2020 8:08:43 PM CDT
+20:08:49.517 INFO  VariantFiltration - ------------------------------------------------------------
+20:08:49.518 INFO  VariantFiltration - ------------------------------------------------------------
+20:08:49.521 INFO  VariantFiltration - HTSJDK Version: 2.20.3
+20:08:49.521 INFO  VariantFiltration - Picard Version: 2.21.1
+20:08:49.522 INFO  VariantFiltration - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+20:08:49.522 INFO  VariantFiltration - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+20:08:49.523 INFO  VariantFiltration - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+20:08:49.523 INFO  VariantFiltration - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+20:08:49.524 INFO  VariantFiltration - Deflater: IntelDeflater
+20:08:49.524 INFO  VariantFiltration - Inflater: IntelInflater
+20:08:49.525 INFO  VariantFiltration - GCS max retries/reopens: 20
+20:08:49.525 INFO  VariantFiltration - Requester pays: disabled
+20:08:49.525 INFO  VariantFiltration - Initializing engine
+20:08:50.938 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.SNPs.vcf
+20:08:51.056 INFO  VariantFiltration - Done initializing engine
+20:08:51.524 INFO  ProgressMeter - Starting traversal
+20:08:51.535 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+20:08:51.718 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:51.720 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:51.761 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:51.764 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:51.901 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:51.910 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:51.912 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:51.913 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:51.956 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:51.965 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:51.986 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:51.992 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:51.993 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:51.999 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.000 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.004 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.055 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.057 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.084 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.090 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.095 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.111 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.113 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.114 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.115 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.116 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.117 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.117 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.122 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.122 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.127 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.139 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.224 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.225 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.228 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.238 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.242 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.251 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.274 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.289 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.292 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+20:08:52.293 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+20:08:52.353 INFO  ProgressMeter -             unmapped              0.0                   746          54785.8
+20:08:52.358 INFO  ProgressMeter - Traversal complete. Processed 746 total variants in 0.0 minutes.
+20:08:52.377 INFO  VariantFiltration - Shutting down engine
+[April 1, 2020 8:08:52 PM CDT] org.broadinstitute.hellbender.tools.walkers.filters.VariantFiltration done. Elapsed time: 0.15 minutes.
+Runtime.totalMemory()=2039545856
+
+VCFtools - 0.1.15
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf [stdin]
+	--out /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.nucleotide_diversity
+	--site-pi
+	--positions /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.SNPs.vcf
+
+After filtering, kept 1 out of 1 Individuals
+Outputting Per-Site Nucleotide Diversity Statistics...
+After filtering, kept 746 out of a possible 15454 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.15
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf [stdin]
+	--out /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.filt.nucleotide_diversity
+	--site-pi
+	--positions /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.SNPs.vcf
+
+
+gzip: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.SNPs.filtered.initial.vcf: not in gzip format
+After filtering, kept 0 out of 0 Individuals
+Error: Require Genotypes in VCF file in order to output Nucleotide Diversity Statistics.

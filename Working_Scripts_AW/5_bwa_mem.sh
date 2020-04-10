@@ -8,7 +8,7 @@ path1=/scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23
 ref1="Sal_Ref_genome"
 path2=/scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster/SRR10740739_assembly
 ref2="WT_2012_ref_assembly"
-
+ref3="WT_2012_ref_assemblyc"
 # Defining path to sample_list
 path3=/scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster
 
@@ -19,9 +19,11 @@ module load bwa/0.7.12
 # Command loop to align both reads to the reference genomes
 for sample in  ${sample_list[@]}; do
     # Align the sample to reference genome 1
-    bwa mem -M -t 4 -R "@RG\tID:foo\tSM:bar" $path1/$ref1.fasta $path3/${sample}_1.fastq.gz $path3/${sample}_2.fastq.gz > $ref1.$sample.aln.sam
+    #bwa mem -M -t 4 -R "@RG\tID:foo\tSM:bar" $path1/$ref1.fasta $path3/${sample}_1.fastq.gz $path3/${sample}_2.fastq.gz > $ref1.$sample.aln.sam
     # Align the same sequence to reference genome 2
-    bwa mem -M -t 4 -R "@RG\tID:foo\tSM:bar" $path2/$ref2.fasta $path3/${sample}_1.fastq.gz $path3/${sample}_2.fastq.gz > $ref2.$sample.aln.sam
+    #bwa mem -M -t 4 -R "@RG\tID:foo\tSM:bar" $path2/$ref2.fasta $path3/${sample}_1.fastq.gz $path3/${sample}_2.fastq.gz > $ref2.$sample.aln.sam
+    #align the same sequence to refernce genome 3
+    bwa mem -M -t 4 -R "@RG\tID:foo\tSM:bar" $path2/$ref3.fasta $path3/${sample}_1.fastq.gz $path3/${sample}_2.fastq.gz > $ref3.$sample.aln.sam
 done
 
 ##################################################################

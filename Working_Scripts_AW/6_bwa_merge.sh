@@ -63,7 +63,7 @@ samtools merge -f -@ 4 Sal_Ref_genome.sorted.merged.bam Sal_Ref_genome.SRR107407
 # Merge the sorted WT reference samples into one file
 samtools merge -f -@ 4 WT_Ref_genome.sorted.merged.bam WT_2012_ref_assembly.SRR10740739.sorted.bam WT_2012_ref_assembly.SRR10740740.sorted.bam WT_2012_ref_assembly.SRR10740741.sorted.bam WT_2012_ref_assembly.SRR10740742.sorted.bam WT_2012_ref_assembly.SRR10740743.sorted.bam WT_2012_ref_assembly.SRR10740744.sorted.bam WT_2012_ref_assembly.SRR10740745.sorted.bam WT_2012_ref_assembly.SRR10740746.sorted.bam WT_2012_ref_assembly.SRR10740747.sorted.bam WT_2012_ref_assembly.SRR10740748.sorted.bam
 
-# DOONE WITH SCRIPT
+# DONE WITH SCRIPT
 #####
 
 

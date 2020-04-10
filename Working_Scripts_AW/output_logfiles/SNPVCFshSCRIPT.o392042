@@ -1,0 +1,98 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: SNP_VCF.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Working_Scripts_AW
+  The working directory is:  /scratch-local/aubcls71.SNPVCFshSCRIPT.392042
+  The memory limit is: 1gb
+  The job will start running after: 2020-04-01T19:06:56
+  Job Name: SNPVCFshSCRIPT
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc18
+  Node list:  dmc18
+  Nodes:  dmc18
+  Command typed:
+/apps/scripts/run_script SNP_VCF.sh     
+  Queue submit command:
+sbatch --qos=class -J SNPVCFshSCRIPT --begin=2020-04-01T19:06:56 --requeue --mail-user=asw0049@auburn.edu -o SNPVCFshSCRIPT.o392042 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=1000mb --constraint=dmc 
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4G -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar GenotypeGVCFs -R /scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.fasta -V /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz -O /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.vcf.gz
+19:08:33.872 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 01, 2020 7:08:39 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+19:08:39.605 INFO  GenotypeGVCFs - ------------------------------------------------------------
+19:08:39.606 INFO  GenotypeGVCFs - The Genome Analysis Toolkit (GATK) v4.1.4.0
+19:08:39.607 INFO  GenotypeGVCFs - For support and documentation go to https://software.broadinstitute.org/gatk/
+19:08:39.608 INFO  GenotypeGVCFs - Executing as aubcls71@dmc18.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+19:08:39.608 INFO  GenotypeGVCFs - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+19:08:39.609 INFO  GenotypeGVCFs - Start Date/Time: April 1, 2020 7:08:33 PM CDT
+19:08:39.610 INFO  GenotypeGVCFs - ------------------------------------------------------------
+19:08:39.610 INFO  GenotypeGVCFs - ------------------------------------------------------------
+19:08:39.612 INFO  GenotypeGVCFs - HTSJDK Version: 2.20.3
+19:08:39.612 INFO  GenotypeGVCFs - Picard Version: 2.21.1
+19:08:39.612 INFO  GenotypeGVCFs - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+19:08:39.613 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+19:08:39.613 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+19:08:39.614 INFO  GenotypeGVCFs - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+19:08:39.614 INFO  GenotypeGVCFs - Deflater: IntelDeflater
+19:08:39.614 INFO  GenotypeGVCFs - Inflater: IntelInflater
+19:08:39.615 INFO  GenotypeGVCFs - GCS max retries/reopens: 20
+19:08:39.615 INFO  GenotypeGVCFs - Requester pays: disabled
+19:08:39.615 INFO  GenotypeGVCFs - Initializing engine
+19:08:40.820 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz
+19:08:40.882 INFO  GenotypeGVCFs - Shutting down engine
+[April 1, 2020 7:08:40 PM CDT] org.broadinstitute.hellbender.tools.walkers.GenotypeGVCFs done. Elapsed time: 0.12 minutes.
+Runtime.totalMemory()=2039545856
+org.broadinstitute.hellbender.exceptions.GATKException: Error initializing feature reader for path /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.getTribbleFeatureReader(FeatureDataSource.java:377)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.getFeatureReader(FeatureDataSource.java:329)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.<init>(FeatureDataSource.java:279)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.<init>(FeatureDataSource.java:250)
+	at org.broadinstitute.hellbender.engine.VariantLocusWalker.initializeDrivingVariants(VariantLocusWalker.java:78)
+	at org.broadinstitute.hellbender.engine.VariantWalkerBase.initializeFeatures(VariantWalkerBase.java:67)
+	at org.broadinstitute.hellbender.engine.GATKTool.onStartup(GATKTool.java:706)
+	at org.broadinstitute.hellbender.engine.VariantLocusWalker.onStartup(VariantLocusWalker.java:65)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.runTool(CommandLineProgram.java:137)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMainPostParseArgs(CommandLineProgram.java:191)
+	at org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:210)
+	at org.broadinstitute.hellbender.Main.runCommandLineProgram(Main.java:163)
+	at org.broadinstitute.hellbender.Main.mainEntry(Main.java:206)
+	at org.broadinstitute.hellbender.Main.main(Main.java:292)
+Caused by: htsjdk.tribble.TribbleException$MalformedFeatureFile: Unable to parse header with error: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz has invalid uncompressedLength: -910943640, for input source: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz
+	at htsjdk.tribble.TabixFeatureReader.readHeader(TabixFeatureReader.java:97)
+	at htsjdk.tribble.TabixFeatureReader.<init>(TabixFeatureReader.java:82)
+	at htsjdk.tribble.AbstractFeatureReader.getFeatureReader(AbstractFeatureReader.java:117)
+	at org.broadinstitute.hellbender.engine.FeatureDataSource.getTribbleFeatureReader(FeatureDataSource.java:374)
+	... 13 more
+Caused by: htsjdk.samtools.util.RuntimeIOException: /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.g.vcf.gz has invalid uncompressedLength: -910943640
+	at htsjdk.samtools.util.BlockCompressedInputStream.inflateBlock(BlockCompressedInputStream.java:543)
+	at htsjdk.samtools.util.BlockCompressedInputStream.processNextBlock(BlockCompressedInputStream.java:532)
+	at htsjdk.samtools.util.BlockCompressedInputStream.nextBlock(BlockCompressedInputStream.java:468)
+	at htsjdk.samtools.util.BlockCompressedInputStream.readBlock(BlockCompressedInputStream.java:458)
+	at htsjdk.samtools.util.BlockCompressedInputStream.available(BlockCompressedInputStream.java:196)
+	at htsjdk.samtools.util.BlockCompressedInputStream.read(BlockCompressedInputStream.java:331)
+	at htsjdk.samtools.util.BlockCompressedInputStream.read(BlockCompressedInputStream.java:257)
+	at htsjdk.tribble.readers.PositionalBufferedStream.fill(PositionalBufferedStream.java:132)
+	at htsjdk.tribble.readers.PositionalBufferedStream.read(PositionalBufferedStream.java:84)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at htsjdk.tribble.readers.LongLineBufferedReader.fill(LongLineBufferedReader.java:140)
+	at htsjdk.tribble.readers.LongLineBufferedReader.readLine(LongLineBufferedReader.java:300)
+	at htsjdk.tribble.readers.LongLineBufferedReader.readLine(LongLineBufferedReader.java:356)
+	at htsjdk.tribble.readers.SynchronousLineReader.readLine(SynchronousLineReader.java:51)
+	at htsjdk.tribble.readers.LineIteratorImpl.advance(LineIteratorImpl.java:24)
+	at htsjdk.tribble.readers.LineIteratorImpl.advance(LineIteratorImpl.java:11)
+	at htsjdk.samtools.util.AbstractIterator.hasNext(AbstractIterator.java:44)
+	at htsjdk.variant.vcf.VCFCodec.readActualHeader(VCFCodec.java:89)
+	at htsjdk.tribble.AsciiFeatureCodec.readHeader(AsciiFeatureCodec.java:79)
+	at htsjdk.tribble.AsciiFeatureCodec.readHeader(AsciiFeatureCodec.java:37)
+	at htsjdk.tribble.TabixFeatureReader.readHeader(TabixFeatureReader.java:95)
+	... 16 more
