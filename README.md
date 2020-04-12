@@ -7,10 +7,10 @@ Raw read data can be found in the following directory in scratch and in the shar
 Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixnio.com/free-images/science/microscopy-images/salmonellosis-salmonella/gram-negative-bacilli-or-rod-shaped-salmonella-sp-bacteria-725x493.jpg)
 
 # Reference Genomes and Assemblies Used
-[Traditional NCBI Refernce: _Salmonella enterica CVM N51250 v1.0_ (SER)](https://www.ncbi.nlm.nih.gov/assembly/GCF_001246125.1)
-Ray Assembly of WT-2012 (scaffolds): SER_ray
-Ray Assembly of WT-2012 (contig): SER_rayc
-SPAdes Assembly of WT-2012: SER_spades
+1. [Traditional NCBI Refernce: _Salmonella enterica CVM N51250 v1.0_ (SER)](https://www.ncbi.nlm.nih.gov/assembly/GCF_001246125.1)
+2. Ray Assembly of WT-2012 (scaffolds): SER_ray
+3. Ray Assembly of WT-2012 (contig): SER_rayc
+4. SPAdes Assembly of WT-2012: SER_spades
 
 |Reference| Genome Assembly Size|
 |---|---|
