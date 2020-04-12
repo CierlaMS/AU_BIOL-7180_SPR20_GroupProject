@@ -24,8 +24,11 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixn
 <img src="Workflow.png" width="500" height="400" />
 </p>
 1. Obtain raw reads using SRA Toolkit fastqDump.
+
 2. FastQC was utilized for basic quality control metrics of raw MiSeq sequencing data.[Step 2](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/tree/master/fastQC)
+
 3. Analyzed data for trimming (Step skipped)
+
 4. BWA for aligining reads to reference genomes and assemblies.
 	BWA was used to do the following:
     Create an index for the reference genomes (script 4)
@@ -33,6 +36,7 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixn
         INPUT FILE: .fastq.gz    OUTPUT FILE: .aln.sam
     Convert the aligned files to an extension the BWA could use to sort and merge files based on reference genome aligned to (script 6)
         INPUT FILE: .aln.sam     OUTPUT FILE: .sorted.merged.bam
+	
 5. Generate phylogeny of samples using CSIPhylogeny.
 ![SNP Sample Phylogeny](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/snp_tree.main_tree.svg)
    
