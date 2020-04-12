@@ -30,6 +30,8 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixn
         INPUT FILE: .fastq.gz    OUTPUT FILE: .aln.sam
     Convert the aligned files to an extension the BWA could use to sort and merge files based on reference genome aligned to (script 6)
         INPUT FILE: .aln.sam     OUTPUT FILE: .sorted.merged.bam
+5. Generate phylogeny of samples using CSIPhylogeny.
+![SNP Sample Phylogeny](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/snp_tree.main_tree.svg)
    
 
 Author contributions are listed in Contributions.md. [Contributions]
