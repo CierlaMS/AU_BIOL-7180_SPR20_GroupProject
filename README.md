@@ -7,13 +7,17 @@ Raw read data can be found in the following directory in scratch and in the shar
 Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixnio.com/free-images/science/microscopy-images/salmonellosis-salmonella/gram-negative-bacilli-or-rod-shaped-salmonella-sp-bacteria-725x493.jpg)
 
 # Reference Genomes and Assemblies Used
+[Traditional NCBI Refernce: _Salmonella enterica CVM N51250 v1.0_ (SER)](https://www.ncbi.nlm.nih.gov/assembly/GCF_001246125.1)
+Ray Assembly of WT-2012 (scaffolds): SER_ray
+Ray Assembly of WT-2012 (contig): SER_rayc
+SPAdes Assembly of WT-2012: SER_spades
 
-
-|Fungal Isolate| Genome Assembly Size|
+|Reference| Genome Assembly Size|
 |---|---|
-| Fop | 55.84 Mbp|
-| Fsp | 52.62 Mbp |
-| Neo | 61.51 Mbp |
+| _Salmonella enterica CVM N51250 v1.0_ | 4.7 Mbp|
+| SER_ray | 4.8 Mbp |
+| SER_rayc | 4.8 Mbp |
+| SER_spades | - Mbp |
 
 ## General Workflow
 1. Obtain raw reads using SRA Toolkit fastqDump.
