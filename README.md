@@ -21,7 +21,7 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixn
 
 ## General Workflow
 
-<img src="/https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Workflow.png" alt="Workflow" width="200"height="200" />
+<img src="/https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Workflow.png" width="200"height="200" />
 
 1. Obtain raw reads using SRA Toolkit fastqDump.
 2. FastQC was utilized for basic quality control metrics of raw MiSeq sequencing data.[Step 2](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/tree/master/fastQC)
