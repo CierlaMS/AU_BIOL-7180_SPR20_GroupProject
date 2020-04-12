@@ -50,4 +50,9 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixn
 | WT_Scaffold | 105 | 1095 | 439 | 656 | 0 | 15484 | 1005 | 0.669207 |
 | WT_Contigs-HaplotypeCaller |103 | 1116 | 444 | 672 | 0 | 15425 | 1029 | 0.660714 |
 
+
+![SNPs and Indels Detected](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_SNPs_Indels.png)
+
+![Transitions and Transversions Detected](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_TsTV.png)
+
 Author contributions are listed in Contributions.md. [Contributions]
