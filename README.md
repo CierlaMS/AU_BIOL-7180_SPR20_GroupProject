@@ -4,7 +4,7 @@ Raw read data can be found in the following directory in scratch and in the shar
 /scratch/AU_BIOL-7180_GrpProject/samples_Salmonella_muenster
 
 ## Background
-!Salmonella Gram-Negative Bacilli[Salmonella Gram-Negative Bacilli](https://pixnio.com/free-images/science/microscopy-images/salmonellosis-salmonella/gram-negative-bacilli-or-rod-shaped-salmonella-sp-bacteria-725x493.jpg)
+Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixnio.com/free-images/science/microscopy-images/salmonellosis-salmonella/gram-negative-bacilli-or-rod-shaped-salmonella-sp-bacteria-725x493.jpg)
 
 # Reference Genomes and Assemblies Used
 
