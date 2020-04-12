@@ -41,5 +41,13 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://pixn
 5. Generate phylogeny of samples using CSIPhylogeny.
 ![SNP Sample Phylogeny](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/snp_tree.main_tree.svg)
    
+## SNP Analysis from Vcf files
+
+| Ref | indels | snps | ts | tv | mnp | other | mas | ts/tv |
+|---|---|---|---|---|---|---|---|---|
+| Sal | 341 | 2323 | 1423 | 900 | 0 | 17787 | 2385 | 1.581111 |
+| WT_Contigs-Mutect2 | 614 | 1062 | 448 | 614 | 53 | 0 | 10 | 0.729642 |
+| WT_Scaffold | 105 | 1095 | 439 | 656 | 0 | 15484 | 1005 | 0.669207 |
+| WT_Contigs-HaplotypeCaller |103 | 1116 | 444 | 672 | 0 | 15425 | 1029 | 0.660714 |
 
 Author contributions are listed in Contributions.md. [Contributions]
