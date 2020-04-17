@@ -17,7 +17,7 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://gith
 | _Salmonella enterica CVM N51250 v1.0_ | 4.7 Mbp|
 | SER_ray | 4.8 Mbp |
 | SER_rayc | 4.8 Mbp |
-| SER_spades | - Mbp |
+| SER_spades | 4.8 Mbp |
 
 ## General Workflow
 <p align="center">
@@ -38,8 +38,8 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://gith
     Convert the aligned files to an extension the BWA could use to sort and merge files based on reference genome aligned to (script 6)
         INPUT FILE: .aln.sam     OUTPUT FILE: .sorted.merged.bam
 	
-5. Generate phylogeny of samples using CSIPhylogeny.
-![SNP Sample Phylogeny](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/snp_tree.main_tree.svg)
+5. Generate phylogeny of samples using CSIPhylogeny. Tree edit with Mega X.
+![SNP Sample Phylogeny](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Sal_Muenster_SNP_Tree.svg)
    
 ## SNP Analysis from Vcf files
 Mutect2 is a vcf generating somatic variant caller. HaplotypeCaller is a took of GATK that calls variands by default with diploid ploidy, but can have ploidy specifed. And FreeBayes is a variant caller commonly ustilized for varaint calling in haploid samples. Here, we opted to do a comparision of the variant calling quality for these three popular variant calling tools. Summary stats of the vcf files genertaed using **bcftools stats** and **plot-vcfstats**. The stats are represented below.
