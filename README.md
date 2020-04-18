@@ -68,12 +68,16 @@ Run python3 on polt.py script:
 #Use python3 to plot data gnerated in plot.py script and produce png graph files.
 python3 plot.py 
 ```
-| Ref | indels | snps | ts | tv | mnp | other | mas | ts/tv |
-|---|---|---|---|---|---|---|---|---|
-| Sal | 341 | 2323 | 1423 | 900 | 0 | 17787 | 2385 | 1.581111 |
-| WT_Contigs-Mutect2 | 614 | 1062 | 448 | 614 | 53 | 0 | 10 | 0.729642 |
-| WT_Scaffold | 105 | 1095 | 439 | 656 | 0 | 15484 | 1005 | 0.669207 |
-| WT_Contigs-HaplotypeCaller |103 | 1116 | 444 | 672 | 0 | 15425 | 1029 | 0.660714 |
+| Ref | indels | snps | ts | tv | mnp | other | mas | ts/tv | Variant Caller |
+|---|---|---|---|---|---|---|---|---|---|
+| _Salmonella enterica CVM N51250 v1.0_ | 49 | 2017 | 1073 | 944 | 436 | 9 | 0 | 1.136653 | FreeBayes |
+| WT_2012_Ray_Scaffold | 18 | 1367 | 434 | 933 | 77 | 5 | 9 | 0.465166 | FreeBayes |
+| WT_2012_Ray_Contigs |18 | 1351 | 437 | 914 | 77 | 5 | 9 |0.478118 | FreeBayes |
+| _Salmonella enterica CVM N51250 v1.0_ | 239 | 1966 | 1221 | 745 | 0 | 7828 | 2007 | 1.638926 | HaplotypeCaller |
+| WT_2012_Ray_Scaffold | 27 | 553 | 140 | 413 | 0 | 5467 | 467 | 0.338983 | HaplotypeCaller |
+| WT_2012_Ray_Contigs |24 | 553 | 139 | 414 | 0 | 5442 | 466 | 0.335749 | HaplotypeCaller |
+| WT_2012_Ray_Contigs | 614 | 1062 | 448 | 614 | 53 | 0 | 10 | 0.729642 | Mutect2 |
+
 
 
 ![SNPs and Indels Detected](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_SNPs_Indels.png)
