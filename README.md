@@ -79,11 +79,14 @@ python3 plot.py
 | WT_2012_Ray_Contigs | 614 | 1062 | 448 | 614 | 53 | 0 | 10 | 0.729642 | Mutect2 |
 
 
+SNPs and Indels Detected Using FreeBayes and Mutect2 | SNPs and Indels Detected Using HaplotypeCaller and Mutect2
+:---------------------------------------------------:|:---------------------------------------------------------:
+![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_FB_SNP_Indels.png) | 
+![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Snp_Indel_Hap.png) |
 
-![SNPs and Indels Detected Using FreeBayes, HaplotypeCaller, and Mutect2](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_FB_SNP_Indels.png)
-![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Snp_Indel_Hap.png)
-
-![Transitions and Transversions Detected Using FreeBayes, HaplotypeCaller, and Mutect2](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Ts_Tv_Hap.png)
-![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Tv_Ts_FreeBayes.png)
+Transitions and Transversions Detected Using FreeBayes and Mutect2 | Transitions and Transversions Detected Using HaplotypeCaller and Mutect2
+:---------------------------------------------------:|:---------------------------------------------------------:
+![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Ts_Tv_Hap.png) |
+![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Tv_Ts_FreeBayes.png)|
 
 Author contributions are listed in Contributions.md. [Contributions]
