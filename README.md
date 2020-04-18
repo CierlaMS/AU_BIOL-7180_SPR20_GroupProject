@@ -68,7 +68,7 @@ Run python3 on polt.py script:
 #Use python3 to plot data generated in plot.py script and produce png graph files.
 python3 plot.py 
 ```
-| Ref | indels | snps | ts | tv | mnp | other | mas | ts/tv | Variant Caller |
+| Reference | indels | snps | transitions | transversions | mnp<sup>1 | other | mas<sup>2 | ts/tv<sup>3 | Variant Caller |
 |---|---|---|---|---|---|---|---|---|---|
 | _Salmonella enterica CVM N51250 v1.0_ | 49 | 2017 | 1073 | 944 | 436 | 9 | 0 | 1.136653 | FreeBayes |
 | WT_2012_Ray_Scaffold | 18 | 1367 | 434 | 933 | 77 | 5 | 9 | 0.465166 | FreeBayes |
@@ -77,6 +77,10 @@ python3 plot.py
 | WT_2012_Ray_Scaffold | 27 | 553 | 140 | 413 | 0 | 5467 | 467 | 0.338983 | HaplotypeCaller |
 | WT_2012_Ray_Contigs |24 | 553 | 139 | 414 | 0 | 5442 | 466 | 0.335749 | HaplotypeCaller |
 | WT_2012_Ray_Contigs | 614 | 1062 | 448 | 614 | 53 | 0 | 10 | 0.729642 | Mutect2 |
+
+1-Multi Nucleotide Polymorphism (mnp)
+2-Multiallelic sites (mas)
+3-Transition to transversion raio (ts/tv)
 
 
 SNPs and Indels Detected Using FreeBayes and Mutect2 | SNPs and Indels Detected Using HaplotypeCaller and Mutect2
