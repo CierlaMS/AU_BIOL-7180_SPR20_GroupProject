@@ -79,6 +79,7 @@ python3 plot.py
 | WT_2012_Ray_Contigs |24 | 553 | 139 | 414 | 0 | 5442 | 466 | 0.335749 | HaplotypeCaller |
 | WT_2012_Ray_Contigs | 614 | 1062 | 448 | 614 | 53 | 0 | 10 | 0.729642 | Mutect2 |
 
+##### Table-1 Notes
 1-Multi Nucleotide Polymorphism (mnp)
 
 2-Multiallelic sites (mas)
