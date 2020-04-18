@@ -1,0 +1,1303 @@
+setting dmc scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: GATK_HaplotypeCaller2.sh
+  The time limit is 24:00:00 HH:MM:SS.
+  The target directory is: /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/Completed_scripts
+  The working directory is:  /scratch-local/aubcls71.VcfPloidyTest.399155
+  The memory limit is: 1gb
+  The job will start running after: 2020-04-16T10:53:53
+  Job Name: VcfPloidyTest
+  Virtual queue: class
+  QOS: --qos=class
+  Constraints: --constraint=dmc
+  Using  1  cores on master node  dmc2
+  Node list:  dmc2
+  Nodes:  dmc2
+  Command typed:
+/apps/scripts/run_script GATK_HaplotypeCaller2.sh     
+  Queue submit command:
+sbatch --qos=class -J VcfPloidyTest --begin=2020-04-16T10:53:53 --requeue --mail-user=asw0049@auburn.edu -o VcfPloidyTest.o399155 --mail-type=ALL -t 24:00:00 -N 1-1 -n 1 --mem-per-cpu=1000mb --constraint=dmc 
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4g -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar HaplotypeCaller -R /scratch/AU_BIOL-7180_GrpProject/reference_genome/ncbi-genomes-2020-03-23/Sal_Ref_genome.fasta -I /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/Sal_Ref_genome.sorted.merged.bam -ploidy 1 -O /scratch/AU_BIOL-7180_GrpProject/VCF_files/Sal_Ref_genome.sorted.merged.g.p.vcf.gz -ERC GVCF
+10:55:21.640 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 16, 2020 10:55:27 AM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+10:55:27.220 INFO  HaplotypeCaller - ------------------------------------------------------------
+10:55:27.221 INFO  HaplotypeCaller - The Genome Analysis Toolkit (GATK) v4.1.4.0
+10:55:27.222 INFO  HaplotypeCaller - For support and documentation go to https://software.broadinstitute.org/gatk/
+10:55:27.222 INFO  HaplotypeCaller - Executing as aubcls71@dmc2.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+10:55:27.223 INFO  HaplotypeCaller - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+10:55:27.223 INFO  HaplotypeCaller - Start Date/Time: April 16, 2020 10:55:21 AM CDT
+10:55:27.224 INFO  HaplotypeCaller - ------------------------------------------------------------
+10:55:27.224 INFO  HaplotypeCaller - ------------------------------------------------------------
+10:55:27.225 INFO  HaplotypeCaller - HTSJDK Version: 2.20.3
+10:55:27.226 INFO  HaplotypeCaller - Picard Version: 2.21.1
+10:55:27.226 INFO  HaplotypeCaller - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+10:55:27.227 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+10:55:27.227 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+10:55:27.228 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+10:55:27.228 INFO  HaplotypeCaller - Deflater: IntelDeflater
+10:55:27.228 INFO  HaplotypeCaller - Inflater: IntelInflater
+10:55:27.228 INFO  HaplotypeCaller - GCS max retries/reopens: 20
+10:55:27.229 INFO  HaplotypeCaller - Requester pays: disabled
+10:55:27.229 INFO  HaplotypeCaller - Initializing engine
+10:55:28.506 INFO  HaplotypeCaller - Done initializing engine
+10:55:28.515 INFO  HaplotypeCallerEngine - Tool is in reference confidence mode and the annotation, the following changes will be made to any specified annotations: 'StrandBiasBySample' will be enabled. 'ChromosomeCounts', 'FisherStrand', 'StrandOddsRatio' and 'QualByDepth' annotations have been disabled
+10:55:28.554 INFO  HaplotypeCallerEngine - Currently, physical phasing is only available for diploid samples.
+10:55:28.554 INFO  HaplotypeCallerEngine - Standard Emitting and Calling confidence set to 0.0 for reference-model confidence output
+10:55:28.555 INFO  HaplotypeCallerEngine - All sites annotated with PLs forced to true for reference-model confidence output
+10:55:28.599 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+10:55:28.625 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+10:55:28.697 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+10:55:28.699 INFO  IntelPairHmm - Available threads: 1
+10:55:28.699 INFO  IntelPairHmm - Requested threads: 4
+10:55:28.700 WARN  IntelPairHmm - Using 1 available threads, but 4 were requested
+10:55:28.700 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+10:55:28.802 INFO  ProgressMeter - Starting traversal
+10:55:28.812 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+10:55:40.915 INFO  ProgressMeter - NZ_LHMO01000001.1:1581              0.2                    10             49.6
+10:55:52.047 INFO  ProgressMeter - NZ_LHMO01000001.1:4290              0.4                    20             51.6
+10:56:01.577 WARN  InbreedingCoeff - InbreedingCoeff will not be calculated; at least 10 samples must have called genotypes
+10:56:07.138 INFO  ProgressMeter - NZ_LHMO01000010.1:3562              0.6                    40             62.6
+10:56:25.322 INFO  ProgressMeter - NZ_LHMO01000010.1:8709              0.9                    60             63.7
+10:56:37.107 INFO  ProgressMeter - NZ_LHMO01000010.1:16389              1.1                    90             79.1
+10:56:47.579 INFO  ProgressMeter - NZ_LHMO01000010.1:27199              1.3                   130             99.0
+10:56:59.369 INFO  ProgressMeter - NZ_LHMO01000011.1:66              1.5                   160            106.0
+10:57:23.672 INFO  ProgressMeter - NZ_LHMO01000011.1:14046              1.9                   210            109.7
+10:57:41.921 INFO  ProgressMeter - NZ_LHMO01000011.1:19275              2.2                   230            103.7
+10:58:00.587 INFO  ProgressMeter - NZ_LHMO01000011.1:32836              2.5                   280            110.7
+10:58:17.352 INFO  ProgressMeter - NZ_LHMO01000011.1:41234              2.8                   310            110.4
+10:58:31.343 INFO  ProgressMeter - NZ_LHMO01000011.1:54790              3.0                   360            118.3
+10:58:45.784 INFO  ProgressMeter - NZ_LHMO01000011.1:60213              3.3                   380            115.8
+10:58:56.674 INFO  ProgressMeter - NZ_LHMO01000011.1:65891              3.5                   400            115.5
+10:59:10.726 INFO  ProgressMeter - NZ_LHMO01000011.1:70875              3.7                   420            113.6
+10:59:21.778 INFO  ProgressMeter - NZ_LHMO01000011.1:84799              3.9                   470            121.0
+10:59:32.804 INFO  ProgressMeter - NZ_LHMO01000011.1:89530              4.1                   490            120.5
+10:59:44.766 INFO  ProgressMeter - NZ_LHMO01000011.1:100324              4.3                   530            124.2
+10:59:59.041 INFO  ProgressMeter - NZ_LHMO01000011.1:105094              4.5                   550            122.1
+11:00:23.021 INFO  ProgressMeter - NZ_LHMO01000011.1:115409              4.9                   590            120.3
+11:00:37.126 INFO  ProgressMeter - NZ_LHMO01000011.1:126573              5.1                   630            122.6
+11:00:49.978 INFO  ProgressMeter - NZ_LHMO01000011.1:131562              5.4                   650            121.4
+11:01:00.038 INFO  ProgressMeter - NZ_LHMO01000011.1:145861              5.5                   700            126.8
+11:01:16.215 INFO  ProgressMeter - NZ_LHMO01000011.1:163236              5.8                   760            131.3
+11:01:28.955 INFO  ProgressMeter - NZ_LHMO01000012.1:1382              6.0                   770            128.3
+11:01:41.790 INFO  ProgressMeter - NZ_LHMO01000012.1:8930              6.2                   800            128.7
+11:01:52.190 INFO  ProgressMeter - NZ_LHMO01000012.1:20031              6.4                   840            131.5
+11:02:02.379 INFO  ProgressMeter - NZ_LHMO01000012.1:39972              6.6                   910            138.7
+11:02:19.759 INFO  ProgressMeter - NZ_LHMO01000012.1:50537              6.8                   950            138.7
+11:02:38.039 INFO  ProgressMeter - NZ_LHMO01000012.1:55373              7.2                   970            135.6
+11:02:49.372 INFO  ProgressMeter - NZ_LHMO01000012.1:61927              7.3                  1000            136.2
+11:02:59.972 INFO  ProgressMeter - NZ_LHMO01000012.1:75215              7.5                  1050            139.6
+11:03:20.255 INFO  ProgressMeter - NZ_LHMO01000012.1:92217              7.9                  1110            141.3
+11:03:30.297 INFO  ProgressMeter - NZ_LHMO01000012.1:97331              8.0                  1130            140.8
+11:03:43.068 INFO  ProgressMeter - NZ_LHMO01000012.1:106485              8.2                  1170            142.0
+11:03:59.046 INFO  ProgressMeter - NZ_LHMO01000012.1:117065              8.5                  1210            142.3
+11:04:09.916 INFO  ProgressMeter - NZ_LHMO01000012.1:130721              8.7                  1260            145.1
+11:04:26.468 INFO  ProgressMeter - NZ_LHMO01000012.1:133514              9.0                  1270            141.7
+11:04:41.290 INFO  ProgressMeter - NZ_LHMO01000012.1:138446              9.2                  1290            140.1
+11:04:53.027 INFO  ProgressMeter - NZ_LHMO01000012.1:147590              9.4                  1330            141.4
+11:05:04.734 INFO  ProgressMeter - NZ_LHMO01000012.1:154360              9.6                  1360            141.7
+11:05:20.564 INFO  ProgressMeter - NZ_LHMO01000012.1:162672              9.9                  1390            140.9
+11:05:40.187 INFO  ProgressMeter - NZ_LHMO01000012.1:172460             10.2                  1430            140.3
+11:05:51.723 INFO  ProgressMeter - NZ_LHMO01000012.1:180401             10.4                  1460            140.6
+11:06:01.809 INFO  ProgressMeter - NZ_LHMO01000012.1:191781             10.5                  1500            142.2
+11:06:12.175 INFO  ProgressMeter - NZ_LHMO01000012.1:205096             10.7                  1550            144.6
+11:06:22.840 INFO  ProgressMeter - NZ_LHMO01000012.1:219220             10.9                  1600            146.8
+11:06:33.220 INFO  ProgressMeter - NZ_LHMO01000012.1:223934             11.1                  1620            146.3
+11:06:46.118 INFO  ProgressMeter - NZ_LHMO01000013.1:2335             11.3                  1640            145.3
+11:06:58.758 INFO  ProgressMeter - NZ_LHMO01000013.1:10335             11.5                  1670            145.2
+11:07:09.316 INFO  ProgressMeter - NZ_LHMO01000013.1:15487             11.7                  1690            144.8
+11:07:22.046 INFO  ProgressMeter - NZ_LHMO01000013.1:17639             11.9                  1700            143.0
+11:07:35.931 INFO  ProgressMeter - NZ_LHMO01000013.1:25376             12.1                  1730            142.8
+11:08:01.640 INFO  ProgressMeter - NZ_LHMO01000013.1:36446             12.5                  1770            141.1
+11:08:15.991 INFO  ProgressMeter - NZ_LHMO01000013.1:41150             12.8                  1790            140.0
+11:08:28.182 INFO  ProgressMeter - NZ_LHMO01000013.1:49141             13.0                  1820            140.1
+11:08:39.468 INFO  ProgressMeter - NZ_LHMO01000013.1:56876             13.2                  1850            140.4
+11:08:52.867 INFO  ProgressMeter - NZ_LHMO01000013.1:67965             13.4                  1890            141.0
+11:09:03.179 INFO  ProgressMeter - NZ_LHMO01000013.1:76634             13.6                  1920            141.5
+11:09:17.218 INFO  ProgressMeter - NZ_LHMO01000013.1:81737             13.8                  1940            140.5
+11:09:29.406 INFO  ProgressMeter - NZ_LHMO01000013.1:92561             14.0                  1980            141.3
+11:09:41.035 INFO  ProgressMeter - NZ_LHMO01000013.1:97619             14.2                  2000            140.8
+11:10:00.089 INFO  ProgressMeter - NZ_LHMO01000013.1:102654             14.5                  2020            139.1
+11:10:11.769 INFO  ProgressMeter - NZ_LHMO01000013.1:106993             14.7                  2040            138.6
+11:10:26.462 INFO  ProgressMeter - NZ_LHMO01000013.1:115428             15.0                  2070            138.4
+11:10:38.995 INFO  ProgressMeter - NZ_LHMO01000013.1:128888             15.2                  2120            139.8
+11:10:49.126 INFO  ProgressMeter - NZ_LHMO01000013.1:142734             15.3                  2170            141.5
+11:10:58.415 WARN  DepthPerSampleHC - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.416 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.416 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.426 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.427 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.429 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.430 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.431 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.432 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:58.793 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:10:59.365 INFO  ProgressMeter - NZ_LHMO01000013.1:175634             15.5                  2290            147.7
+11:11:11.827 INFO  ProgressMeter - NZ_LHMO01000013.1:189751             15.7                  2340            148.9
+11:11:30.618 INFO  ProgressMeter - NZ_LHMO01000013.1:202748             16.0                  2390            149.1
+11:11:41.654 INFO  ProgressMeter - NZ_LHMO01000013.1:210364             16.2                  2420            149.3
+11:11:53.899 INFO  ProgressMeter - NZ_LHMO01000013.1:221665             16.4                  2460            149.8
+11:12:06.124 INFO  ProgressMeter - NZ_LHMO01000013.1:227098             16.6                  2480            149.2
+11:12:19.124 INFO  ProgressMeter - NZ_LHMO01000013.1:232015             16.8                  2500            148.5
+11:12:29.851 INFO  ProgressMeter - NZ_LHMO01000013.1:242615             17.0                  2540            149.3
+11:12:43.896 INFO  ProgressMeter - NZ_LHMO01000013.1:249734             17.3                  2570            149.0
+11:12:57.260 INFO  ProgressMeter - NZ_LHMO01000013.1:252393             17.5                  2580            147.6
+11:13:18.241 INFO  ProgressMeter - NZ_LHMO01000013.1:257606             17.8                  2600            145.9
+11:13:37.455 INFO  ProgressMeter - NZ_LHMO01000013.1:262403             18.1                  2620            144.4
+11:13:47.836 INFO  ProgressMeter - NZ_LHMO01000013.1:273128             18.3                  2660            145.2
+11:13:59.719 INFO  ProgressMeter - NZ_LHMO01000013.1:287059             18.5                  2710            146.4
+11:14:12.859 INFO  ProgressMeter - NZ_LHMO01000013.1:295632             18.7                  2740            146.3
+11:14:25.016 INFO  ProgressMeter - NZ_LHMO01000013.1:306274             18.9                  2780            146.8
+11:14:36.338 INFO  ProgressMeter - NZ_LHMO01000013.1:317810             19.1                  2820            147.4
+11:14:48.458 INFO  ProgressMeter - NZ_LHMO01000013.1:328578             19.3                  2860            148.0
+11:14:58.702 INFO  ProgressMeter - NZ_LHMO01000013.1:346015             19.5                  2920            149.8
+11:15:09.929 INFO  ProgressMeter - NZ_LHMO01000013.1:354462             19.7                  2950            149.9
+11:15:20.729 INFO  ProgressMeter - NZ_LHMO01000013.1:365379             19.9                  2990            150.5
+11:15:23.435 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+11:15:31.522 INFO  ProgressMeter - NZ_LHMO01000014.1:13478             20.0                  3070            153.2
+11:15:43.987 INFO  ProgressMeter - NZ_LHMO01000014.1:16160             20.3                  3080            152.1
+11:15:55.287 INFO  ProgressMeter - NZ_LHMO01000014.1:21188             20.4                  3100            151.7
+11:16:05.565 INFO  ProgressMeter - NZ_LHMO01000014.1:35300             20.6                  3150            152.8
+11:16:23.960 INFO  ProgressMeter - NZ_LHMO01000014.1:37550             20.9                  3160            151.1
+11:16:38.911 INFO  ProgressMeter - NZ_LHMO01000014.1:45132             21.2                  3190            150.7
+11:16:51.283 INFO  ProgressMeter - NZ_LHMO01000014.1:53399             21.4                  3220            150.6
+11:17:05.028 INFO  ProgressMeter - NZ_LHMO01000014.1:57087             21.6                  3240            150.0
+11:17:19.990 INFO  ProgressMeter - NZ_LHMO01000014.1:64818             21.9                  3270            149.6
+11:17:34.425 INFO  ProgressMeter - NZ_LHMO01000014.1:67038             22.1                  3280            148.5
+11:17:45.410 INFO  ProgressMeter - NZ_LHMO01000014.1:69571             22.3                  3290            147.7
+11:17:57.471 INFO  ProgressMeter - NZ_LHMO01000014.1:77461             22.5                  3320            147.7
+11:18:07.611 INFO  ProgressMeter - NZ_LHMO01000014.1:82947             22.6                  3340            147.5
+11:18:20.169 INFO  ProgressMeter - NZ_LHMO01000014.1:90263             22.9                  3370            147.4
+11:18:30.345 INFO  ProgressMeter - NZ_LHMO01000014.1:109865             23.0                  3440            149.4
+11:18:41.163 INFO  ProgressMeter - NZ_LHMO01000014.1:123562             23.2                  3490            150.4
+11:18:53.219 INFO  ProgressMeter - NZ_LHMO01000014.1:134262             23.4                  3530            150.8
+11:19:06.194 INFO  ProgressMeter - NZ_LHMO01000014.1:141807             23.6                  3560            150.7
+11:19:17.067 INFO  ProgressMeter - NZ_LHMO01000014.1:158619             23.8                  3620            152.1
+11:19:33.510 INFO  ProgressMeter - NZ_LHMO01000014.1:171622             24.1                  3670            152.4
+11:19:44.218 INFO  ProgressMeter - NZ_LHMO01000014.1:182406             24.3                  3710            152.9
+11:19:55.130 INFO  ProgressMeter - NZ_LHMO01000014.1:190409             24.4                  3740            153.0
+11:20:08.963 INFO  ProgressMeter - NZ_LHMO01000014.1:203304             24.7                  3790            153.6
+11:20:20.909 INFO  ProgressMeter - NZ_LHMO01000014.1:213087             24.9                  3830            154.0
+11:20:39.889 INFO  ProgressMeter - NZ_LHMO01000014.1:218173             25.2                  3850            152.9
+11:20:50.363 INFO  ProgressMeter - NZ_LHMO01000014.1:223231             25.4                  3870            152.6
+11:21:02.594 INFO  ProgressMeter - NZ_LHMO01000014.1:236312             25.6                  3920            153.3
+11:21:14.222 INFO  ProgressMeter - NZ_LHMO01000014.1:241296             25.8                  3940            153.0
+11:21:26.840 INFO  ProgressMeter - NZ_LHMO01000014.1:261700             26.0                  4010            154.4
+11:21:40.703 INFO  ProgressMeter - NZ_LHMO01000014.1:266551             26.2                  4030            153.8
+11:21:51.177 INFO  ProgressMeter - NZ_LHMO01000014.1:280187             26.4                  4080            154.7
+11:22:03.059 INFO  ProgressMeter - NZ_LHMO01000014.1:289638             26.6                  4120            155.1
+11:22:13.115 INFO  ProgressMeter - NZ_LHMO01000014.1:298000             26.7                  4150            155.2
+11:22:31.921 INFO  ProgressMeter - NZ_LHMO01000014.1:309357             27.1                  4190            154.9
+11:22:42.893 INFO  ProgressMeter - NZ_LHMO01000014.1:332711             27.2                  4270            156.8
+11:22:53.498 INFO  ProgressMeter - NZ_LHMO01000014.1:346674             27.4                  4320            157.6
+11:23:04.916 INFO  ProgressMeter - NZ_LHMO01000014.1:363265             27.6                  4380            158.7
+11:23:20.561 INFO  ProgressMeter - NZ_LHMO01000014.1:371046             27.9                  4410            158.3
+11:23:35.097 INFO  ProgressMeter - NZ_LHMO01000014.1:373235             28.1                  4420            157.3
+11:23:52.261 INFO  ProgressMeter - NZ_LHMO01000014.1:380414             28.4                  4450            156.7
+11:24:04.029 INFO  ProgressMeter - NZ_LHMO01000014.1:396744             28.6                  4510            157.8
+11:24:14.934 INFO  ProgressMeter - NZ_LHMO01000014.1:406370             28.8                  4550            158.2
+11:24:32.446 INFO  ProgressMeter - NZ_LHMO01000014.1:414117             29.1                  4580            157.6
+11:24:47.715 INFO  ProgressMeter - NZ_LHMO01000015.1:4908             29.3                  4630            157.9
+11:24:59.024 INFO  ProgressMeter - NZ_LHMO01000015.1:9525             29.5                  4650            157.6
+11:25:10.675 INFO  ProgressMeter - NZ_LHMO01000015.1:20494             29.7                  4690            157.9
+11:25:24.127 INFO  ProgressMeter - NZ_LHMO01000015.1:25871             29.9                  4710            157.4
+11:25:35.229 INFO  ProgressMeter - NZ_LHMO01000015.1:30937             30.1                  4730            157.1
+11:25:45.480 INFO  ProgressMeter - NZ_LHMO01000015.1:39064             30.3                  4760            157.2
+11:25:58.715 INFO  ProgressMeter - NZ_LHMO01000015.1:56204             30.5                  4820            158.0
+11:26:12.331 INFO  ProgressMeter - NZ_LHMO01000015.1:63766             30.7                  4850            157.9
+11:26:27.917 INFO  ProgressMeter - NZ_LHMO01000015.1:74710             31.0                  4890            157.8
+11:26:41.221 INFO  ProgressMeter - NZ_LHMO01000015.1:85923             31.2                  4930            158.0
+11:26:52.799 INFO  ProgressMeter - NZ_LHMO01000015.1:92877             31.4                  4960            158.0
+11:27:26.871 INFO  ProgressMeter - NZ_LHMO01000016.1:686             32.0                  4970            155.5
+11:27:53.916 INFO  ProgressMeter - NZ_LHMO01000017.1:652             32.4                  4980            153.6
+11:28:07.545 INFO  ProgressMeter - NZ_LHMO01000017.1:5707             32.6                  5000            153.2
+11:28:18.578 INFO  ProgressMeter - NZ_LHMO01000017.1:18673             32.8                  5050            153.8
+11:28:29.646 INFO  ProgressMeter - NZ_LHMO01000017.1:29720             33.0                  5090            154.2
+11:28:41.538 INFO  ProgressMeter - NZ_LHMO01000017.1:37439             33.2                  5120            154.2
+11:29:01.787 INFO  ProgressMeter - NZ_LHMO01000017.1:51376             33.5                  5170            154.1
+11:29:12.558 INFO  ProgressMeter - NZ_LHMO01000017.1:56425             33.7                  5190            153.9
+11:29:22.587 INFO  ProgressMeter - NZ_LHMO01000017.1:67864             33.9                  5230            154.3
+11:29:33.745 INFO  ProgressMeter - NZ_LHMO01000018.1:7193             34.1                  5270            154.6
+11:29:44.472 INFO  ProgressMeter - NZ_LHMO01000018.1:8878             34.3                  5280            154.1
+11:30:00.427 INFO  ProgressMeter - NZ_LHMO01000018.1:10941             34.5                  5290            153.2
+11:30:11.481 INFO  ProgressMeter - NZ_LHMO01000018.1:19354             34.7                  5320            153.3
+11:30:29.368 INFO  ProgressMeter - NZ_LHMO01000018.1:24445             35.0                  5340            152.5
+11:30:43.314 INFO  ProgressMeter - NZ_LHMO01000018.1:31192             35.2                  5370            152.4
+11:30:54.095 INFO  ProgressMeter - NZ_LHMO01000018.1:42509             35.4                  5410            152.7
+11:31:06.173 INFO  ProgressMeter - NZ_LHMO01000018.1:59918             35.6                  5470            153.6
+11:31:17.815 INFO  ProgressMeter - NZ_LHMO01000018.1:75784             35.8                  5530            154.4
+11:31:28.122 INFO  ProgressMeter - NZ_LHMO01000018.1:80712             36.0                  5550            154.2
+11:31:38.491 INFO  ProgressMeter - NZ_LHMO01000018.1:92183             36.2                  5590            154.6
+11:32:02.950 INFO  ProgressMeter - NZ_LHMO01000018.1:99612             36.6                  5620            153.7
+11:32:14.444 INFO  ProgressMeter - NZ_LHMO01000018.1:104856             36.8                  5640            153.4
+11:32:25.290 INFO  ProgressMeter - NZ_LHMO01000018.1:115796             36.9                  5680            153.8
+11:32:45.682 INFO  ProgressMeter - NZ_LHMO01000018.1:121667             37.3                  5700            152.9
+11:32:57.648 INFO  ProgressMeter - NZ_LHMO01000018.1:133195             37.5                  5740            153.1
+11:33:09.531 INFO  ProgressMeter - NZ_LHMO01000018.1:140576             37.7                  5770            153.1
+11:33:23.503 INFO  ProgressMeter - NZ_LHMO01000019.1:6881             37.9                  5810            153.3
+11:33:34.287 INFO  ProgressMeter - NZ_LHMO01000019.1:20235             38.1                  5860            153.8
+11:33:46.565 INFO  ProgressMeter - NZ_LHMO01000019.1:30144             38.3                  5900            154.1
+11:33:58.992 INFO  ProgressMeter - NZ_LHMO01000019.1:41200             38.5                  5940            154.3
+11:34:09.252 INFO  ProgressMeter - NZ_LHMO01000019.1:46143             38.7                  5960            154.1
+11:34:31.147 INFO  ProgressMeter - NZ_LHMO01000019.1:54025             39.0                  5990            153.4
+11:34:51.047 INFO  ProgressMeter - NZ_LHMO01000019.1:56166             39.4                  6000            152.4
+11:35:02.592 INFO  ProgressMeter - NZ_LHMO01000019.1:61337             39.6                  6020            152.2
+11:35:13.108 INFO  ProgressMeter - NZ_LHMO01000019.1:75611             39.7                  6070            152.7
+11:35:34.221 INFO  ProgressMeter - NZ_LHMO01000019.1:91268             40.1                  6130            152.9
+11:35:46.060 INFO  ProgressMeter - NZ_LHMO01000002.1:2238             40.3                  6150            152.7
+11:36:01.816 INFO  ProgressMeter - NZ_LHMO01000002.1:9925             40.6                  6180            152.4
+11:36:12.875 INFO  ProgressMeter - NZ_LHMO01000002.1:17926             40.7                  6210            152.5
+11:36:26.796 INFO  ProgressMeter - NZ_LHMO01000002.1:28442             41.0                  6250            152.6
+11:36:41.920 INFO  ProgressMeter - NZ_LHMO01000002.1:43162             41.2                  6300            152.8
+11:36:53.156 INFO  ProgressMeter - NZ_LHMO01000020.1:3246             41.4                  6330            152.9
+11:37:03.616 INFO  ProgressMeter - NZ_LHMO01000020.1:11719             41.6                  6360            153.0
+11:37:19.860 INFO  ProgressMeter - NZ_LHMO01000020.1:18657             41.9                  6390            152.7
+11:37:36.226 INFO  ProgressMeter - NZ_LHMO01000020.1:35815             42.1                  6450            153.1
+11:37:51.500 INFO  ProgressMeter - NZ_LHMO01000020.1:46587             42.4                  6490            153.1
+11:38:01.549 INFO  ProgressMeter - NZ_LHMO01000020.1:51896             42.5                  6510            153.0
+11:38:13.590 INFO  ProgressMeter - NZ_LHMO01000020.1:62850             42.7                  6550            153.2
+11:38:27.665 INFO  ProgressMeter - NZ_LHMO01000020.1:73993             43.0                  6590            153.3
+11:38:38.192 INFO  ProgressMeter - NZ_LHMO01000021.1:14953             43.2                  6650            154.1
+11:38:49.197 INFO  ProgressMeter - NZ_LHMO01000021.1:17480             43.3                  6660            153.7
+11:39:01.597 INFO  ProgressMeter - NZ_LHMO01000021.1:19616             43.5                  6670            153.2
+11:39:15.192 INFO  ProgressMeter - NZ_LHMO01000021.1:36577             43.8                  6730            153.7
+11:39:33.157 INFO  ProgressMeter - NZ_LHMO01000021.1:38181             44.1                  6740            152.9
+11:39:50.936 INFO  ProgressMeter - NZ_LHMO01000021.1:52675             44.4                  6790            153.0
+11:40:04.605 INFO  ProgressMeter - NZ_LHMO01000021.1:62707             44.6                  6830            153.2
+11:40:14.799 INFO  ProgressMeter - NZ_LHMO01000021.1:79239             44.8                  6890            153.9
+11:40:26.576 INFO  ProgressMeter - NZ_LHMO01000021.1:81619             45.0                  6900            153.5
+11:40:38.406 INFO  ProgressMeter - NZ_LHMO01000021.1:89320             45.2                  6930            153.5
+11:40:54.793 INFO  ProgressMeter - NZ_LHMO01000021.1:93215             45.4                  6950            153.0
+11:41:05.598 INFO  ProgressMeter - NZ_LHMO01000021.1:101170             45.6                  6980            153.0
+11:41:16.948 INFO  ProgressMeter - NZ_LHMO01000021.1:108947             45.8                  7010            153.0
+11:41:38.218 INFO  ProgressMeter - NZ_LHMO01000021.1:111317             46.2                  7020            152.1
+11:42:06.989 INFO  ProgressMeter - NZ_LHMO01000021.1:118994             46.6                  7050            151.2
+11:42:17.255 INFO  ProgressMeter - NZ_LHMO01000021.1:121389             46.8                  7060            150.8
+11:42:28.565 INFO  ProgressMeter - NZ_LHMO01000021.1:132790             47.0                  7100            151.1
+11:42:38.802 INFO  ProgressMeter - NZ_LHMO01000021.1:143983             47.2                  7140            151.4
+11:42:49.157 INFO  ProgressMeter - NZ_LHMO01000021.1:146247             47.3                  7150            151.0
+11:43:02.844 INFO  ProgressMeter - NZ_LHMO01000021.1:153949             47.6                  7180            150.9
+11:43:14.738 INFO  ProgressMeter - NZ_LHMO01000021.1:164434             47.8                  7220            151.2
+11:43:28.153 INFO  ProgressMeter - NZ_LHMO01000021.1:169540             48.0                  7240            150.9
+11:43:47.036 INFO  ProgressMeter - NZ_LHMO01000021.1:172055             48.3                  7250            150.1
+11:43:57.992 INFO  ProgressMeter - NZ_LHMO01000021.1:177359             48.5                  7270            149.9
+11:44:15.392 INFO  ProgressMeter - NZ_LHMO01000021.1:184860             48.8                  7300            149.7
+11:44:33.023 INFO  ProgressMeter - NZ_LHMO01000021.1:192289             49.1                  7330            149.4
+11:44:47.157 INFO  ProgressMeter - NZ_LHMO01000021.1:202993             49.3                  7370            149.5
+11:45:01.231 INFO  ProgressMeter - NZ_LHMO01000021.1:213300             49.5                  7410            149.6
+11:45:15.199 INFO  ProgressMeter - NZ_LHMO01000021.1:220911             49.8                  7440            149.5
+11:45:32.321 INFO  ProgressMeter - NZ_LHMO01000021.1:234341             50.1                  7490            149.6
+11:45:49.020 INFO  ProgressMeter - NZ_LHMO01000021.1:244607             50.3                  7530            149.6
+11:46:03.726 INFO  ProgressMeter - NZ_LHMO01000021.1:252693             50.6                  7560            149.5
+11:46:14.109 INFO  ProgressMeter - NZ_LHMO01000021.1:263544             50.8                  7600            149.7
+11:46:24.630 INFO  ProgressMeter - NZ_LHMO01000021.1:271676             50.9                  7630            149.8
+11:46:34.831 INFO  ProgressMeter - NZ_LHMO01000021.1:279571             51.1                  7660            149.9
+11:46:49.028 INFO  ProgressMeter - NZ_LHMO01000021.1:287605             51.3                  7690            149.8
+11:46:59.685 INFO  ProgressMeter - NZ_LHMO01000021.1:298498             51.5                  7730            150.1
+11:47:16.454 INFO  ProgressMeter - NZ_LHMO01000021.1:300943             51.8                  7740            149.4
+11:47:27.629 INFO  ProgressMeter - NZ_LHMO01000021.1:309183             52.0                  7770            149.5
+11:47:38.683 INFO  ProgressMeter - NZ_LHMO01000022.1:14935             52.2                  7840            150.3
+11:47:50.471 INFO  ProgressMeter - NZ_LHMO01000022.1:25552             52.4                  7880            150.5
+11:48:04.914 INFO  ProgressMeter - NZ_LHMO01000022.1:29888             52.6                  7900            150.2
+11:48:15.086 INFO  ProgressMeter - NZ_LHMO01000022.1:34145             52.8                  7920            150.1
+11:48:32.374 INFO  ProgressMeter - NZ_LHMO01000022.1:38520             53.1                  7940            149.6
+11:48:49.516 INFO  ProgressMeter - NZ_LHMO01000022.1:43502             53.3                  7960            149.2
+11:49:47.877 INFO  ProgressMeter - NZ_LHMO01000022.1:45518             54.3                  7970            146.7
+11:51:37.334 INFO  ProgressMeter - NZ_LHMO01000022.1:49820             56.1                  7990            142.3
+11:51:54.543 INFO  ProgressMeter - NZ_LHMO01000023.1:20657             56.4                  8070            143.0
+11:52:04.740 INFO  ProgressMeter - NZ_LHMO01000023.1:31232             56.6                  8110            143.3
+11:52:18.458 INFO  ProgressMeter - NZ_LHMO01000023.1:44654             56.8                  8160            143.6
+11:52:45.653 INFO  ProgressMeter - NZ_LHMO01000023.1:49595             57.3                  8180            142.8
+11:52:59.535 INFO  ProgressMeter - NZ_LHMO01000023.1:51218             57.5                  8190            142.4
+11:53:09.675 INFO  ProgressMeter - NZ_LHMO01000023.1:65583             57.7                  8240            142.9
+11:53:20.411 INFO  ProgressMeter - NZ_LHMO01000023.1:73316             57.9                  8270            142.9
+11:53:32.461 INFO  ProgressMeter - NZ_LHMO01000023.1:90312             58.1                  8330            143.5
+11:53:46.617 INFO  ProgressMeter - NZ_LHMO01000023.1:97829             58.3                  8360            143.4
+11:53:58.592 INFO  ProgressMeter - NZ_LHMO01000023.1:105819             58.5                  8390            143.4
+11:54:09.218 INFO  ProgressMeter - NZ_LHMO01000023.1:111045             58.7                  8410            143.3
+11:54:27.742 INFO  ProgressMeter - NZ_LHMO01000024.1:15286             59.0                  8490            143.9
+11:54:57.251 INFO  ProgressMeter - NZ_LHMO01000025.1:1249             59.5                  8540            143.6
+11:55:08.459 INFO  ProgressMeter - NZ_LHMO01000025.1:14980             59.7                  8590            144.0
+11:55:20.721 INFO  ProgressMeter - NZ_LHMO01000025.1:23094             59.9                  8620            144.0
+11:55:36.861 INFO  ProgressMeter - NZ_LHMO01000025.1:30111             60.1                  8650            143.8
+11:55:46.910 INFO  ProgressMeter - NZ_LHMO01000025.1:40693             60.3                  8690            144.1
+11:55:57.792 INFO  ProgressMeter - NZ_LHMO01000025.1:52012             60.5                  8730            144.3
+11:56:09.183 INFO  ProgressMeter - NZ_LHMO01000025.1:57583             60.7                  8750            144.2
+11:56:21.509 INFO  ProgressMeter - NZ_LHMO01000025.1:62789             60.9                  8770            144.1
+11:56:32.564 INFO  ProgressMeter - NZ_LHMO01000025.1:76115             61.1                  8820            144.4
+11:56:42.855 INFO  ProgressMeter - NZ_LHMO01000025.1:86777             61.2                  8860            144.7
+11:56:57.071 INFO  ProgressMeter - NZ_LHMO01000025.1:99678             61.5                  8910            144.9
+11:57:12.684 INFO  ProgressMeter - NZ_LHMO01000025.1:109889             61.7                  8950            145.0
+11:57:29.288 INFO  ProgressMeter - NZ_LHMO01000026.1:8922             62.0                  8990            145.0
+11:57:57.460 INFO  ProgressMeter - NZ_LHMO01000027.1:540             62.5                  9000            144.1
+11:58:53.500 INFO  ProgressMeter - NZ_LHMO01000028.1:47             63.4                  9010            142.1
+11:59:25.476 INFO  ProgressMeter - NZ_LHMO01000028.1:1800             63.9                  9020            141.1
+12:01:00.754 INFO  ProgressMeter - NZ_LHMO01000028.1:3780             65.5                  9030            137.8
+12:02:04.436 INFO  ProgressMeter - NZ_LHMO01000028.1:5067             66.6                  9040            135.7
+12:02:26.924 INFO  ProgressMeter - NZ_LHMO01000028.1:6432             67.0                  9050            135.1
+12:03:04.220 INFO  ProgressMeter - NZ_LHMO01000028.1:7657             67.6                  9060            134.0
+12:04:02.669 INFO  ProgressMeter - NZ_LHMO01000028.1:8992             68.6                  9070            132.3
+12:04:38.690 INFO  ProgressMeter - NZ_LHMO01000028.1:11035             69.2                  9080            131.3
+12:04:53.399 INFO  ProgressMeter - NZ_LHMO01000028.1:13506             69.4                  9090            131.0
+12:05:28.272 INFO  ProgressMeter - NZ_LHMO01000028.1:15082             70.0                  9100            130.0
+12:05:48.566 INFO  ProgressMeter - NZ_LHMO01000028.1:17711             70.3                  9110            129.5
+12:06:02.048 INFO  ProgressMeter - NZ_LHMO01000028.1:19200             70.6                  9120            129.3
+12:06:11.433 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:11.434 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:11.435 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:11.436 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:11.440 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:11.440 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:11.441 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:11.441 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:06:37.940 INFO  ProgressMeter - NZ_LHMO01000028.1:20988             71.2                  9130            128.3
+12:07:04.534 INFO  ProgressMeter - NZ_LHMO01000029.1:6849             71.6                  9170            128.1
+12:07:18.289 INFO  ProgressMeter - NZ_LHMO01000029.1:17444             71.8                  9210            128.2
+12:07:31.414 INFO  ProgressMeter - NZ_LHMO01000029.1:25012             72.0                  9240            128.3
+12:07:48.436 INFO  ProgressMeter - NZ_LHMO01000029.1:26878             72.3                  9250            127.9
+12:07:59.036 INFO  ProgressMeter - NZ_LHMO01000029.1:40450             72.5                  9300            128.3
+12:08:09.276 INFO  ProgressMeter - NZ_LHMO01000029.1:52152             72.7                  9340            128.5
+12:08:20.514 INFO  ProgressMeter - NZ_LHMO01000003.1:10996             72.9                  9390            128.9
+12:08:30.859 INFO  ProgressMeter - NZ_LHMO01000003.1:30918             73.0                  9460            129.5
+12:08:42.357 INFO  ProgressMeter - NZ_LHMO01000003.1:44628             73.2                  9510            129.9
+12:09:05.105 INFO  ProgressMeter - NZ_LHMO01000003.1:49638             73.6                  9530            129.5
+12:09:16.591 INFO  ProgressMeter - NZ_LHMO01000003.1:52054             73.8                  9540            129.3
+12:09:27.377 INFO  ProgressMeter - NZ_LHMO01000003.1:54360             74.0                  9550            129.1
+12:09:39.258 INFO  ProgressMeter - NZ_LHMO01000003.1:67792             74.2                  9600            129.4
+12:09:50.138 INFO  ProgressMeter - NZ_LHMO01000003.1:87367             74.4                  9670            130.1
+12:10:04.896 INFO  ProgressMeter - NZ_LHMO01000003.1:95019             74.6                  9700            130.0
+12:10:16.819 INFO  ProgressMeter - NZ_LHMO01000003.1:102698             74.8                  9730            130.1
+12:10:29.196 INFO  ProgressMeter - NZ_LHMO01000003.1:118389             75.0                  9790            130.5
+12:10:43.337 INFO  ProgressMeter - NZ_LHMO01000003.1:123297             75.2                  9810            130.4
+12:10:54.214 INFO  ProgressMeter - NZ_LHMO01000003.1:132846             75.4                  9850            130.6
+12:11:09.928 INFO  ProgressMeter - NZ_LHMO01000003.1:148544             75.7                  9910            130.9
+12:11:21.078 INFO  ProgressMeter - NZ_LHMO01000003.1:159156             75.9                  9950            131.1
+12:11:31.768 INFO  ProgressMeter - NZ_LHMO01000003.1:171847             76.0                 10000            131.5
+12:11:42.762 INFO  ProgressMeter - NZ_LHMO01000003.1:182206             76.2                 10040            131.7
+12:11:57.155 INFO  ProgressMeter - NZ_LHMO01000003.1:194974             76.5                 10090            131.9
+12:12:10.408 INFO  ProgressMeter - NZ_LHMO01000003.1:203125             76.7                 10120            132.0
+12:12:21.516 INFO  ProgressMeter - NZ_LHMO01000003.1:211237             76.9                 10150            132.0
+12:12:31.658 INFO  ProgressMeter - NZ_LHMO01000003.1:222141             77.0                 10190            132.3
+12:12:42.197 INFO  ProgressMeter - NZ_LHMO01000003.1:232737             77.2                 10230            132.5
+12:12:54.831 INFO  ProgressMeter - NZ_LHMO01000003.1:241016             77.4                 10260            132.5
+12:13:07.736 INFO  ProgressMeter - NZ_LHMO01000003.1:250934             77.6                 10300            132.6
+12:13:20.961 INFO  ProgressMeter - NZ_LHMO01000003.1:258731             77.9                 10330            132.7
+12:13:34.850 INFO  ProgressMeter - NZ_LHMO01000003.1:263715             78.1                 10350            132.5
+12:13:48.021 INFO  ProgressMeter - NZ_LHMO01000003.1:277701             78.3                 10400            132.8
+12:13:58.910 INFO  ProgressMeter - NZ_LHMO01000003.1:294748             78.5                 10460            133.2
+12:14:09.838 INFO  ProgressMeter - NZ_LHMO01000003.1:305218             78.7                 10500            133.4
+12:14:20.116 INFO  ProgressMeter - NZ_LHMO01000003.1:313101             78.9                 10530            133.5
+12:14:32.814 INFO  ProgressMeter - NZ_LHMO01000003.1:315364             79.1                 10540            133.3
+12:14:44.235 INFO  ProgressMeter - NZ_LHMO01000003.1:329473             79.3                 10590            133.6
+12:15:00.322 INFO  ProgressMeter - NZ_LHMO01000003.1:346048             79.5                 10650            133.9
+12:15:10.660 INFO  ProgressMeter - NZ_LHMO01000003.1:356587             79.7                 10690            134.1
+12:15:21.571 INFO  ProgressMeter - NZ_LHMO01000003.1:359188             79.9                 10700            134.0
+12:15:33.966 INFO  ProgressMeter - NZ_LHMO01000003.1:366985             80.1                 10730            134.0
+12:15:44.381 INFO  ProgressMeter - NZ_LHMO01000003.1:371912             80.3                 10750            133.9
+12:15:54.924 INFO  ProgressMeter - NZ_LHMO01000003.1:382905             80.4                 10790            134.1
+12:16:25.208 INFO  ProgressMeter - NZ_LHMO01000030.1:1073             80.9                 10820            133.7
+12:17:02.636 INFO  ProgressMeter - NZ_LHMO01000031.1:901             81.6                 10830            132.8
+12:17:13.792 INFO  ProgressMeter - NZ_LHMO01000032.1:10428             81.7                 10900            133.3
+12:17:29.472 INFO  ProgressMeter - NZ_LHMO01000032.1:18513             82.0                 10930            133.3
+12:17:44.362 INFO  ProgressMeter - NZ_LHMO01000032.1:29152             82.3                 10970            133.4
+12:18:03.368 INFO  ProgressMeter - NZ_LHMO01000032.1:39811             82.6                 11010            133.3
+12:18:14.439 INFO  ProgressMeter - NZ_LHMO01000032.1:42081             82.8                 11020            133.2
+12:18:32.719 INFO  ProgressMeter - NZ_LHMO01000032.1:61990             83.1                 11090            133.5
+12:18:45.146 INFO  ProgressMeter - NZ_LHMO01000034.1:2765             83.3                 11170            134.1
+12:18:55.712 INFO  ProgressMeter - NZ_LHMO01000034.1:10804             83.4                 11200            134.2
+12:19:10.468 INFO  ProgressMeter - NZ_LHMO01000034.1:17652             83.7                 11230            134.2
+12:19:25.023 INFO  ProgressMeter - NZ_LHMO01000036.1:479             83.9                 11260            134.1
+12:20:07.517 INFO  ProgressMeter - NZ_LHMO01000036.1:4677             84.6                 11280            133.3
+12:20:29.690 INFO  ProgressMeter - NZ_LHMO01000036.1:5475             85.0                 11290            132.8
+12:20:49.686 INFO  ProgressMeter - NZ_LHMO01000037.1:2787             85.3                 11310            132.5
+12:21:03.392 INFO  ProgressMeter - NZ_LHMO01000037.1:19503             85.6                 11370            132.9
+12:21:16.209 INFO  ProgressMeter - NZ_LHMO01000004.1:5732             85.8                 11420            133.1
+12:21:36.678 INFO  ProgressMeter - NZ_LHMO01000004.1:16498             86.1                 11460            133.1
+12:21:52.022 INFO  ProgressMeter - NZ_LHMO01000004.1:27946             86.4                 11500            133.1
+12:22:05.556 INFO  ProgressMeter - NZ_LHMO01000004.1:32732             86.6                 11520            133.0
+12:22:16.291 INFO  ProgressMeter - NZ_LHMO01000004.1:46510             86.8                 11570            133.3
+12:22:27.234 INFO  ProgressMeter - NZ_LHMO01000004.1:57272             87.0                 11610            133.5
+12:22:38.901 INFO  ProgressMeter - NZ_LHMO01000004.1:62568             87.2                 11630            133.4
+12:22:50.688 INFO  ProgressMeter - NZ_LHMO01000004.1:73550             87.4                 11670            133.6
+12:23:01.033 INFO  ProgressMeter - NZ_LHMO01000004.1:78482             87.5                 11690            133.5
+12:23:25.300 INFO  ProgressMeter - NZ_LHMO01000004.1:88901             87.9                 11730            133.4
+12:25:47.762 INFO  ProgressMeter - NZ_LHMO01000041.1:162             90.3                 11750            130.1
+12:26:03.044 INFO  ProgressMeter - NZ_LHMO01000043.1:372             90.6                 11760            129.8
+12:26:13.974 INFO  ProgressMeter - NZ_LHMO01000046.1:708             90.8                 11780            129.8
+12:26:28.619 INFO  ProgressMeter - NZ_LHMO01000005.1:8224             91.0                 11820            129.9
+12:26:42.909 INFO  ProgressMeter - NZ_LHMO01000005.1:13500             91.2                 11840            129.8
+12:26:53.504 INFO  ProgressMeter - NZ_LHMO01000005.1:24649             91.4                 11880            130.0
+12:27:07.948 INFO  ProgressMeter - NZ_LHMO01000005.1:35912             91.7                 11920            130.1
+12:27:18.176 INFO  ProgressMeter - NZ_LHMO01000005.1:38482             91.8                 11930            129.9
+12:27:49.306 INFO  ProgressMeter - NZ_LHMO01000005.1:42738             92.3                 11950            129.4
+12:28:04.451 INFO  ProgressMeter - NZ_LHMO01000005.1:47518             92.6                 11970            129.3
+12:28:16.105 INFO  ProgressMeter - NZ_LHMO01000005.1:57850             92.8                 12010            129.4
+12:28:36.534 INFO  ProgressMeter - NZ_LHMO01000005.1:65279             93.1                 12040            129.3
+12:28:49.992 INFO  ProgressMeter - NZ_LHMO01000005.1:75231             93.4                 12080            129.4
+12:29:02.101 INFO  ProgressMeter - NZ_LHMO01000005.1:77526             93.6                 12090            129.2
+12:29:15.060 INFO  ProgressMeter - NZ_LHMO01000005.1:85030             93.8                 12120            129.3
+12:29:25.844 INFO  ProgressMeter - NZ_LHMO01000005.1:92377             94.0                 12150            129.3
+12:29:39.172 INFO  ProgressMeter - NZ_LHMO01000005.1:103092             94.2                 12190            129.4
+12:29:51.847 INFO  ProgressMeter - NZ_LHMO01000005.1:110761             94.4                 12220            129.5
+12:30:04.964 INFO  ProgressMeter - NZ_LHMO01000005.1:112772             94.6                 12230            129.3
+12:30:22.030 INFO  ProgressMeter - NZ_LHMO01000005.1:120666             94.9                 12260            129.2
+12:30:39.495 INFO  ProgressMeter - NZ_LHMO01000005.1:134194             95.2                 12310            129.3
+12:30:51.147 INFO  ProgressMeter - NZ_LHMO01000005.1:147322             95.4                 12360            129.6
+12:31:01.348 INFO  ProgressMeter - NZ_LHMO01000005.1:155093             95.5                 12390            129.7
+12:31:15.667 INFO  ProgressMeter - NZ_LHMO01000005.1:157846             95.8                 12400            129.5
+12:31:26.262 INFO  ProgressMeter - NZ_LHMO01000005.1:166019             96.0                 12430            129.5
+12:31:45.386 INFO  ProgressMeter - NZ_LHMO01000005.1:167953             96.3                 12440            129.2
+12:32:02.931 INFO  ProgressMeter - NZ_LHMO01000005.1:170337             96.6                 12450            128.9
+12:32:14.760 INFO  ProgressMeter - NZ_LHMO01000005.1:180829             96.8                 12490            129.1
+12:32:30.162 INFO  ProgressMeter - NZ_LHMO01000005.1:191890             97.0                 12530            129.1
+12:32:48.441 INFO  ProgressMeter - NZ_LHMO01000005.1:198854             97.3                 12560            129.0
+12:33:01.984 INFO  ProgressMeter - NZ_LHMO01000005.1:203122             97.6                 12580            129.0
+12:33:11.988 INFO  ProgressMeter - NZ_LHMO01000005.1:207906             97.7                 12600            128.9
+12:33:23.916 INFO  ProgressMeter - NZ_LHMO01000005.1:224253             97.9                 12660            129.3
+12:33:36.823 INFO  ProgressMeter - NZ_LHMO01000005.1:232426             98.1                 12690            129.3
+12:33:57.647 INFO  ProgressMeter - NZ_LHMO01000005.1:245424             98.5                 12740            129.4
+12:34:07.798 INFO  ProgressMeter - NZ_LHMO01000005.1:258377             98.6                 12790            129.7
+12:34:17.959 INFO  ProgressMeter - NZ_LHMO01000005.1:263916             98.8                 12810            129.6
+12:34:32.305 INFO  ProgressMeter - NZ_LHMO01000005.1:274042             99.1                 12850            129.7
+12:34:43.419 INFO  ProgressMeter - NZ_LHMO01000005.1:284303             99.2                 12890            129.9
+12:35:02.792 INFO  ProgressMeter - NZ_LHMO01000005.1:291865             99.6                 12920            129.8
+12:35:19.586 INFO  ProgressMeter - NZ_LHMO01000005.1:296348             99.8                 12940            129.6
+12:35:30.380 INFO  ProgressMeter - NZ_LHMO01000005.1:298919            100.0                 12950            129.5
+12:35:39.129 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.135 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.147 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.148 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.149 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.150 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.150 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.151 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.154 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.155 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.156 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.156 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.157 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.158 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.158 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.159 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.160 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.160 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.161 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.162 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.162 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.163 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.164 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.164 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:35:39.165 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:36:12.775 INFO  ProgressMeter - NZ_LHMO01000006.1:1816            100.7                 13000            129.1
+12:36:30.868 INFO  ProgressMeter - NZ_LHMO01000006.1:16944            101.0                 13060            129.3
+12:36:42.905 INFO  ProgressMeter - NZ_LHMO01000006.1:18918            101.2                 13070            129.1
+12:36:56.977 INFO  ProgressMeter - NZ_LHMO01000006.1:32967            101.5                 13120            129.3
+12:36:59.279 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:36:59.280 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:36:59.280 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:36:59.281 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+12:37:13.342 INFO  ProgressMeter - NZ_LHMO01000007.1:986            101.7                 13260            130.3
+12:37:23.740 INFO  ProgressMeter - NZ_LHMO01000007.1:8942            101.9                 13290            130.4
+12:37:39.017 INFO  ProgressMeter - NZ_LHMO01000007.1:17249            102.2                 13320            130.4
+12:37:50.325 INFO  ProgressMeter - NZ_LHMO01000007.1:25915            102.4                 13350            130.4
+12:38:02.286 INFO  ProgressMeter - NZ_LHMO01000008.1:6161            102.6                 13400            130.7
+12:38:16.715 INFO  ProgressMeter - NZ_LHMO01000008.1:13291            102.8                 13430            130.6
+12:38:31.342 INFO  ProgressMeter - NZ_LHMO01000008.1:21018            103.0                 13460            130.6
+12:38:49.470 INFO  ProgressMeter - NZ_LHMO01000008.1:24420            103.3                 13480            130.4
+12:39:02.642 INFO  ProgressMeter - NZ_LHMO01000008.1:30201            103.6                 13500            130.4
+12:39:12.779 INFO  ProgressMeter - NZ_LHMO01000008.1:44133            103.7                 13550            130.6
+12:39:24.794 INFO  ProgressMeter - NZ_LHMO01000008.1:49024            103.9                 13570            130.6
+12:39:36.938 INFO  ProgressMeter - NZ_LHMO01000008.1:54377            104.1                 13590            130.5
+12:39:47.987 INFO  ProgressMeter - NZ_LHMO01000008.1:62369            104.3                 13620            130.6
+12:40:01.798 INFO  ProgressMeter - NZ_LHMO01000008.1:75889            104.5                 13670            130.8
+12:40:17.815 INFO  ProgressMeter - NZ_LHMO01000008.1:84364            104.8                 13700            130.7
+12:40:39.391 INFO  ProgressMeter - NZ_LHMO01000008.1:95098            105.2                 13740            130.6
+12:40:50.109 INFO  ProgressMeter - NZ_LHMO01000008.1:103937            105.4                 13770            130.7
+12:41:00.975 INFO  ProgressMeter - NZ_LHMO01000008.1:111906            105.5                 13800            130.8
+12:41:15.950 INFO  ProgressMeter - NZ_LHMO01000008.1:119811            105.8                 13830            130.7
+12:41:29.926 INFO  ProgressMeter - NZ_LHMO01000008.1:124947            106.0                 13850            130.6
+12:41:46.553 INFO  ProgressMeter - NZ_LHMO01000008.1:127001            106.3                 13860            130.4
+12:41:57.191 INFO  ProgressMeter - NZ_LHMO01000008.1:138100            106.5                 13900            130.5
+12:42:15.213 INFO  ProgressMeter - NZ_LHMO01000008.1:144363            106.8                 13930            130.5
+12:42:26.926 INFO  ProgressMeter - NZ_LHMO01000008.1:149663            107.0                 13950            130.4
+12:42:48.241 INFO  ProgressMeter - NZ_LHMO01000008.1:160307            107.3                 13990            130.4
+12:42:58.906 INFO  ProgressMeter - NZ_LHMO01000008.1:168203            107.5                 14020            130.4
+12:43:09.377 INFO  ProgressMeter - NZ_LHMO01000008.1:179325            107.7                 14060            130.6
+12:43:20.527 INFO  ProgressMeter - NZ_LHMO01000008.1:186993            107.9                 14090            130.6
+12:43:33.800 INFO  ProgressMeter - NZ_LHMO01000008.1:198760            108.1                 14130            130.7
+12:43:46.719 INFO  ProgressMeter - NZ_LHMO01000008.1:203594            108.3                 14150            130.7
+12:43:57.907 INFO  ProgressMeter - NZ_LHMO01000008.1:210874            108.5                 14180            130.7
+12:44:09.881 INFO  ProgressMeter - NZ_LHMO01000008.1:224953            108.7                 14230            130.9
+12:44:21.138 INFO  ProgressMeter - NZ_LHMO01000008.1:232780            108.9                 14260            131.0
+12:44:31.184 INFO  ProgressMeter - NZ_LHMO01000008.1:237455            109.0                 14280            131.0
+12:44:46.882 INFO  ProgressMeter - NZ_LHMO01000008.1:245186            109.3                 14310            130.9
+12:45:01.760 INFO  ProgressMeter - NZ_LHMO01000008.1:252726            109.5                 14340            130.9
+12:45:12.556 INFO  ProgressMeter - NZ_LHMO01000008.1:258228            109.7                 14360            130.9
+12:45:26.044 INFO  ProgressMeter - NZ_LHMO01000008.1:265434            110.0                 14390            130.9
+12:45:40.129 INFO  ProgressMeter - NZ_LHMO01000008.1:273318            110.2                 14420            130.9
+12:46:02.408 INFO  ProgressMeter - NZ_LHMO01000008.1:287760            110.6                 14470            130.9
+12:46:19.156 INFO  ProgressMeter - NZ_LHMO01000008.1:331111            110.8                 14620            131.9
+12:46:32.486 INFO  ProgressMeter - NZ_LHMO01000008.1:336485            111.1                 14640            131.8
+12:46:51.868 INFO  ProgressMeter - NZ_LHMO01000008.1:341436            111.4                 14660            131.6
+12:47:06.173 INFO  ProgressMeter - NZ_LHMO01000008.1:349303            111.6                 14690            131.6
+12:47:16.705 INFO  ProgressMeter - NZ_LHMO01000008.1:360434            111.8                 14730            131.8
+12:47:39.859 INFO  ProgressMeter - NZ_LHMO01000008.1:367149            112.2                 14760            131.6
+12:47:57.636 INFO  ProgressMeter - NZ_LHMO01000008.1:372564            112.5                 14780            131.4
+12:48:09.051 INFO  ProgressMeter - NZ_LHMO01000008.1:377722            112.7                 14800            131.4
+12:48:26.840 INFO  ProgressMeter - NZ_LHMO01000008.1:385541            113.0                 14830            131.3
+12:48:39.441 INFO  ProgressMeter - NZ_LHMO01000008.1:396644            113.2                 14870            131.4
+12:48:51.560 INFO  ProgressMeter - NZ_LHMO01000008.1:405352            113.4                 14900            131.4
+12:49:07.798 INFO  ProgressMeter - NZ_LHMO01000008.1:413913            113.6                 14930            131.4
+12:49:35.273 INFO  ProgressMeter - NZ_LHMO01000009.1:2908            114.1                 14950            131.0
+12:49:56.573 INFO  ProgressMeter - NZ_LHMO01000009.1:16023            114.5                 15000            131.0
+12:50:09.908 INFO  ProgressMeter - NZ_LHMO01000009.1:26471            114.7                 15040            131.1
+12:50:20.429 INFO  ProgressMeter - NZ_LHMO01000009.1:31594            114.9                 15060            131.1
+12:50:40.020 INFO  ProgressMeter - NZ_LHMO01000009.1:36100            115.2                 15080            130.9
+12:50:50.176 INFO  ProgressMeter - NZ_LHMO01000009.1:38005            115.4                 15090            130.8
+12:51:03.446 INFO  ProgressMeter - NZ_LHMO01000009.1:45972            115.6                 15120            130.8
+12:51:14.929 INFO  ProgressMeter - NZ_LHMO01000009.1:57061            115.8                 15160            131.0
+12:51:35.937 INFO  ProgressMeter - NZ_LHMO01000009.1:59600            116.1                 15170            130.6
+12:51:48.702 INFO  ProgressMeter - NZ_LHMO01000009.1:64598            116.3                 15190            130.6
+12:52:03.835 INFO  ProgressMeter - NZ_LHMO01000009.1:69908            116.6                 15210            130.5
+12:52:16.061 INFO  ProgressMeter - NZ_LHMO01000009.1:76540            116.8                 15240            130.5
+12:52:40.412 INFO  ProgressMeter - NZ_LHMO01000009.1:84840            117.2                 15270            130.3
+12:52:50.864 INFO  ProgressMeter - NZ_LHMO01000009.1:94985            117.4                 15310            130.4
+12:53:06.011 INFO  ProgressMeter - NZ_LHMO01000009.1:103086            117.6                 15340            130.4
+12:53:20.158 INFO  ProgressMeter - NZ_LHMO01000009.1:113484            117.9                 15380            130.5
+12:53:32.760 INFO  ProgressMeter - NZ_LHMO01000009.1:120270            118.1                 15410            130.5
+12:53:49.860 INFO  ProgressMeter - NZ_LHMO01000009.1:131420            118.4                 15450            130.5
+12:54:00.834 INFO  ProgressMeter - NZ_LHMO01000009.1:151070            118.5                 15520            130.9
+12:54:10.883 INFO  ProgressMeter - NZ_LHMO01000009.1:168150            118.7                 15580            131.3
+12:54:22.581 INFO  ProgressMeter - NZ_LHMO01000009.1:172978            118.9                 15600            131.2
+12:54:35.143 INFO  ProgressMeter - NZ_LHMO01000009.1:177784            119.1                 15620            131.1
+12:54:46.795 INFO  ProgressMeter - NZ_LHMO01000009.1:190605            119.3                 15670            131.3
+12:54:59.600 INFO  ProgressMeter - NZ_LHMO01000009.1:195103            119.5                 15690            131.3
+12:55:10.701 INFO  ProgressMeter - NZ_LHMO01000009.1:200134            119.7                 15710            131.2
+12:55:22.574 INFO  ProgressMeter - NZ_LHMO01000009.1:207878            119.9                 15740            131.3
+12:55:38.485 INFO  ProgressMeter - NZ_LHMO01000009.1:216584            120.2                 15770            131.2
+12:55:49.188 INFO  ProgressMeter - NZ_LHMO01000009.1:221216            120.3                 15790            131.2
+12:56:02.167 INFO  ProgressMeter - NZ_LHMO01000009.1:229134            120.6                 15820            131.2
+12:56:19.564 INFO  ProgressMeter - NZ_LHMO01000009.1:236074            120.8                 15850            131.2
+12:56:34.907 INFO  ProgressMeter - NZ_LHMO01000009.1:247066            121.1                 15890            131.2
+12:56:54.343 INFO  ProgressMeter - NZ_LHMO01000009.1:268789            121.4                 15970            131.5
+12:57:04.624 INFO  ProgressMeter - NZ_LHMO01000009.1:273210            121.6                 15990            131.5
+12:57:16.501 INFO  ProgressMeter - NZ_LHMO01000009.1:275465            121.8                 16000            131.4
+12:57:43.651 INFO  ProgressMeter - NZ_LHMO01000009.1:293575            122.2                 16070            131.5
+12:58:01.604 INFO  ProgressMeter - NZ_LHMO01000009.1:301158            122.5                 16100            131.4
+12:58:12.191 INFO  ProgressMeter - NZ_LHMO01000009.1:312933            122.7                 16140            131.5
+12:58:27.124 INFO  ProgressMeter - NZ_LHMO01000009.1:318158            123.0                 16160            131.4
+12:58:38.600 INFO  ProgressMeter - NZ_LHMO01000009.1:329076            123.2                 16200            131.5
+12:58:52.856 INFO  ProgressMeter - NZ_LHMO01000009.1:333466            123.4                 16220            131.4
+12:59:03.477 INFO  ProgressMeter - NZ_LHMO01000009.1:344268            123.6                 16260            131.6
+12:59:16.573 INFO  ProgressMeter - NZ_LHMO01000009.1:356483            123.8                 16310            131.7
+12:59:29.959 INFO  ProgressMeter - NZ_LHMO01000009.1:375866            124.0                 16380            132.1
+13:00:18.822 INFO  ProgressMeter - NZ_LHMO01000009.1:380472            124.8                 16400            131.4
+13:00:56.843 INFO  ProgressMeter - NZ_LHMO01000009.1:382624            125.5                 16410            130.8
+13:01:10.648 INFO  ProgressMeter - NZ_LHMO01000009.1:391002            125.7                 16440            130.8
+13:01:23.497 INFO  ProgressMeter - NZ_LHMO01000009.1:401378            125.9                 16480            130.9
+13:01:34.847 INFO  ProgressMeter - NZ_LHMO01000009.1:418282            126.1                 16540            131.2
+13:01:50.834 INFO  ProgressMeter - NZ_LHMO01000009.1:428705            126.4                 16580            131.2
+13:02:05.042 INFO  ProgressMeter - NZ_LHMO01000009.1:435092            126.6                 16610            131.2
+13:02:15.482 INFO  ProgressMeter - NZ_LHMO01000009.1:448726            126.8                 16660            131.4
+13:02:26.855 INFO  ProgressMeter - NZ_LHMO01000009.1:456754            127.0                 16690            131.5
+13:02:38.830 INFO  ProgressMeter - NZ_LHMO01000009.1:466744            127.2                 16730            131.6
+13:02:49.721 INFO  ProgressMeter - NZ_LHMO01000009.1:471173            127.3                 16750            131.5
+13:03:01.279 INFO  ProgressMeter - NZ_LHMO01000009.1:487482            127.5                 16810            131.8
+13:03:23.900 INFO  ProgressMeter - NZ_LHMO01000009.1:492368            127.9                 16830            131.6
+13:03:35.989 INFO  ProgressMeter - NZ_LHMO01000009.1:499332            128.1                 16860            131.6
+13:03:52.473 INFO  ProgressMeter - NZ_LHMO01000009.1:506868            128.4                 16890            131.5
+13:04:08.721 INFO  ProgressMeter - NZ_LHMO01000009.1:518531            128.7                 16930            131.6
+13:04:19.935 INFO  ProgressMeter - NZ_LHMO01000009.1:523149            128.9                 16950            131.5
+13:04:37.053 INFO  ProgressMeter - NZ_LHMO01000009.1:536546            129.1                 17000            131.6
+13:04:57.730 INFO  ProgressMeter - NZ_LHMO01000009.1:546701            129.5                 17040            131.6
+13:05:08.936 INFO  ProgressMeter - NZ_LHMO01000009.1:551348            129.7                 17060            131.6
+13:05:20.033 INFO  ProgressMeter - NZ_LHMO01000009.1:561831            129.9                 17100            131.7
+13:05:34.869 INFO  ProgressMeter - NZ_LHMO01000009.1:578034            130.1                 17160            131.9
+13:05:51.218 INFO  ProgressMeter - NZ_LHMO01000009.1:597954            130.4                 17230            132.2
+13:06:03.669 INFO  ProgressMeter - NZ_LHMO01000009.1:617400            130.6                 17300            132.5
+13:06:22.133 INFO  ProgressMeter - NZ_LHMO01000009.1:631500            130.9                 17350            132.6
+13:06:32.466 INFO  ProgressMeter - NZ_LHMO01000009.1:647052            131.1                 17410            132.8
+13:06:43.751 INFO  ProgressMeter - NZ_LHMO01000009.1:653846            131.2                 17440            132.9
+13:06:56.164 INFO  ProgressMeter - NZ_LHMO01000009.1:673373            131.5                 17510            133.2
+13:07:06.523 INFO  ProgressMeter - NZ_LHMO01000009.1:678221            131.6                 17530            133.2
+13:07:21.396 INFO  ProgressMeter - NZ_LHMO01000009.1:686441            131.9                 17560            133.2
+13:07:32.208 INFO  ProgressMeter - NZ_LHMO01000009.1:699330            132.1                 17610            133.4
+13:07:43.487 INFO  ProgressMeter - NZ_LHMO01000009.1:707361            132.2                 17640            133.4
+13:07:54.236 INFO  ProgressMeter - NZ_LHMO01000009.1:712662            132.4                 17660            133.4
+13:08:08.138 INFO  ProgressMeter - NZ_LHMO01000009.1:734698            132.7                 17740            133.7
+13:08:19.306 INFO  ProgressMeter - NZ_LHMO01000009.1:745606            132.8                 17780            133.8
+13:08:34.092 INFO  ProgressMeter - NZ_LHMO01000009.1:750239            133.1                 17800            133.7
+13:08:46.962 INFO  ProgressMeter - NZ_LHMO01000009.1:758017            133.3                 17830            133.8
+13:08:59.244 INFO  ProgressMeter - NZ_LHMO01000009.1:766176            133.5                 17860            133.8
+13:09:11.415 INFO  ProgressMeter - NZ_LHMO01000009.1:771213            133.7                 17880            133.7
+13:09:24.869 INFO  ProgressMeter - NZ_LHMO01000009.1:781846            133.9                 17920            133.8
+13:09:26.385 INFO  HaplotypeCaller - 128142 read(s) filtered by: ((((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter) AND WellformedReadFilter)
+  128142 read(s) filtered by: (((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter)
+      128142 read(s) filtered by: ((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter)
+          128142 read(s) filtered by: (((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter)
+              128142 read(s) filtered by: ((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter)
+                  128142 read(s) filtered by: (((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter)
+                      53162 read(s) filtered by: ((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter)
+                          53162 read(s) filtered by: (MappingQualityReadFilter AND MappingQualityAvailableReadFilter)
+                              53162 read(s) filtered by: MappingQualityReadFilter 
+                      74980 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+
+13:09:26.404 INFO  ProgressMeter - NZ_LHMO01000009.1:784846            134.0                 17935            133.9
+13:09:26.408 INFO  ProgressMeter - Traversal complete. Processed 17935 total regions in 134.0 minutes.
+13:09:27.103 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 2.76027198
+13:09:27.121 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 5660.841928258001
+13:09:27.122 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 243.16 sec
+13:09:27.137 INFO  HaplotypeCaller - Shutting down engine
+[April 16, 2020 1:09:27 PM CDT] org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller done. Elapsed time: 134.10 minutes.
+Runtime.totalMemory()=2039545856
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4g -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar HaplotypeCaller -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assembly.fasta -I /scratch/AU_BIOL-7180_GrpProject/sorted_and_merged_bam_files_AW/WT_Ref_genome.sorted.merged.bam -ploidy 1 -O /scratch/AU_BIOL-7180_GrpProject/VCF_files/WT_Ref_genome.sorted.merged.g.p.vcf.gz -ERC GVCF
+13:09:46.199 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 16, 2020 1:09:52 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+13:09:52.060 INFO  HaplotypeCaller - ------------------------------------------------------------
+13:09:52.061 INFO  HaplotypeCaller - The Genome Analysis Toolkit (GATK) v4.1.4.0
+13:09:52.061 INFO  HaplotypeCaller - For support and documentation go to https://software.broadinstitute.org/gatk/
+13:09:52.063 INFO  HaplotypeCaller - Executing as aubcls71@dmc2.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+13:09:52.063 INFO  HaplotypeCaller - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+13:09:52.064 INFO  HaplotypeCaller - Start Date/Time: April 16, 2020 1:09:45 PM CDT
+13:09:52.064 INFO  HaplotypeCaller - ------------------------------------------------------------
+13:09:52.064 INFO  HaplotypeCaller - ------------------------------------------------------------
+13:09:52.066 INFO  HaplotypeCaller - HTSJDK Version: 2.20.3
+13:09:52.066 INFO  HaplotypeCaller - Picard Version: 2.21.1
+13:09:52.067 INFO  HaplotypeCaller - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+13:09:52.067 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+13:09:52.067 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+13:09:52.067 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+13:09:52.068 INFO  HaplotypeCaller - Deflater: IntelDeflater
+13:09:52.068 INFO  HaplotypeCaller - Inflater: IntelInflater
+13:09:52.069 INFO  HaplotypeCaller - GCS max retries/reopens: 20
+13:09:52.069 INFO  HaplotypeCaller - Requester pays: disabled
+13:09:52.069 INFO  HaplotypeCaller - Initializing engine
+13:09:53.621 INFO  HaplotypeCaller - Done initializing engine
+13:09:53.629 INFO  HaplotypeCallerEngine - Tool is in reference confidence mode and the annotation, the following changes will be made to any specified annotations: 'StrandBiasBySample' will be enabled. 'ChromosomeCounts', 'FisherStrand', 'StrandOddsRatio' and 'QualByDepth' annotations have been disabled
+13:09:53.687 INFO  HaplotypeCallerEngine - Currently, physical phasing is only available for diploid samples.
+13:09:53.688 INFO  HaplotypeCallerEngine - Standard Emitting and Calling confidence set to 0.0 for reference-model confidence output
+13:09:53.688 INFO  HaplotypeCallerEngine - All sites annotated with PLs forced to true for reference-model confidence output
+13:09:53.720 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+13:09:53.725 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+13:09:53.774 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+13:09:53.776 INFO  IntelPairHmm - Available threads: 1
+13:09:53.777 INFO  IntelPairHmm - Requested threads: 4
+13:09:53.777 WARN  IntelPairHmm - Using 1 available threads, but 4 were requested
+13:09:53.778 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+13:09:53.872 INFO  ProgressMeter - Starting traversal
+13:09:53.885 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+13:10:11.235 INFO  ProgressMeter -      scaffold-0:1993              0.3                    10             34.6
+13:10:26.289 INFO  ProgressMeter -      scaffold-0:7605              0.5                    30             55.5
+13:10:44.421 INFO  ProgressMeter -     scaffold-0:15965              0.8                    60             71.2
+13:10:49.933 WARN  InbreedingCoeff - InbreedingCoeff will not be calculated; at least 10 samples must have called genotypes
+13:10:54.607 INFO  ProgressMeter -     scaffold-0:18370              1.0                    70             69.2
+13:11:04.897 INFO  ProgressMeter -     scaffold-0:20064              1.2                    80             67.6
+13:11:18.309 INFO  ProgressMeter -     scaffold-0:28060              1.4                   110             78.2
+13:11:29.050 INFO  ProgressMeter -     scaffold-0:48710              1.6                   180            113.5
+13:11:39.205 INFO  ProgressMeter -     scaffold-0:66270              1.8                   240            136.7
+13:11:50.821 INFO  ProgressMeter -     scaffold-0:71364              1.9                   260            133.4
+13:12:00.955 INFO  ProgressMeter -     scaffold-0:85508              2.1                   310            146.4
+13:12:23.238 INFO  ProgressMeter -     scaffold-0:90699              2.5                   330            132.6
+13:12:33.779 INFO  ProgressMeter -    scaffold-0:104528              2.7                   380            142.6
+13:12:44.543 INFO  ProgressMeter -     scaffold-1:10402              2.8                   420            147.7
+13:13:07.628 INFO  ProgressMeter -     scaffold-1:24401              3.2                   470            145.6
+13:13:26.402 INFO  ProgressMeter -     scaffold-1:37476              3.5                   520            146.8
+13:13:39.992 INFO  ProgressMeter -     scaffold-1:48698              3.8                   560            148.6
+13:13:54.084 INFO  ProgressMeter -     scaffold-1:59976              4.0                   600            149.9
+13:14:07.644 INFO  ProgressMeter -     scaffold-1:65420              4.2                   620            146.6
+13:14:20.780 INFO  ProgressMeter -     scaffold-1:76718              4.4                   660            148.4
+13:14:35.964 INFO  ProgressMeter -     scaffold-1:83791              4.7                   690            146.8
+13:14:48.879 INFO  ProgressMeter -     scaffold-1:86483              4.9                   700            142.4
+13:14:59.298 INFO  ProgressMeter -    scaffold-1:100382              5.1                   750            147.3
+13:15:14.420 INFO  ProgressMeter -    scaffold-1:105798              5.3                   770            144.1
+13:15:43.535 INFO  ProgressMeter -      scaffold-2:1332              5.8                   800            137.3
+13:16:13.161 INFO  ProgressMeter -      scaffold-2:8390              6.3                   830            131.3
+13:16:23.920 INFO  ProgressMeter -     scaffold-2:10504              6.5                   840            129.2
+13:16:35.637 INFO  ProgressMeter -     scaffold-2:21905              6.7                   880            131.4
+13:16:46.580 INFO  ProgressMeter -     scaffold-2:33098              6.9                   920            133.8
+13:16:57.660 INFO  ProgressMeter -     scaffold-2:38016              7.1                   940            133.1
+13:17:08.203 INFO  ProgressMeter -     scaffold-2:45319              7.2                   970            134.0
+13:17:18.897 INFO  ProgressMeter -     scaffold-2:53143              7.4                  1000            134.8
+13:17:34.432 INFO  ProgressMeter -     scaffold-2:60832              7.7                  1030            134.2
+13:17:50.042 INFO  ProgressMeter -       scaffold-3:652              7.9                  1040            131.1
+13:18:05.667 INFO  ProgressMeter -      scaffold-3:8275              8.2                  1070            130.5
+13:18:24.912 INFO  ProgressMeter -     scaffold-3:12492              8.5                  1090            128.0
+13:18:44.902 INFO  ProgressMeter -     scaffold-3:20015              8.9                  1120            126.5
+13:18:58.231 INFO  ProgressMeter -     scaffold-3:24679              9.1                  1140            125.7
+13:19:14.709 INFO  ProgressMeter -     scaffold-3:27337              9.3                  1150            123.0
+13:19:24.817 INFO  ProgressMeter -     scaffold-3:40771              9.5                  1200            126.1
+13:19:36.129 INFO  ProgressMeter -     scaffold-3:50491              9.7                  1240            127.8
+13:19:46.543 INFO  ProgressMeter -     scaffold-3:60948              9.9                  1280            129.6
+13:20:07.092 INFO  ProgressMeter -     scaffold-3:68649             10.2                  1310            128.2
+13:20:18.215 INFO  ProgressMeter -     scaffold-3:83003             10.4                  1360            130.7
+13:20:35.489 INFO  ProgressMeter -     scaffold-4:10380             10.7                  1410            131.9
+13:20:46.557 INFO  ProgressMeter -     scaffold-4:18950             10.9                  1440            132.4
+13:20:57.808 INFO  ProgressMeter -     scaffold-4:29408             11.1                  1480            133.8
+13:21:11.995 INFO  ProgressMeter -     scaffold-4:36263             11.3                  1510            133.6
+13:21:23.045 INFO  ProgressMeter -     scaffold-4:52967             11.5                  1570            136.7
+13:21:40.528 INFO  ProgressMeter -     scaffold-4:59913             11.8                  1600            135.9
+13:21:53.838 INFO  ProgressMeter -     scaffold-4:62486             12.0                  1610            134.2
+13:22:05.855 INFO  ProgressMeter -     scaffold-4:73072             12.2                  1650            135.3
+13:22:16.135 INFO  ProgressMeter -     scaffold-4:86330             12.4                  1700            137.4
+13:22:29.618 INFO  ProgressMeter -     scaffold-4:99887             12.6                  1750            138.9
+13:22:48.056 INFO  ProgressMeter -    scaffold-4:104667             12.9                  1770            137.2
+13:23:00.326 INFO  ProgressMeter -    scaffold-4:106808             13.1                  1780            135.8
+13:23:14.238 INFO  ProgressMeter -    scaffold-4:109607             13.3                  1790            134.2
+13:23:24.412 INFO  ProgressMeter -    scaffold-4:116855             13.5                  1820            134.7
+13:23:34.467 INFO  ProgressMeter -    scaffold-4:139774             13.7                  1900            138.9
+13:23:54.763 INFO  ProgressMeter -      scaffold-5:4667             14.0                  1960            139.9
+13:24:06.319 INFO  ProgressMeter -     scaffold-5:16061             14.2                  2000            140.8
+13:24:19.631 INFO  ProgressMeter -     scaffold-5:24049             14.4                  2030            140.7
+13:24:36.288 INFO  ProgressMeter -     scaffold-5:33660             14.7                  2070            140.8
+13:24:56.777 INFO  ProgressMeter -     scaffold-5:49385             15.0                  2130            141.5
+13:25:37.860 INFO  ProgressMeter -     scaffold-5:57905             15.7                  2160            137.3
+13:25:53.825 INFO  ProgressMeter -     scaffold-5:67720             16.0                  2200            137.5
+13:26:16.456 INFO  ProgressMeter -     scaffold-6:23194             16.4                  2300            140.4
+13:26:28.038 INFO  ProgressMeter -     scaffold-6:34839             16.6                  2340            141.2
+13:26:39.722 INFO  ProgressMeter -     scaffold-6:39827             16.8                  2360            140.8
+13:26:53.559 INFO  ProgressMeter -     scaffold-6:46825             17.0                  2390            140.6
+13:27:07.343 INFO  ProgressMeter -     scaffold-6:57641             17.2                  2430            141.1
+13:27:24.259 INFO  ProgressMeter -     scaffold-6:61968             17.5                  2450            140.0
+13:27:35.601 INFO  ProgressMeter -     scaffold-6:66552             17.7                  2470            139.6
+13:27:46.777 INFO  ProgressMeter -     scaffold-6:71723             17.9                  2490            139.2
+13:28:01.462 INFO  ProgressMeter -     scaffold-6:79129             18.1                  2520            139.0
+13:28:12.512 INFO  ProgressMeter -     scaffold-6:90394             18.3                  2560            139.8
+13:28:23.473 INFO  ProgressMeter -     scaffold-7:11822             18.5                  2610            141.1
+13:28:40.133 INFO  ProgressMeter -     scaffold-7:27716             18.8                  2670            142.2
+13:28:57.482 INFO  ProgressMeter -     scaffold-7:35234             19.1                  2700            141.7
+13:29:09.603 INFO  ProgressMeter -     scaffold-7:43988             19.3                  2730            141.7
+13:29:35.042 INFO  ProgressMeter -     scaffold-8:13704             19.7                  2790            141.7
+13:29:45.601 INFO  ProgressMeter -     scaffold-8:18322             19.9                  2810            141.5
+13:29:59.467 INFO  ProgressMeter -     scaffold-8:29391             20.1                  2850            141.8
+13:30:13.652 INFO  ProgressMeter -     scaffold-8:40153             20.3                  2890            142.2
+13:30:27.525 INFO  ProgressMeter -      scaffold-9:9275             20.6                  2960            144.0
+13:30:56.367 INFO  ProgressMeter -     scaffold-9:14610             21.0                  2980            141.6
+13:31:09.803 INFO  ProgressMeter -     scaffold-9:25189             21.3                  3020            142.0
+13:31:22.246 INFO  ProgressMeter -     scaffold-9:27376             21.5                  3030            141.1
+13:31:37.294 INFO  ProgressMeter -     scaffold-9:38111             21.7                  3070            141.3
+13:31:48.771 INFO  ProgressMeter -     scaffold-9:52158             21.9                  3120            142.4
+13:32:00.493 INFO  ProgressMeter -     scaffold-9:59855             22.1                  3150            142.5
+13:32:10.814 INFO  ProgressMeter -     scaffold-9:70979             22.3                  3190            143.2
+13:32:24.186 INFO  ProgressMeter -     scaffold-9:76271             22.5                  3210            142.6
+13:32:37.003 INFO  ProgressMeter -     scaffold-9:81467             22.7                  3230            142.2
+13:32:52.828 INFO  ProgressMeter -     scaffold-9:89644             23.0                  3260            141.8
+13:33:03.725 INFO  ProgressMeter -    scaffold-9:103747             23.2                  3310            142.9
+13:33:18.028 INFO  ProgressMeter -    scaffold-9:111701             23.4                  3340            142.7
+13:33:31.622 INFO  ProgressMeter -    scaffold-9:123306             23.6                  3380            143.0
+13:33:49.384 INFO  ProgressMeter -    scaffold-9:129034             23.9                  3400            142.1
+13:34:00.748 INFO  ProgressMeter -    scaffold-9:140138             24.1                  3440            142.7
+13:34:17.540 INFO  ProgressMeter -     scaffold-10:9275             24.4                  3480            142.7
+13:34:23.438 WARN  DepthPerSampleHC - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.438 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.440 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.441 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.442 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.444 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.445 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.446 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.448 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.450 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.451 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.452 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.453 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.454 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.462 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.463 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.465 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.466 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:23.467 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+13:34:28.025 INFO  ProgressMeter -     scaffold-11:2152             24.6                  3590            146.1
+13:34:39.028 INFO  ProgressMeter -     scaffold-11:4580             24.8                  3600            145.4
+13:34:58.680 INFO  ProgressMeter -    scaffold-11:15596             25.1                  3640            145.1
+13:35:10.415 INFO  ProgressMeter -    scaffold-11:19768             25.3                  3660            144.8
+13:35:21.268 INFO  ProgressMeter -    scaffold-11:33402             25.5                  3710            145.7
+13:35:35.296 INFO  ProgressMeter -    scaffold-11:44002             25.7                  3750            146.0
+13:35:50.229 INFO  ProgressMeter -    scaffold-11:52986             25.9                  3790            146.1
+13:36:01.583 INFO  ProgressMeter -    scaffold-11:57133             26.1                  3810            145.8
+13:36:22.623 INFO  ProgressMeter -    scaffold-11:73423             26.5                  3870            146.2
+13:36:33.881 INFO  ProgressMeter -      scaffold-12:423             26.7                  3890            145.9
+13:36:44.505 INFO  ProgressMeter -    scaffold-12:10790             26.8                  3930            146.4
+13:36:57.381 INFO  ProgressMeter -    scaffold-12:26976             27.1                  3990            147.5
+13:37:11.417 INFO  ProgressMeter -    scaffold-13:11019             27.3                  4040            148.0
+13:37:27.782 INFO  ProgressMeter -    scaffold-13:21924             27.6                  4080            148.0
+13:37:38.438 INFO  ProgressMeter -    scaffold-13:34994             27.7                  4130            148.9
+13:37:51.643 INFO  ProgressMeter -    scaffold-13:43184             28.0                  4160            148.8
+13:38:07.894 INFO  ProgressMeter -     scaffold-14:1531             28.2                  4190            148.4
+13:38:21.756 INFO  ProgressMeter -    scaffold-14:12049             28.5                  4230            148.6
+13:38:31.945 INFO  ProgressMeter -    scaffold-14:16785             28.6                  4250            148.4
+13:38:44.714 INFO  ProgressMeter -    scaffold-14:21800             28.8                  4270            148.0
+13:38:57.860 INFO  ProgressMeter -    scaffold-14:27109             29.1                  4290            147.6
+13:39:12.438 INFO  ProgressMeter -    scaffold-14:43404             29.3                  4350            148.4
+13:39:22.992 INFO  ProgressMeter -    scaffold-14:46001             29.5                  4360            147.9
+13:39:33.359 INFO  ProgressMeter -     scaffold-15:5718             29.7                  4400            148.4
+13:39:46.472 INFO  ProgressMeter -    scaffold-15:16487             29.9                  4440            148.6
+13:40:06.855 INFO  ProgressMeter -    scaffold-15:18789             30.2                  4450            147.3
+13:40:18.864 INFO  ProgressMeter -    scaffold-15:26649             30.4                  4480            147.3
+13:40:34.387 INFO  ProgressMeter -    scaffold-15:36900             30.7                  4520            147.4
+13:40:50.782 INFO  ProgressMeter -    scaffold-15:44593             30.9                  4550            147.0
+13:41:00.792 INFO  ProgressMeter -    scaffold-15:61980             31.1                  4610            148.2
+13:41:22.591 INFO  ProgressMeter -     scaffold-16:6172             31.5                  4670            148.4
+13:41:35.071 INFO  ProgressMeter -    scaffold-16:16251             31.7                  4710            148.6
+13:41:51.877 INFO  ProgressMeter -    scaffold-16:33595             32.0                  4770            149.2
+13:42:07.860 INFO  ProgressMeter -    scaffold-16:41359             32.2                  4800            148.9
+13:42:21.612 INFO  ProgressMeter -    scaffold-16:45590             32.5                  4820            148.5
+13:42:32.372 INFO  ProgressMeter -    scaffold-16:57168             32.6                  4860            148.9
+13:42:45.075 INFO  ProgressMeter -     scaffold-17:5533             32.9                  4900            149.1
+13:42:56.595 INFO  ProgressMeter -    scaffold-17:16132             33.0                  4940            149.5
+13:43:18.498 INFO  ProgressMeter -    scaffold-17:29920             33.4                  4990            149.4
+13:43:29.901 INFO  ProgressMeter -    scaffold-17:35553             33.6                  5010            149.1
+13:43:42.442 INFO  ProgressMeter -    scaffold-17:43471             33.8                  5040            149.1
+13:43:53.031 INFO  ProgressMeter -    scaffold-17:54742             34.0                  5080            149.5
+13:44:04.834 INFO  ProgressMeter -    scaffold-17:62281             34.2                  5110            149.5
+13:44:16.294 INFO  ProgressMeter -    scaffold-17:66967             34.4                  5130            149.2
+13:44:49.025 INFO  ProgressMeter -    scaffold-17:80610             34.9                  5180            148.3
+13:45:05.017 INFO  ProgressMeter -    scaffold-17:88190             35.2                  5210            148.1
+13:45:18.716 INFO  ProgressMeter -    scaffold-17:90220             35.4                  5220            147.4
+13:45:32.418 INFO  ProgressMeter -    scaffold-17:95181             35.6                  5240            147.0
+13:45:52.895 INFO  ProgressMeter -   scaffold-17:103170             36.0                  5270            146.5
+13:46:08.261 INFO  ProgressMeter -   scaffold-17:114637             36.2                  5310            146.5
+13:46:23.085 INFO  ProgressMeter -   scaffold-17:122531             36.5                  5340            146.4
+13:46:48.436 INFO  ProgressMeter -   scaffold-17:127882             36.9                  5360            145.2
+13:47:01.225 INFO  ProgressMeter -     scaffold-18:7840             37.1                  5410            145.7
+13:47:14.174 INFO  ProgressMeter -    scaffold-18:15183             37.3                  5440            145.7
+13:47:30.826 INFO  ProgressMeter -    scaffold-18:17274             37.6                  5450            144.9
+13:47:41.078 INFO  ProgressMeter -    scaffold-18:27546             37.8                  5490            145.3
+13:47:58.678 INFO  ProgressMeter -     scaffold-19:2435             38.1                  5520            145.0
+13:48:09.141 INFO  ProgressMeter -     scaffold-19:5104             38.3                  5530            144.6
+13:48:23.597 INFO  ProgressMeter -    scaffold-19:18912             38.5                  5580            145.0
+13:48:37.908 INFO  ProgressMeter -    scaffold-19:30377             38.7                  5620            145.1
+13:48:51.597 INFO  ProgressMeter -    scaffold-19:35150             39.0                  5640            144.8
+13:49:03.198 INFO  ProgressMeter -     scaffold-20:4599             39.2                  5700            145.6
+13:49:16.058 INFO  ProgressMeter -    scaffold-20:11956             39.4                  5730            145.5
+13:49:26.881 INFO  ProgressMeter -    scaffold-20:14791             39.5                  5740            145.1
+13:49:40.775 INFO  ProgressMeter -    scaffold-20:22839             39.8                  5770            145.0
+13:49:51.991 INFO  ProgressMeter -    scaffold-20:28034             40.0                  5790            144.9
+13:50:03.389 INFO  ProgressMeter -    scaffold-20:33979             40.2                  5810            144.7
+13:50:16.969 INFO  ProgressMeter -    scaffold-20:38849             40.4                  5830            144.4
+13:50:27.896 INFO  ProgressMeter -    scaffold-20:52644             40.6                  5880            144.9
+13:50:38.156 INFO  ProgressMeter -    scaffold-20:60754             40.7                  5910            145.1
+13:50:55.250 INFO  ProgressMeter -    scaffold-20:68334             41.0                  5940            144.8
+13:51:06.627 INFO  ProgressMeter -    scaffold-20:79174             41.2                  5980            145.1
+13:51:22.494 INFO  ProgressMeter -    scaffold-20:86837             41.5                  6010            144.9
+13:51:33.947 INFO  ProgressMeter -     scaffold-21:4482             41.7                  6040            145.0
+13:51:56.982 INFO  ProgressMeter -    scaffold-21:18942             42.1                  6090            144.8
+13:52:08.812 INFO  ProgressMeter -     scaffold-22:4070             42.2                  6120            144.9
+13:52:19.951 INFO  ProgressMeter -     scaffold-22:6796             42.4                  6130            144.5
+13:52:39.549 INFO  ProgressMeter -    scaffold-22:17405             42.8                  6170            144.3
+13:52:52.350 INFO  ProgressMeter -    scaffold-22:28384             43.0                  6210            144.5
+13:53:04.079 INFO  ProgressMeter -    scaffold-22:33086             43.2                  6230            144.3
+13:53:18.740 INFO  ProgressMeter -    scaffold-23:15106             43.4                  6300            145.1
+13:53:30.971 INFO  ProgressMeter -     scaffold-24:5194             43.6                  6380            146.3
+13:53:41.633 INFO  ProgressMeter -    scaffold-24:13502             43.8                  6410            146.4
+13:53:57.757 INFO  ProgressMeter -    scaffold-24:21883             44.1                  6440            146.1
+13:54:08.547 INFO  ProgressMeter -    scaffold-24:32787             44.2                  6480            146.5
+13:54:20.866 INFO  ProgressMeter -      scaffold-25:952             44.4                  6510            146.5
+13:54:36.187 INFO  ProgressMeter -     scaffold-25:8120             44.7                  6540            146.3
+13:54:59.333 INFO  ProgressMeter -    scaffold-25:13238             45.1                  6560            145.5
+13:55:15.559 INFO  ProgressMeter -    scaffold-25:18321             45.4                  6580            145.1
+13:55:26.607 INFO  ProgressMeter -    scaffold-25:26416             45.5                  6610            145.1
+13:55:39.880 INFO  ProgressMeter -    scaffold-25:37369             45.8                  6650            145.3
+13:55:53.976 INFO  ProgressMeter -    scaffold-25:42940             46.0                  6670            145.0
+13:56:05.055 INFO  ProgressMeter -    scaffold-25:57036             46.2                  6720            145.5
+13:56:26.546 INFO  ProgressMeter -    scaffold-25:68124             46.5                  6760            145.2
+13:56:38.446 INFO  ProgressMeter -    scaffold-26:16137             46.7                  6820            145.9
+13:56:49.822 INFO  ProgressMeter -     scaffold-27:4580             46.9                  6880            146.6
+13:56:59.827 INFO  ProgressMeter -     scaffold-27:9519             47.1                  6900            146.5
+13:57:13.825 INFO  ProgressMeter -        scaffold-28:1             47.3                  6940            146.6
+13:57:33.123 INFO  ProgressMeter -    scaffold-28:11339             47.7                  6980            146.5
+13:57:45.821 INFO  ProgressMeter -    scaffold-29:16379             47.9                  7040            147.1
+13:57:58.555 INFO  ProgressMeter -    scaffold-29:36071             48.1                  7110            147.9
+13:58:29.420 INFO  ProgressMeter -    scaffold-29:44083             48.6                  7140            146.9
+13:58:43.850 INFO  ProgressMeter -    scaffold-29:48349             48.8                  7160            146.6
+13:58:56.626 INFO  ProgressMeter -    scaffold-29:59231             49.0                  7200            146.8
+13:59:09.561 INFO  ProgressMeter -    scaffold-30:12017             49.3                  7260            147.4
+13:59:32.812 INFO  ProgressMeter -    scaffold-30:19668             49.6                  7290            146.8
+13:59:45.097 INFO  ProgressMeter -    scaffold-30:24850             49.9                  7310            146.6
+13:59:59.497 INFO  ProgressMeter -     scaffold-31:3716             50.1                  7350            146.7
+14:00:11.876 INFO  ProgressMeter -    scaffold-31:11244             50.3                  7380            146.7
+14:00:25.827 INFO  ProgressMeter -    scaffold-31:19463             50.5                  7410            146.6
+14:00:37.843 INFO  ProgressMeter -    scaffold-31:29571             50.7                  7450            146.8
+14:00:53.676 INFO  ProgressMeter -    scaffold-31:34851             51.0                  7470            146.5
+14:01:03.812 INFO  ProgressMeter -    scaffold-31:39956             51.2                  7490            146.4
+14:01:15.152 INFO  ProgressMeter -     scaffold-32:2315             51.4                  7520            146.4
+14:01:29.119 INFO  ProgressMeter -    scaffold-32:18693             51.6                  7580            146.9
+14:01:48.093 INFO  ProgressMeter -    scaffold-32:28514             51.9                  7620            146.8
+14:01:58.576 INFO  ProgressMeter -     scaffold-33:3052             52.1                  7670            147.3
+14:02:08.957 INFO  ProgressMeter -    scaffold-34:10505             52.3                  7730            147.9
+14:02:28.988 INFO  ProgressMeter -    scaffold-34:18424             52.6                  7760            147.6
+14:02:43.423 INFO  ProgressMeter -    scaffold-34:26012             52.8                  7790            147.5
+14:03:06.043 INFO  ProgressMeter -    scaffold-34:34214             53.2                  7820            147.0
+14:03:16.306 INFO  ProgressMeter -    scaffold-35:12225             53.4                  7880            147.6
+14:03:27.269 INFO  ProgressMeter -     scaffold-36:1871             53.6                  7910            147.7
+14:03:39.544 INFO  ProgressMeter -     scaffold-36:6935             53.8                  7930            147.5
+14:03:51.852 INFO  ProgressMeter -    scaffold-36:13735             54.0                  7960            147.5
+14:04:11.102 INFO  ProgressMeter -    scaffold-36:19690             54.3                  7980            147.0
+14:04:25.674 INFO  ProgressMeter -    scaffold-36:27425             54.5                  8010            146.9
+14:04:35.681 INFO  ProgressMeter -    scaffold-36:29939             54.7                  8020            146.6
+14:04:51.378 INFO  ProgressMeter -    scaffold-36:42932             55.0                  8070            146.8
+14:05:05.355 INFO  ProgressMeter -    scaffold-36:45616             55.2                  8080            146.4
+14:05:18.086 INFO  ProgressMeter -    scaffold-36:58677             55.4                  8130            146.7
+14:05:34.996 INFO  ProgressMeter -    scaffold-36:61119             55.7                  8140            146.2
+14:05:45.550 INFO  ProgressMeter -     scaffold-38:2802             55.9                  8200            146.8
+14:05:56.046 INFO  ProgressMeter -       scaffold-39:52             56.0                  8260            147.4
+14:06:06.472 INFO  ProgressMeter -     scaffold-39:8420             56.2                  8290            147.5
+14:06:19.776 INFO  ProgressMeter -    scaffold-39:24571             56.4                  8350            148.0
+14:06:44.150 INFO  ProgressMeter -     scaffold-40:8272             56.8                  8400            147.8
+14:06:55.329 INFO  ProgressMeter -     scaffold-41:4904             57.0                  8450            148.2
+14:07:11.828 INFO  ProgressMeter -     scaffold-42:7491             57.3                  8490            148.2
+14:07:22.779 INFO  ProgressMeter -    scaffold-42:12747             57.5                  8510            148.0
+14:07:33.406 INFO  ProgressMeter -    scaffold-42:26266             57.7                  8560            148.5
+14:07:47.480 INFO  ProgressMeter -    scaffold-42:29022             57.9                  8570            148.0
+14:07:57.941 INFO  ProgressMeter -    scaffold-42:33630             58.1                  8590            147.9
+14:08:08.785 INFO  ProgressMeter -    scaffold-42:38893             58.2                  8610            147.8
+14:08:19.155 INFO  ProgressMeter -    scaffold-42:52288             58.4                  8660            148.2
+14:08:34.695 INFO  ProgressMeter -    scaffold-42:66182             58.7                  8710            148.4
+14:08:47.392 INFO  ProgressMeter -    scaffold-42:77392             58.9                  8750            148.6
+14:09:01.017 INFO  ProgressMeter -    scaffold-43:10248             59.1                  8800            148.9
+14:09:11.470 INFO  ProgressMeter -        scaffold-44:1             59.3                  8860            149.4
+14:09:21.872 INFO  ProgressMeter -     scaffold-45:8983             59.5                  8920            150.0
+14:09:32.784 INFO  ProgressMeter -     scaffold-46:9224             59.6                  8960            150.2
+14:09:44.895 INFO  ProgressMeter -     scaffold-47:7660             59.9                  9000            150.4
+14:09:55.263 INFO  ProgressMeter -    scaffold-47:12435             60.0                  9020            150.3
+14:10:05.388 INFO  ProgressMeter -    scaffold-47:20780             60.2                  9050            150.4
+14:10:17.136 INFO  ProgressMeter -    scaffold-47:23019             60.4                  9060            150.0
+14:10:42.514 INFO  ProgressMeter -     scaffold-49:1873             60.8                  9100            149.6
+14:10:52.951 INFO  ProgressMeter -    scaffold-49:10046             61.0                  9130            149.7
+14:11:05.755 INFO  ProgressMeter -    scaffold-49:12521             61.2                  9140            149.4
+14:11:20.095 INFO  ProgressMeter -    scaffold-49:14620             61.4                  9150            148.9
+14:11:30.831 INFO  ProgressMeter -    scaffold-49:23532             61.6                  9190            149.2
+14:11:46.733 INFO  ProgressMeter -    scaffold-49:37599             61.9                  9240            149.3
+14:12:24.266 INFO  ProgressMeter -    scaffold-49:44206             62.5                  9270            148.3
+14:12:35.636 INFO  ProgressMeter -     scaffold-50:7280             62.7                  9300            148.3
+14:12:46.088 INFO  ProgressMeter -    scaffold-50:12285             62.9                  9320            148.2
+14:13:00.233 INFO  ProgressMeter -    scaffold-50:18054             63.1                  9340            148.0
+14:13:18.284 INFO  ProgressMeter -    scaffold-50:28713             63.4                  9380            147.9
+14:13:28.321 INFO  ProgressMeter -    scaffold-50:37188             63.6                  9410            148.0
+14:13:40.927 INFO  ProgressMeter -    scaffold-50:53783             63.8                  9470            148.5
+14:13:59.556 INFO  ProgressMeter -    scaffold-50:62070             64.1                  9500            148.2
+14:14:11.961 INFO  ProgressMeter -    scaffold-50:67169             64.3                  9520            148.1
+14:14:26.036 INFO  ProgressMeter -    scaffold-50:80660             64.5                  9570            148.3
+14:14:38.044 INFO  ProgressMeter -     scaffold-51:2154             64.7                  9590            148.1
+14:14:53.158 INFO  ProgressMeter -    scaffold-51:10076             65.0                  9620            148.0
+14:15:08.466 INFO  ProgressMeter -    scaffold-51:15215             65.2                  9640            147.8
+14:15:20.269 INFO  ProgressMeter -    scaffold-51:20270             65.4                  9660            147.6
+14:15:44.880 INFO  ProgressMeter -     scaffold-52:2867             65.8                  9700            147.3
+14:15:55.771 INFO  ProgressMeter -     scaffold-53:3074             66.0                  9740            147.5
+14:16:06.458 INFO  ProgressMeter -    scaffold-53:11869             66.2                  9770            147.6
+14:16:17.471 INFO  ProgressMeter -     scaffold-54:2752             66.4                  9810            147.8
+14:16:28.649 INFO  ProgressMeter -     scaffold-55:2080             66.6                  9830            147.6
+14:16:38.685 INFO  ProgressMeter -     scaffold-55:6707             66.7                  9850            147.6
+14:16:49.987 INFO  ProgressMeter -    scaffold-59:10801             66.9                  9950            148.7
+14:17:02.884 INFO  ProgressMeter -     scaffold-60:3418             67.1                  9990            148.8
+14:17:13.183 INFO  ProgressMeter -    scaffold-60:11810             67.3                 10020            148.8
+14:17:25.428 INFO  ProgressMeter -     scaffold-63:2333             67.5                 10090            149.4
+14:17:36.872 INFO  ProgressMeter -    scaffold-63:15516             67.7                 10140            149.7
+14:17:50.963 INFO  ProgressMeter -      scaffold-64:738             68.0                 10180            149.8
+14:18:02.162 INFO  ProgressMeter -     scaffold-66:1779             68.1                 10230            150.1
+14:18:13.215 INFO  ProgressMeter -     scaffold-66:9678             68.3                 10260            150.2
+14:18:23.627 INFO  ProgressMeter -     scaffold-71:2401             68.5                 10350            151.1
+14:18:33.797 INFO  ProgressMeter -    scaffold-72:10196             68.7                 10400            151.5
+14:18:47.106 INFO  ProgressMeter -    scaffold-72:15376             68.9                 10420            151.3
+14:19:01.100 INFO  ProgressMeter -    scaffold-72:23193             69.1                 10450            151.2
+14:19:16.766 INFO  ProgressMeter -     scaffold-74:3398             69.4                 10490            151.2
+14:19:26.906 INFO  ProgressMeter -     scaffold-74:5622             69.6                 10500            151.0
+14:19:36.991 INFO  ProgressMeter -    scaffold-74:16930             69.7                 10540            151.2
+14:19:48.707 INFO  ProgressMeter -    scaffold-74:30698             69.9                 10590            151.5
+14:20:22.150 INFO  ProgressMeter -    scaffold-74:36146             70.5                 10610            150.6
+14:20:39.335 INFO  ProgressMeter -     scaffold-77:4822             70.8                 10660            150.7
+14:20:50.160 INFO  ProgressMeter -    scaffold-77:15788             70.9                 10700            150.8
+14:21:00.512 INFO  ProgressMeter -    scaffold-77:21139             71.1                 10720            150.8
+14:21:11.476 INFO  ProgressMeter -    scaffold-77:31738             71.3                 10760            150.9
+14:21:22.116 INFO  ProgressMeter -    scaffold-77:33826             71.5                 10770            150.7
+14:21:34.114 INFO  ProgressMeter -    scaffold-77:50321             71.7                 10830            151.1
+14:21:45.014 INFO  ProgressMeter -    scaffold-77:55031             71.9                 10850            151.0
+14:21:55.241 INFO  ProgressMeter -    scaffold-77:60525             72.0                 10870            150.9
+14:22:06.125 INFO  ProgressMeter -    scaffold-77:69017             72.2                 10900            151.0
+14:22:20.462 INFO  ProgressMeter -    scaffold-77:79414             72.4                 10940            151.0
+14:22:30.851 INFO  ProgressMeter -    scaffold-77:84106             72.6                 10960            150.9
+14:22:52.582 INFO  ProgressMeter -    scaffold-77:88824             73.0                 10980            150.5
+14:23:07.420 INFO  ProgressMeter -     scaffold-79:3222             73.2                 11030            150.6
+14:23:29.054 INFO  ProgressMeter -    scaffold-79:10700             73.6                 11060            150.3
+14:23:42.570 INFO  ProgressMeter -    scaffold-79:14910             73.8                 11080            150.1
+14:23:53.133 INFO  ProgressMeter -     scaffold-81:8256             74.0                 11150            150.7
+14:24:09.317 INFO  ProgressMeter -    scaffold-81:13593             74.3                 11170            150.4
+14:24:23.881 INFO  ProgressMeter -    scaffold-81:17448             74.5                 11190            150.2
+14:24:38.733 INFO  ProgressMeter -    scaffold-81:24831             74.7                 11220            150.1
+14:24:49.795 INFO  ProgressMeter -    scaffold-81:42365             74.9                 11280            150.5
+14:25:02.363 INFO  ProgressMeter -    scaffold-81:52932             75.1                 11320            150.6
+14:25:22.292 INFO  ProgressMeter -     scaffold-84:1010             75.5                 11380            150.8
+14:25:32.694 INFO  ProgressMeter -     scaffold-86:1586             75.6                 11410            150.8
+14:25:42.716 INFO  ProgressMeter -    scaffold-87:10885             75.8                 11460            151.2
+14:25:55.170 INFO  ProgressMeter -    scaffold-87:18034             76.0                 11490            151.1
+14:26:05.601 INFO  ProgressMeter -    scaffold-87:23815             76.2                 11510            151.1
+14:26:29.783 INFO  ProgressMeter -    scaffold-87:35429             76.6                 11550            150.8
+14:26:40.914 INFO  ProgressMeter -    scaffold-87:49498             76.8                 11600            151.1
+14:26:51.845 INFO  ProgressMeter -    scaffold-87:54566             77.0                 11620            151.0
+14:27:10.360 INFO  ProgressMeter -    scaffold-87:59571             77.3                 11640            150.6
+14:27:21.766 INFO  ProgressMeter -    scaffold-87:67738             77.5                 11670            150.6
+14:27:26.578 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.582 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.585 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.586 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.587 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.587 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.588 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.589 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.590 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.591 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.591 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.592 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:26.593 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:27:32.422 INFO  ProgressMeter -    scaffold-87:93167             77.6                 11760            151.5
+14:27:46.032 INFO  ProgressMeter -     scaffold-91:6063             77.9                 11850            152.2
+14:27:58.762 INFO  ProgressMeter -    scaffold-91:13652             78.1                 11880            152.1
+14:28:10.522 INFO  ProgressMeter -    scaffold-91:40318             78.3                 11970            152.9
+14:28:20.536 INFO  ProgressMeter -    scaffold-91:48675             78.4                 12000            153.0
+14:28:31.994 INFO  ProgressMeter -        scaffold-92:1             78.6                 12060            153.4
+14:28:42.890 INFO  ProgressMeter -     scaffold-92:3951             78.8                 12080            153.3
+14:28:49.505 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:28:49.506 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:28:49.507 WARN  StrandBiasBySample - Annotation will not be calculated, genotype is not called or alleleLikelihoodMap is null
+14:28:52.956 INFO  ProgressMeter -     scaffold-95:6967             79.0                 12150            153.8
+14:29:07.837 INFO  ProgressMeter -     scaffold-96:1004             79.2                 12170            153.6
+14:29:38.055 INFO  ProgressMeter -     scaffold-96:2742             79.7                 12180            152.8
+14:30:06.402 INFO  ProgressMeter -      scaffold-98:790             80.2                 12210            152.2
+14:30:17.348 INFO  ProgressMeter -     scaffold-98:2629             80.4                 12220            152.0
+14:30:29.456 INFO  ProgressMeter -     scaffold-102:352             80.6                 12280            152.4
+14:30:39.622 INFO  ProgressMeter -     scaffold-104:352             80.8                 12330            152.7
+14:32:09.010 INFO  ProgressMeter -    scaffold-109:1572             82.3                 12380            150.5
+14:33:12.369 INFO  ProgressMeter -    scaffold-112:1493             83.3                 12510            150.2
+14:35:09.235 INFO  ProgressMeter -       scaffold-113:1             85.3                 12520            146.9
+14:35:29.417 INFO  ProgressMeter -    scaffold-121:2668             85.6                 12570            146.9
+14:35:40.873 INFO  ProgressMeter -   scaffold-121:15894             85.8                 12620            147.1
+14:35:51.054 INFO  ProgressMeter -   scaffold-121:21232             86.0                 12640            147.1
+14:36:06.461 INFO  ProgressMeter -   scaffold-121:28883             86.2                 12670            147.0
+14:36:17.105 INFO  ProgressMeter -   scaffold-121:39548             86.4                 12710            147.1
+14:36:36.425 INFO  ProgressMeter -   scaffold-121:47051             86.7                 12740            146.9
+14:36:53.812 INFO  ProgressMeter -   scaffold-121:51399             87.0                 12760            146.7
+14:37:03.893 INFO  ProgressMeter -   scaffold-121:54040             87.2                 12770            146.5
+14:37:16.078 INFO  ProgressMeter -   scaffold-121:62329             87.4                 12800            146.5
+14:37:54.116 INFO  ProgressMeter -      scaffold-122:52             88.0                 12810            145.6
+14:38:09.264 INFO  ProgressMeter -    scaffold-211:2874             88.3                 13090            148.3
+14:38:21.418 INFO  ProgressMeter -    scaffold-211:8465             88.5                 13110            148.2
+14:38:33.814 INFO  ProgressMeter -    scaffold-212:5749             88.7                 13140            148.2
+14:38:47.245 INFO  ProgressMeter -   scaffold-212:10894             88.9                 13160            148.0
+14:38:58.181 INFO  ProgressMeter -   scaffold-212:18983             89.1                 13190            148.1
+14:39:09.703 INFO  ProgressMeter -   scaffold-213:10539             89.3                 13250            148.4
+14:39:33.252 INFO  ProgressMeter -   scaffold-213:18198             89.7                 13280            148.1
+14:39:45.963 INFO  ProgressMeter -   scaffold-213:22794             89.9                 13300            148.0
+14:40:01.242 INFO  ProgressMeter -    scaffold-214:3515             90.1                 13360            148.2
+14:40:11.507 INFO  ProgressMeter -    scaffold-215:3052             90.3                 13440            148.8
+14:40:25.593 INFO  ProgressMeter -   scaffold-215:17031             90.5                 13490            149.0
+14:40:41.744 INFO  ProgressMeter -   scaffold-215:19544             90.8                 13500            148.7
+14:40:52.152 INFO  ProgressMeter -   scaffold-215:27280             91.0                 13530            148.7
+14:41:10.806 INFO  ProgressMeter -   scaffold-215:38006             91.3                 13570            148.7
+14:41:22.285 INFO  ProgressMeter -   scaffold-215:43696             91.5                 13590            148.6
+14:41:36.621 INFO  ProgressMeter -    scaffold-216:5128             91.7                 13630            148.6
+14:41:46.783 INFO  ProgressMeter -   scaffold-216:10461             91.9                 13650            148.6
+14:42:01.388 INFO  ProgressMeter -   scaffold-216:18313             92.1                 13680            148.5
+14:42:16.702 INFO  ProgressMeter -   scaffold-216:29113             92.4                 13720            148.5
+14:42:35.605 INFO  ProgressMeter -   scaffold-216:33942             92.7                 13740            148.2
+14:42:58.552 INFO  ProgressMeter -   scaffold-216:54066             93.1                 13810            148.4
+14:43:23.847 INFO  ProgressMeter -    scaffold-217:5675             93.5                 13840            148.0
+14:43:35.849 INFO  ProgressMeter -   scaffold-217:11306             93.7                 13860            147.9
+14:43:46.549 INFO  ProgressMeter -   scaffold-217:16598             93.9                 13880            147.9
+14:44:00.838 INFO  ProgressMeter -   scaffold-217:24168             94.1                 13910            147.8
+14:44:11.756 INFO  ProgressMeter -   scaffold-217:35400             94.3                 13950            147.9
+14:44:24.268 INFO  ProgressMeter -   scaffold-217:51676             94.5                 14010            148.2
+14:44:35.533 INFO  ProgressMeter -    scaffold-218:9173             94.7                 14060            148.5
+14:44:46.689 INFO  ProgressMeter -   scaffold-218:19480             94.9                 14100            148.6
+14:45:01.576 INFO  ProgressMeter -   scaffold-218:30509             95.1                 14140            148.6
+14:45:12.127 INFO  ProgressMeter -   scaffold-218:44700             95.3                 14190            148.9
+14:45:26.704 INFO  ProgressMeter -   scaffold-218:49824             95.5                 14210            148.7
+14:45:37.949 INFO  ProgressMeter -   scaffold-218:54873             95.7                 14230            148.6
+14:45:48.815 INFO  ProgressMeter -   scaffold-218:62712             95.9                 14260            148.7
+14:46:01.537 INFO  ProgressMeter -    scaffold-219:5607             96.1                 14330            149.1
+14:46:12.712 INFO  ProgressMeter -   scaffold-219:22443             96.3                 14390            149.4
+14:46:23.418 INFO  ProgressMeter -   scaffold-219:30633             96.5                 14420            149.4
+14:46:35.735 INFO  ProgressMeter -   scaffold-219:44571             96.7                 14470            149.6
+14:46:47.674 INFO  ProgressMeter -   scaffold-219:52703             96.9                 14500            149.6
+14:46:58.868 INFO  ProgressMeter -   scaffold-219:58289             97.1                 14520            149.6
+14:47:11.570 INFO  ProgressMeter -   scaffold-219:75520             97.3                 14580            149.9
+14:47:23.580 INFO  ProgressMeter -   scaffold-220:10523             97.5                 14630            150.1
+14:47:37.366 INFO  ProgressMeter -   scaffold-220:18544             97.7                 14660            150.0
+14:47:53.370 INFO  ProgressMeter -   scaffold-220:23125             98.0                 14680            149.8
+14:48:05.538 INFO  ProgressMeter -   scaffold-220:31193             98.2                 14710            149.8
+14:48:16.520 INFO  ProgressMeter -   scaffold-221:10942             98.4                 14840            150.8
+14:48:34.452 INFO  ProgressMeter -   scaffold-221:21736             98.7                 14880            150.8
+14:48:49.167 INFO  ProgressMeter -   scaffold-221:29607             98.9                 14910            150.7
+14:49:03.014 INFO  ProgressMeter -   scaffold-221:39692             99.2                 14950            150.8
+14:49:24.412 INFO  ProgressMeter -   scaffold-221:53258             99.5                 15000            150.7
+14:49:39.577 INFO  ProgressMeter -   scaffold-221:60405             99.8                 15030            150.7
+14:49:55.752 INFO  ProgressMeter -    scaffold-222:7760            100.0                 15070            150.7
+14:50:14.325 INFO  ProgressMeter -   scaffold-222:12931            100.3                 15090            150.4
+14:50:24.804 INFO  ProgressMeter -   scaffold-222:15110            100.5                 15100            150.2
+14:50:35.578 INFO  ProgressMeter -   scaffold-222:17896            100.7                 15110            150.1
+14:50:46.278 INFO  ProgressMeter -   scaffold-222:26191            100.9                 15140            150.1
+14:50:56.843 INFO  ProgressMeter -   scaffold-222:31453            101.0                 15160            150.0
+14:51:09.842 INFO  ProgressMeter -   scaffold-222:39648            101.3                 15190            150.0
+14:51:21.843 INFO  ProgressMeter -   scaffold-222:46962            101.5                 15220            150.0
+14:51:33.123 INFO  ProgressMeter -   scaffold-222:60894            101.7                 15270            150.2
+14:51:48.857 INFO  ProgressMeter -    scaffold-223:9464            101.9                 15320            150.3
+14:52:03.639 INFO  ProgressMeter -   scaffold-223:17706            102.2                 15350            150.3
+14:52:15.378 INFO  ProgressMeter -   scaffold-223:23673            102.4                 15370            150.2
+14:52:27.385 INFO  ProgressMeter -   scaffold-223:40268            102.6                 15430            150.5
+14:52:38.067 INFO  ProgressMeter -   scaffold-223:54244            102.7                 15480            150.7
+14:52:48.246 INFO  ProgressMeter -   scaffold-223:64901            102.9                 15520            150.8
+14:53:02.873 INFO  ProgressMeter -   scaffold-223:72112            103.1                 15550            150.8
+14:53:17.045 INFO  ProgressMeter -    scaffold-224:3063            103.4                 15570            150.6
+14:53:27.374 INFO  ProgressMeter -   scaffold-224:13935            103.6                 15610            150.7
+14:53:43.336 INFO  ProgressMeter -   scaffold-224:18988            103.8                 15630            150.5
+14:54:09.127 INFO  ProgressMeter -   scaffold-224:24088            104.3                 15650            150.1
+14:54:20.813 INFO  ProgressMeter -   scaffold-224:29404            104.4                 15670            150.0
+14:54:32.695 INFO  ProgressMeter -   scaffold-224:36792            104.6                 15700            150.0
+14:54:43.763 INFO  ProgressMeter -   scaffold-224:39641            104.8                 15710            149.9
+14:54:54.169 INFO  ProgressMeter -   scaffold-224:44424            105.0                 15730            149.8
+14:55:10.548 INFO  ProgressMeter -   scaffold-224:55507            105.3                 15770            149.8
+14:55:21.628 INFO  ProgressMeter -   scaffold-224:66800            105.5                 15810            149.9
+14:55:36.097 INFO  ProgressMeter -   scaffold-224:83449            105.7                 15870            150.1
+14:55:52.745 INFO  ProgressMeter -   scaffold-224:93240            106.0                 15910            150.1
+14:56:05.713 INFO  ProgressMeter -    scaffold-225:4327            106.2                 15970            150.4
+14:56:15.740 INFO  ProgressMeter -   scaffold-225:21324            106.4                 16030            150.7
+14:56:26.709 INFO  ProgressMeter -   scaffold-225:26781            106.5                 16050            150.6
+14:56:39.057 INFO  ProgressMeter -   scaffold-225:40342            106.8                 16100            150.8
+14:56:54.380 INFO  ProgressMeter -   scaffold-225:49645            107.0                 16140            150.8
+14:57:07.043 INFO  ProgressMeter -   scaffold-225:60728            107.2                 16180            150.9
+14:57:38.196 INFO  ProgressMeter -   scaffold-225:73911            107.7                 16230            150.6
+14:57:51.635 INFO  ProgressMeter -   scaffold-225:84472            108.0                 16270            150.7
+14:58:12.482 INFO  ProgressMeter -   scaffold-225:88435            108.3                 16290            150.4
+14:58:27.006 INFO  ProgressMeter -   scaffold-225:93589            108.6                 16310            150.3
+14:58:43.584 INFO  ProgressMeter -   scaffold-225:98403            108.8                 16330            150.1
+14:58:55.305 INFO  ProgressMeter -  scaffold-225:109414            109.0                 16370            150.2
+14:59:09.838 INFO  ProgressMeter -  scaffold-225:120104            109.3                 16410            150.2
+14:59:22.264 INFO  ProgressMeter -  scaffold-225:122093            109.5                 16420            150.0
+14:59:35.526 INFO  ProgressMeter -  scaffold-225:124717            109.7                 16430            149.8
+14:59:53.020 INFO  ProgressMeter -  scaffold-225:129495            110.0                 16450            149.6
+15:00:04.021 INFO  ProgressMeter -  scaffold-225:137835            110.2                 16480            149.6
+15:00:25.252 INFO  ProgressMeter -  scaffold-225:143519            110.5                 16500            149.3
+15:00:36.114 INFO  ProgressMeter -  scaffold-225:154178            110.7                 16540            149.4
+15:00:46.465 INFO  ProgressMeter -  scaffold-225:156465            110.9                 16550            149.3
+15:01:04.268 INFO  ProgressMeter -    scaffold-226:8519            111.2                 16590            149.2
+15:01:19.474 INFO  ProgressMeter -   scaffold-226:24622            111.4                 16650            149.4
+15:01:30.583 INFO  ProgressMeter -   scaffold-226:35543            111.6                 16690            149.5
+15:01:42.698 INFO  ProgressMeter -   scaffold-226:43731            111.8                 16720            149.5
+15:01:58.602 INFO  ProgressMeter -   scaffold-226:54860            112.1                 16760            149.5
+15:02:08.628 INFO  ProgressMeter -   scaffold-226:66188            112.2                 16800            149.7
+15:02:35.096 INFO  ProgressMeter -   scaffold-226:71845            112.7                 16820            149.3
+15:02:46.572 INFO  ProgressMeter -   scaffold-226:79585            112.9                 16850            149.3
+15:02:56.950 INFO  ProgressMeter -   scaffold-226:92533            113.1                 16900            149.5
+15:03:08.064 INFO  ProgressMeter -  scaffold-226:100291            113.2                 16930            149.5
+15:03:21.120 INFO  ProgressMeter -  scaffold-226:102854            113.5                 16940            149.3
+15:03:31.464 INFO  ProgressMeter -  scaffold-226:107687            113.6                 16960            149.3
+15:03:44.359 INFO  ProgressMeter -  scaffold-226:120823            113.8                 17010            149.4
+15:03:54.931 INFO  ProgressMeter -  scaffold-226:123147            114.0                 17020            149.3
+15:04:06.006 INFO  ProgressMeter -  scaffold-226:149649            114.2                 17110            149.8
+15:04:16.447 INFO  ProgressMeter -  scaffold-226:157474            114.4                 17140            149.9
+15:05:02.769 INFO  ProgressMeter -  scaffold-226:166167            115.1                 17180            149.2
+15:05:37.584 INFO  ProgressMeter -  scaffold-226:167805            115.7                 17190            148.5
+15:05:50.184 INFO  ProgressMeter -    scaffold-227:5415            115.9                 17220            148.5
+15:06:05.132 INFO  ProgressMeter -   scaffold-227:19187            116.2                 17270            148.6
+15:06:19.913 INFO  ProgressMeter -   scaffold-227:24162            116.4                 17290            148.5
+15:06:32.815 INFO  ProgressMeter -   scaffold-227:35425            116.6                 17330            148.6
+15:06:43.175 INFO  ProgressMeter -   scaffold-227:40260            116.8                 17350            148.5
+15:06:55.617 INFO  ProgressMeter -   scaffold-227:42345            117.0                 17360            148.3
+15:07:07.250 INFO  ProgressMeter -   scaffold-227:47474            117.2                 17380            148.3
+15:07:19.146 INFO  ProgressMeter -   scaffold-227:52150            117.4                 17400            148.2
+15:07:31.089 INFO  ProgressMeter -    scaffold-228:6699            117.6                 17450            148.4
+15:07:43.954 INFO  ProgressMeter -   scaffold-228:11564            117.8                 17470            148.3
+15:07:57.967 INFO  ProgressMeter -   scaffold-228:25750            118.1                 17520            148.4
+15:08:09.273 INFO  ProgressMeter -   scaffold-228:28565            118.3                 17530            148.2
+15:08:19.976 INFO  ProgressMeter -   scaffold-228:42985            118.4                 17580            148.4
+15:08:31.829 INFO  ProgressMeter -   scaffold-228:53697            118.6                 17620            148.5
+15:08:43.144 INFO  ProgressMeter -   scaffold-228:70971            118.8                 17680            148.8
+15:08:54.232 INFO  ProgressMeter -   scaffold-228:81800            119.0                 17720            148.9
+15:09:04.785 INFO  ProgressMeter -   scaffold-228:86500            119.2                 17740            148.8
+15:09:15.094 INFO  ProgressMeter -   scaffold-228:91864            119.4                 17760            148.8
+15:09:26.000 INFO  ProgressMeter -  scaffold-228:106222            119.5                 17810            149.0
+15:09:40.347 INFO  ProgressMeter -  scaffold-228:122488            119.8                 17870            149.2
+15:09:52.880 INFO  ProgressMeter -  scaffold-228:132891            120.0                 17910            149.3
+15:10:05.774 INFO  ProgressMeter -  scaffold-228:144038            120.2                 17950            149.3
+15:10:25.150 INFO  ProgressMeter -  scaffold-228:155377            120.5                 17990            149.3
+15:10:57.275 INFO  ProgressMeter -  scaffold-228:159633            121.1                 18010            148.8
+15:11:18.366 INFO  ProgressMeter -    scaffold-229:8819            121.4                 18050            148.7
+15:11:30.592 INFO  ProgressMeter -   scaffold-229:23016            121.6                 18100            148.8
+15:11:44.394 INFO  ProgressMeter -   scaffold-229:25125            121.8                 18110            148.6
+15:11:57.137 INFO  ProgressMeter -   scaffold-229:36475            122.1                 18150            148.7
+15:12:13.514 INFO  ProgressMeter -   scaffold-229:46950            122.3                 18190            148.7
+15:12:24.141 INFO  ProgressMeter -   scaffold-229:52522            122.5                 18210            148.6
+15:12:34.279 INFO  ProgressMeter -   scaffold-229:60591            122.7                 18240            148.7
+15:12:47.401 INFO  ProgressMeter -   scaffold-229:62834            122.9                 18250            148.5
+15:12:57.608 INFO  ProgressMeter -   scaffold-229:65636            123.1                 18260            148.4
+15:13:14.400 INFO  ProgressMeter -   scaffold-229:70820            123.3                 18280            148.2
+15:13:25.566 INFO  ProgressMeter -   scaffold-229:78717            123.5                 18310            148.2
+15:13:39.890 INFO  ProgressMeter -   scaffold-229:86513            123.8                 18340            148.2
+15:13:52.286 INFO  ProgressMeter -   scaffold-229:91216            124.0                 18360            148.1
+15:14:17.938 INFO  ProgressMeter -  scaffold-229:101415            124.4                 18400            147.9
+15:15:22.348 INFO  ProgressMeter -  scaffold-229:102621            125.5                 18410            146.7
+15:16:09.423 INFO  ProgressMeter -  scaffold-229:104242            126.3                 18420            145.9
+15:16:20.431 INFO  ProgressMeter -  scaffold-229:112463            126.4                 18450            145.9
+15:16:31.282 INFO  ProgressMeter -  scaffold-229:120958            126.6                 18480            145.9
+15:16:49.587 INFO  ProgressMeter -  scaffold-229:134339            126.9                 18530            146.0
+15:17:04.007 INFO  ProgressMeter -  scaffold-229:142349            127.2                 18560            145.9
+15:17:14.748 INFO  ProgressMeter -  scaffold-229:148069            127.3                 18580            145.9
+15:17:15.234 INFO  HaplotypeCaller - 600754 read(s) filtered by: ((((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter) AND WellformedReadFilter)
+  600754 read(s) filtered by: (((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter) AND GoodCigarReadFilter)
+      600754 read(s) filtered by: ((((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter) AND NonZeroReferenceLengthAlignmentReadFilter)
+          600754 read(s) filtered by: (((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter) AND PassesVendorQualityCheckReadFilter)
+              600754 read(s) filtered by: ((((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter) AND NotDuplicateReadFilter)
+                  600754 read(s) filtered by: (((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter) AND NotSecondaryAlignmentReadFilter)
+                      526637 read(s) filtered by: ((MappingQualityReadFilter AND MappingQualityAvailableReadFilter) AND MappedReadFilter)
+                          526637 read(s) filtered by: (MappingQualityReadFilter AND MappingQualityAvailableReadFilter)
+                              526637 read(s) filtered by: MappingQualityReadFilter 
+                      74117 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+
+15:17:15.235 INFO  ProgressMeter -  scaffold-229:148069            127.4                 18581            145.9
+15:17:15.242 INFO  ProgressMeter - Traversal complete. Processed 18581 total regions in 127.4 minutes.
+15:17:15.796 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 2.6662394810000003
+15:17:15.797 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 5194.750203942001
+15:17:15.804 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 190.29 sec
+15:17:15.826 INFO  HaplotypeCaller - Shutting down engine
+[April 16, 2020 3:17:15 PM CDT] org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller done. Elapsed time: 127.50 minutes.
+Runtime.totalMemory()=2039545856
+Using GATK jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx4g -jar /mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar HaplotypeCaller -R /home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assemblyc.fasta -I /home/aubcls71/TestFile/WT_2012_ref_assemblyc.merged.sorted.bam -ploidy 1 -O /scratch/AU_BIOL-7180_GrpProject/VCF_files/WT_2012_ref_assemblyc.merged.sorted.g.p.vcf.gz -ERC GVCF
+15:17:25.062 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/beegfs/apps/dmc/apps/spackb_0.12.1/spack/opt/spack/linux-centos7-ivybridge/gcc-9.2.0/gatk-4.1.4.0-7vcexkjypomohflygk4h3rty3ejjd3qd/bin/gatk-package-4.1.4.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Apr 16, 2020 3:17:30 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:17:30.900 INFO  HaplotypeCaller - ------------------------------------------------------------
+15:17:30.901 INFO  HaplotypeCaller - The Genome Analysis Toolkit (GATK) v4.1.4.0
+15:17:30.901 INFO  HaplotypeCaller - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:17:30.903 INFO  HaplotypeCaller - Executing as aubcls71@dmc2.asc.edu on Linux v3.10.0-1062.4.1.el7.x86_64 amd64
+15:17:30.903 INFO  HaplotypeCaller - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_232-b09
+15:17:30.904 INFO  HaplotypeCaller - Start Date/Time: April 16, 2020 3:17:24 PM CDT
+15:17:30.904 INFO  HaplotypeCaller - ------------------------------------------------------------
+15:17:30.905 INFO  HaplotypeCaller - ------------------------------------------------------------
+15:17:30.906 INFO  HaplotypeCaller - HTSJDK Version: 2.20.3
+15:17:30.907 INFO  HaplotypeCaller - Picard Version: 2.21.1
+15:17:30.907 INFO  HaplotypeCaller - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:17:30.908 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:17:30.908 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:17:30.909 INFO  HaplotypeCaller - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:17:30.909 INFO  HaplotypeCaller - Deflater: IntelDeflater
+15:17:30.909 INFO  HaplotypeCaller - Inflater: IntelInflater
+15:17:30.910 INFO  HaplotypeCaller - GCS max retries/reopens: 20
+15:17:30.910 INFO  HaplotypeCaller - Requester pays: disabled
+15:17:30.910 INFO  HaplotypeCaller - Initializing engine
+15:17:30.944 INFO  HaplotypeCaller - Shutting down engine
+[April 16, 2020 3:17:30 PM CDT] org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller done. Elapsed time: 0.10 minutes.
+Runtime.totalMemory()=2039545856
+***********************************************************************
+
+A USER ERROR has occurred: Fasta dict file file:///home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assemblyc.dict for reference file:///home/aubcls71/AU_BIOL-7180_SPR20_GroupProject/SRR10740739_assembly/WT_2012_ref_assemblyc.fasta does not exist. Please see http://gatkforums.broadinstitute.org/discussion/1601/how-can-i-prepare-a-fasta-file-to-use-as-reference for help creating it.
+
+***********************************************************************
+Set the system property GATK_STACKTRACE_ON_USER_EXCEPTION (--java-options '-DGATK_STACKTRACE_ON_USER_EXCEPTION=true') to print the stack trace.
