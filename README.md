@@ -65,7 +65,7 @@ counts_by_af.snps.dat    depth.0.pdf  indels.0.dat  indels.0.png  plot.py       
 ```
 Run python3 on polt.py script:
 ```
-#Use python3 to plot data gnerated in plot.py script and produce png graph files.
+#Use python3 to plot data generated in plot.py script and produce png graph files.
 python3 plot.py 
 ```
 | Ref | indels | snps | ts | tv | mnp | other | mas | ts/tv | Variant Caller |
