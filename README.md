@@ -68,6 +68,7 @@ Run python3 on polt.py script:
 #Use python3 to plot data generated in plot.py script and produce png graph files.
 python3 plot.py 
 ```
+##### Table-1
 | Reference | indels | snps | transitions | transversions | mnp<sup>1 | other | mas<sup>2 | ts/tv<sup>3 | Variant Caller |
 |---|---|---|---|---|---|---|---|---|---|
 | _Salmonella enterica CVM N51250 v1.0_ | 49 | 2017 | 1073 | 944 | 436 | 9 | 0 | 1.136653 | FreeBayes |
@@ -79,9 +80,12 @@ python3 plot.py
 | WT_2012_Ray_Contigs | 614 | 1062 | 448 | 614 | 53 | 0 | 10 | 0.729642 | Mutect2 |
 
 1-Multi Nucleotide Polymorphism (mnp)
+
 2-Multiallelic sites (mas)
+
 3-Transition to transversion raio (ts/tv)
 
+### Rplots of SNPs Detected
 
 SNPs and Indels Detected Using FreeBayes and Mutect2 | SNPs and Indels Detected Using HaplotypeCaller and Mutect2
 :---------------------------------------------------:|:---------------------------------------------------------:
