@@ -36,7 +36,7 @@ if test -f "$input_file"; then
             bwa index $ref.fasta
         done
         echo "$(date) ---$(ref) Reference file is indexed." >> fastq2vcf.$ref.$dateum.log &&
-########Uses fastq-dump to retrieve raw read fastq files and split them based on paired-end data in compressed formats.
+########Uses fastq-dump to retrieve raw read fastq files and split them based on paired-end data in compressed formats.**IMPORTANT** To download an entire set of reads from the SRA, remove the -X # argument. The script's runtime may increase as a result.
         for sample in ${sample_list[@]}; do
             fastq-dump -X 30 --split-files -gzip $sample
         done
