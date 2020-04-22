@@ -126,7 +126,7 @@ Note: No space should be added between the "=" and user information.
 
 **ploidy=** ploidy of organism from samples (_Example: for Salmonella.fasta, put_ 1)
 
-**Note about ploidy**- If teh defined ploidy =1, FreeBayes will be called. Any other ploidy will call HaplotypeCaller.
+**Note about ploidy**- If tehe defined ploidy =1, FreeBayes will be called. Any other ploidy will call HaplotypeCaller.
 
 #### Sample datasets are provided in the TestFile folder.
 Salmonella.fasta (haploid)
