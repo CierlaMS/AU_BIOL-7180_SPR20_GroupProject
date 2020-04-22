@@ -99,3 +99,6 @@ Transitions and Transversions Detected Using FreeBayes and Mutect2 | Transitions
 ![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Ts_Tv_Hap.png)|![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Tv_Ts_FreeBayes.png)|
 
 Author contributions are listed in Contributions.md. [Contributions]
+Ashley Williams
+Shelby Osburn
+Steven Kitchens
