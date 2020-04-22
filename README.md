@@ -113,9 +113,36 @@ Other SNPS Detected Using FreeBayes and Mutect2 | Other SNPs Detected Using Hapl
 :---------------------------------------------------:|:---------------------------------------------------------:
 ![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_SNP_Other_FB.png)|![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Other_SNP_Hap.png)|
 
+## fastq2vcf tool
+Within the **TestFile** directory and on the main GitHub page is the script **fastq2vcf.sh** which can be run in the ASC and submitted to the queue system. This script is an automated version of our pipeline and will perform all steps with the exception of trimming fastq files. The script is designed to download fastq files using SRA toolkit's fastq-dump will ultimately gernerate files needed for viewing data on the Integrative Genome Viewer (IGV), VCF files based on user input for ploidy, and stats files of the VCF (ends in .vchk). All files except index files, dictionary files, and other reference file dependent files are organized into directories as part of a final cleanup step. Within the script, users must define thre variables, **"ref="**, **"input_file="**, and **"ploidy="**. 
 
+Note: No space should be added between the "=" and user information.
+### User-Defined Variables
+**ref=** basename of fasta file (_Example: for Salmonella.fasta, put_ Salmonella)
+**input_file=** name of file with list of SRR number to be downloaded with fastq-dump (_Example:_ sample_list.txt)
+**ploidy=** ploidy of organism from samples (_Example: for Salmonella.fasta, put_ 1)
 
-Author contributions are listed in Contributions.md. [Contributions]
+**Note about ploidy**- If teh defined ploidy =1, FreeBayes will be called. Any other ploidy will call HaplotypeCaller.
+
+#### Sample datasets are provided in the TestFile folder.
+Salmonella.fasta (haploid)
+sample_list.txt (haploid-Bacterial isolates from this project)
+covid-19_MT039887.1.fasta (Negative control)
+sample_list2.txt (diploid-Human)
+
+#### Dependencies
+**bwa/0.7.12
+samtools/1.3.1
+picard/1.79
+gatk/4.1.4.0
+freebayes/1.0.2
+sra
+fastqc/0.10.1**
+
+##### Author contributions are listed in Contributions.md. [Contributions]
+
 Ashley Williams (email :asw0049@auburn.edu)
+
 Shelby Osburn
+
 Steven Kitchens
