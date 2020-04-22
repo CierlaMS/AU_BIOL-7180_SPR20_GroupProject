@@ -30,12 +30,11 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://gith
 
 3. Analyzed data for trimming (Step skipped)
 
-4. BWA for aligining reads to reference genomes and assemblies.
-	BWA was used to do the following:
-    Create an index for the reference genomes (script 4)
-    Align the samples we have to both reference genomes (script 5)                      
+4. BWA for aligining reads to reference genomes and assemblies. BWA was used to do the following:
+    a. Create an index for the reference genomes (script 4; https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Completed_scripts/4_bwa_index2.sh)
+    b. Align the samples we have to both reference genomes (script 5)                      
         INPUT FILE: .fastq.gz    OUTPUT FILE: .aln.sam
-    Convert the aligned files to an extension the BWA could use to sort and merge files based on reference genome aligned to (script 6)
+    c. Convert the aligned files to an extension the BWA could use to sort and merge files based on reference genome aligned to (script 6)
         INPUT FILE: .aln.sam     OUTPUT FILE: .sorted.merged.bam
 	
 5. Generate phylogeny of samples using CSIPhylogeny. Tree edit with Mega X.
