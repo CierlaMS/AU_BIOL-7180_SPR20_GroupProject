@@ -88,7 +88,7 @@ python3 plot.py
 
 ### Rplots of SNPs Detected
 
-## Example Script for generating R plots
+#### Example Script for generating R plots
 ```
 library(ggplot2)
 p1<-ggplot(data=INSERT_DATAFILE_HERE, aes(x=Reference, y=other)) + geom_bar(stat="identity",  width=0.5, fill="black")+ coord_flip()
