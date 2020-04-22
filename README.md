@@ -146,7 +146,7 @@ sample_list2.txt (diploid-Human)
 
 **gatk/4.1.4.0**
 
-**freebayes/1.0.2
+**freebayes/1.0.2**
 
 **sra**
 
