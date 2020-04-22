@@ -7,7 +7,7 @@ Raw read data can be found in the following directory in scratch and in the shar
 Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Scripts_old/Salmonella_Muenster_Streak.png)
 
 ## Reference Genomes and Assemblies Used
-1. [Traditional NCBI Refernce: _Salmonella enterica CVM N51250 v1.0_ (SER)](https://www.ncbi.nlm.nih.gov/assembly/GCF_001246125.1)
+1. [Traditional NCBI Refernce: _Salmonella enterica CVM N51250 v1.0_ (SER) Salmonella enterica subsp. enterica serovar Muenster (enterobacteria)](https://www.ncbi.nlm.nih.gov/assembly/GCF_001246125.1)
 2. Ray Assembly of WT-2012 (scaffolds): SER_ray
 3. Ray Assembly of WT-2012 (contig): SER_rayc
 4. SPAdes Assembly of WT-2012: SER_spades
