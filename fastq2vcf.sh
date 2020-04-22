@@ -3,11 +3,11 @@
 ##########Variables############################
 # Setup Variables
 #Input filename of file with sample list
-input_file=sample_list2.txt
+input_file=sample_list.txt
 #Input name of fasta formatted reference with .fasta (example: Salmonella)
-ref=covid-19_MT039887.1
+ref=Salmonella
 #Enter the ploidy of your organism (example: Enter 1 for haploid)
-ploidy=2
+ploidy=1
 #Date variable for logfile
 dateum=$(date +%Y-%m-%d)
 
@@ -24,6 +24,7 @@ module load picard/1.79
 module load gatk/4.1.4.0
 module load freebayes/1.0.2
 module load sra
+module load fastqc/0.10.1
 ##################Active Script################################
 
 if test -f "$input_file"; then
@@ -40,6 +41,12 @@ if test -f "$input_file"; then
             fastq-dump -X 30 --split-files -gzip $sample
         done
         echo "$(date) ---$(ref) fastq files are downloaded." >> fastq2vcf.$ref.$dateum.log &&
+
+########Uses fastQC to generate read qua;ity reports from fastq files..
+        for file in *.fastq.gz; do
+            fastqc $file
+        done
+        echo "$(date) ---$(ref) FastQC files are downloaded." >> fastq2vcf.$ref.$dateum.log &&
 
 ########Command loop to align both reads to the reference genomes to store alinment as SAM file
         for sample in ${sample_list[@]}; do
@@ -107,6 +114,8 @@ if test -f "$input_file"; then
 ####### Clean up and organize Work
         mkdir ${ref}_fastq_files
         mv *.fastq ${ref}_fastq_files/
+        mkdir ${ref}_fastQC_files
+        mv *_fastqc* ${ref}_fastQC_files/
         mkdir ${ref}_vcf_files
         mv *.vcf.* *.vcf *.vchk ${ref}_vcf_files/
         mkdir ${ref}_sam_files
@@ -120,14 +129,5 @@ else
     echo "$input_file not found. Aborting!!!!"
 fi
 
-#######Attempt to save storage space by removing SAM files as they will not be called any longer in this script.
-#read -p "Would you like to remove your sam files to save space on your system?: "reply
-#case $reply in
-#    Y|YES|y|yes) echo "SAM files deleted." >> fastq2vcf.$ref.$dateum.log
-#                rm -r ${ref}_sam_files ;;
-#    N|NO|n|no) echo "SAM files still stored and not deleted. Listing all files." >> fastq2vcf.$ref.$dateum.log
-#                ls -al ;;
-#    Q|q)        exit 0 ;;
-#    *) echo "Invalid choice!"; exit 1 ;;
-#esac
+#######Attempt to save storage space by removing SAM files and unmerged BAM files as they will not be called any longer in this script.
 exit
