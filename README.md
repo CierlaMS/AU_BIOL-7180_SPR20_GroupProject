@@ -98,7 +98,14 @@ Transitions and Transversions Detected Using FreeBayes and Mutect2 | Transitions
 :---------------------------------------------------:|:---------------------------------------------------------:
 ![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Ts_Tv_Hap.png)|![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Tv_Ts_FreeBayes.png)|
 
+
+Other SNPS Detected Using FreeBayes and Mutect2 | Other SNPs Detected Using HaplotypeCaller and Mutect2
+:---------------------------------------------------:|:---------------------------------------------------------:
+![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_SNP_Other_FB.png)|![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Other_SNP_Hap.png)|
+
+
+
 Author contributions are listed in Contributions.md. [Contributions]
-Ashley Williams
+Ashley Williams (email :asw0049@auburn.edu)
 Shelby Osburn
 Steven Kitchens
