@@ -154,8 +154,8 @@ sample_list2.txt (diploid-Human)
 
 ##### Author contributions are listed in Contributions.md. [Contributions]
 
-Ashley Williams (email :asw0049@auburn.edu)
+Ashley Williams (email: asw0049@auburn.edu)
 
-Shelby Osburn
+Shelby Osburn (email: sco0004@auburn.edu)
 
 Steven Kitchens
