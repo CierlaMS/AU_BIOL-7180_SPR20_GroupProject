@@ -88,6 +88,16 @@ python3 plot.py
 
 ### Rplots of SNPs Detected
 
+## Example Script for generating R plots
+```
+library(ggplot2)
+p1<-ggplot(data=INSERT_DATAFILE_HERE, aes(x=Reference, y=other)) + geom_bar(stat="identity",  width=0.5, fill="black")+ coord_flip()
+p2<-ggplot(data=INSERT_DATAFILE_HERE, aes(x=Reference, y=other)) + geom_bar(stat="identity",  width=0.5, fill="black")+ coord_flip()+ ylim(NA, 40)
+gridExtra::grid.arrange(p7, top= "INSERT_TITLE_HERE")
+gridExtra::grid.arrange(p6, top= "INSERT_TITLE_HERE")
+
+```
+
 SNPs and Indels Detected Using FreeBayes and Mutect2 | SNPs and Indels Detected Using HaplotypeCaller and Mutect2
 :---------------------------------------------------:|:---------------------------------------------------------:
 ![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_FB_SNP_Indels.png)| ![](https://github.com/asw0049/AU_BIOL-7180_SPR20_GroupProject/blob/master/Rplot_Snp_Indel_Hap.png)|
