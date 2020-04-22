@@ -158,4 +158,4 @@ Ashley Williams (email: asw0049@auburn.edu)
 
 Shelby Osburn (email: sco0004@auburn.edu)
 
-Steven Kitchens
+Steven Kitchens (email: srk0002@auburn.edu)
