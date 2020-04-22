@@ -21,7 +21,7 @@ Salmonella Gram-Negative Bacilli![Salmonella Gram-Negative Bacilli](https://gith
 
 ## General Workflow
 <p align="center">
-<img src="Workflow.png" width="500" height="400" />
+<img src="Final_Pipeline.png" width="500" height="400" />
 </p>
 
 1. Obtain raw reads using SRA Toolkit fastqDump.
