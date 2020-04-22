@@ -130,6 +130,7 @@ Note: No space should be added between the "=" and user information.
 
 #### Sample datasets are provided in the TestFile folder.
 **IMPORTANT** To download an entire set of reads from the SRA, remove the -X # argument. The script's runtime may increase as a result.
+
 Salmonella.fasta (haploid)
 
 sample_list.txt (haploid-Bacterial isolates from this project)
