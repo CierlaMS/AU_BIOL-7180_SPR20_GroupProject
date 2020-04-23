@@ -126,7 +126,7 @@ Note: No space should be added between the "=" and user information.
 
 **ploidy=** ploidy of organism from samples (_Example: for Salmonella.fasta, put_ 1)
 
-**Note about ploidy**- If tehe defined ploidy =1, FreeBayes will be called. Any other ploidy will call HaplotypeCaller.
+**Note about ploidy**- If the defined ploidy =1, FreeBayes will be called. Any other ploidy will call HaplotypeCaller.
 
 #### Sample datasets are provided in the TestFile folder.
 **IMPORTANT** To download an entire set of reads from the SRA, remove the -X # argument. The script's runtime may increase as a result.
@@ -154,7 +154,7 @@ sample_list2.txt (diploid-Human)
 
 **fastqc/0.10.1**
 
-##### Author contributions are listed in Contributions.md. [Contributions]
+##### Authors are listed below.
 
 Ashley Williams (email: asw0049@auburn.edu)
 
